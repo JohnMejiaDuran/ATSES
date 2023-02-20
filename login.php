@@ -7,7 +7,7 @@
     <title>Bienvenido</title>
     <link rel="stylesheet" href="http://localhost/ATSES/assets/css/main.css">
 </head>
-<body>
+<body class="body-login">
     <section id="screen-login">
         <div class="logo-login">
             <img src="http://localhost/ATSES/images/logo2.png" alt="logo" >
@@ -23,8 +23,8 @@
                     <label class="login-label" for="password">Contraseña</label>
                     <input class="login-input" type="password" name="password" id="password" placeholder=" ">
                 </div>
-                <div>
-                    <input type="button" name="Entrar" value="Entrar">
+                <div class="input-button">
+                    <a class="login-button" href="http://localhost/ATSES/index.php"><input type="button" name="Entrar" value="Entrar"></a>
                 </div>
                 <p class="login-parragraph"><a href="#" class="login-link">¿Olvidaste tu Contraseña?</a></p>
             </form>

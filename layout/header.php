@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="http://localhost/ATSES/assets/css/main.css">
 </head>
-<body>
+<body >
     <header>
         <a href="http://localhost/ATSES/index.php" class="logo"> 
             <img src="http://localhost/ATSES/images/logo2.PNG" alt="">
