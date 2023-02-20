@@ -3,7 +3,7 @@
     <?php require('./layout/aside.php') ?>
 
         <section class="main-content">
-            <img src="http://localhost/ATSES/images/Cotizacion.PNG" alt="">
+            <img src="http://localhost/ATSES/images/registrocliente.png" alt="">
         </section>
 
     

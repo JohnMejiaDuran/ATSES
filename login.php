@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,6 +22,9 @@
                 <div class="login-group">
                     <label class="login-label" for="password">Contraseña</label>
                     <input class="login-input" type="password" name="password" id="password" placeholder=" ">
+                </div>
+                <div>
+                    <input type="button" name="Entrar" value="Entrar">
                 </div>
                 <p class="login-parragraph"><a href="#" class="login-link">¿Olvidaste tu Contraseña?</a></p>
             </form>
