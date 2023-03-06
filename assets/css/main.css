@@ -245,22 +245,44 @@ footer p {
 	height: 93.2vh;
 	width: auto;
 	
+	
 }
+
+
 .main-content img  {
 	width: auto;
 }
-@media (max-width:300px){
-	header{
-		flex-direction: column;
-	}
 
-}
+
+	
 
 /*COTIZACION*/
-thead {
-	background-color: #26004b;
+
+.quote-h1 {
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	background-color: #55d1d1;
+	
 }
 
-table th tr td {
-	border: 3px solid black;
+.quote-cotizacion-1 {
+	display: grid;
+	grid-row: auto;
+	border: 2px solid;
+
+}
+
+.table-quote-2 {
+	margin: 0 auto;
+}
+
+.table-quote-2 tr th {
+	padding: 0 50px;
+	border-bottom: 3px solid ;
+}
+
+.table-quote-2 tr td {
+	padding: 20px;
+	border-bottom: 3px solid;
 }

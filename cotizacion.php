@@ -2,32 +2,85 @@
     
     <?php require('./layout/aside.php') ?>
 
-    <main>
-        <section>
-            <table>
-                <thead>
-                    <tr>
-                        <th><h1>Cotizacion</h1></th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td><input type="number" placeholder="Cedula o Nit"></td>
-                        <td><input type="text" placeholder="Nombre o razon social"></td>
-                        <td><input type="number" placeholder="Telefono"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" placeholder="Dirección"></td>
-                        <td><input type="email" placeholder="Email"></td>
-                    </tr>
-                    <tr>
-                        <td><h2>Datos de cotizacion:</h2></td>
-                    </tr>
-                </tbody>
+    <main class="cotizacion-main">
+        
+    <h1 class="quote-h1"">Cotización</h1>
+    <table class="quote-cotizacion-1">
+        <tr>
+            <td>
+                <label for="">Cedula</label>
+                <input type="number" name="" id="">
+            </td>
+            <td>
+                <label for="">Nombre</label><br>
+                <input type="text">
+            </td>
+            <td>
+                <label for="">Telefono</label>
+                <input type="number">
+            </td>
+            <td>
+                <label for="">Direccion</label>
+                <input type="text" name="" id="">
+            </td>
+            <td>
+                <label for="">Email</label>
+                <input type="text">
+            </td>
             
-            </table>
-        </section>
+            <tr>
+                <td>Datos de cotizacion:</td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Fecha</label>
+                    <input type="date" name="" id="">
+                </td>
+                <td>
+                    <label for="">Numero de cotizacion</label>
+                    <input type="number" name="" id="">
+                </td>
+                <td>
+                    <label for="">Elaborado por</label>
+                    <input type="text" name="" id="">
+                </td>
+            </tr>
+        </tr>
+    </table>
+    <table class="table-quote-2">
+        <tr>
+            <th>Tipo</th>
+            <th>Materiales</th>
+            <th>Diseño</th>
+            <th>Descripción</th>
+            <th>Cantidad</th>
+            <th>Valor unidad</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
     </main>
 
       
