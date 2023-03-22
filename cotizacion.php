@@ -2,86 +2,55 @@
     
     <?php require('./layout/aside.php') ?>
 
-    <main class="cotizacion-main">
-        
-    <h1 class="quote-h1"">Cotización</h1>
-    <table class="quote-cotizacion-1">
-        <tr>
-            <td>
-                <label for="">Cedula</label>
-                <input type="number" name="" id="">
-            </td>
-            <td>
+
+        <section class="cotizacion-main"> 
+            <div class="container-makequote">
+            <div class="main-title">
+                <h1>Cotizacion</h1>
+            </div>
+            <div>
+                <label for="">Cedula</label><br>
+                <input type="text">
+            </div>
+            <div>
                 <label for="">Nombre</label><br>
                 <input type="text">
-            </td>
-            <td>
-                <label for="">Telefono</label>
-                <input type="number">
-            </td>
-            <td>
-                <label for="">Direccion</label>
-                <input type="text" name="" id="">
-            </td>
-            <td>
-                <label for="">Email</label>
+            </div>
+            <div>
+                <label for="">Telefono</label><br>
                 <input type="text">
-            </td>
-            
-            <tr>
-                <td>Datos de cotizacion:</td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="">Fecha</label>
-                    <input type="date" name="" id="">
-                </td>
-                <td>
-                    <label for="">Numero de cotizacion</label>
-                    <input type="number" name="" id="">
-                </td>
-                <td>
-                    <label for="">Elaborado por</label>
-                    <input type="text" name="" id="">
-                </td>
-            </tr>
-        </tr>
-    </table>
-    <table class="table-quote-2">
-        <tr>
-            <th>Tipo</th>
-            <th>Materiales</th>
-            <th>Diseño</th>
-            <th>Descripción</th>
-            <th>Cantidad</th>
-            <th>Valor unidad</th>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-    </main>
+            </div>
+            <div>
+                <label for="">Direccion</label><br>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">E-mail</label><br>
+                <input type="text">
+            </div>
+            <div class="data-quote">
+                <h2>Datos de cotizacion:</h2>
+            </div>
+            <div>
+                <label for="">Fecha</label><br>
+                <input type="text">
+            </div>
+            <div>
+                <label for=""># de cotizacion</label><br>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">Elaborado por</label><br>
+                <input type="text">
+            </div>
+            </div>
+        </section>
+        <section class="table-1">
+            <table>
+                <tr>
+                    <td>Hola LUSSSSSSSSSSSSS</td>
+                </tr>
+            </table>
+        </section>
 
-      
 <?php require('./layout/footer.php') ?>
