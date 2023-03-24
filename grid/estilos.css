@@ -6,8 +6,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
     display: flex;
-    flex-direction: column;
-    
 }
 
 a{
@@ -20,16 +18,16 @@ a{
     height: 100vh;
 
     display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows:  auto 1fr auto;    
+    grid-template-columns: auto repeat(5,1fr);
+    grid-template-rows:  auto repeat(4,1fr) auto;    
     background-color: aqua;
 
-    grid-template-areas: "aside header   "
-                         "aside  content   "
-                         "aside  content   "
-                         "aside  content   "
-                         "aside  content  "
-                         "aside footer  ";
+    grid-template-areas: "aside header header  header  header  header"
+                         "aside  content  content content content content"
+                         "aside  content  content content content content"
+                         "aside  content  content content content content"
+                         "aside  content  content content content content"
+                         "aside footer footer  footer  footer  footer";
 }
 
 /* HEADER */
@@ -132,51 +130,5 @@ a{
 .footer {
     background: #26004b;
     grid-area: footer;
-    height: 30px
+    height: 100%;
 }
-
-	
-
-/*COTIZACION*/
-.cotizacion-main {
-	display: flex;
-	
-
-}
-.container-makequote {
-	display: grid;
-	grid-template-columns: repeat(3,1fr);
-	width: 100%;
-	grid-gap:10px;
-	margin-left: 20px;
-}
-.container-makequote > div > input {
-	border-style: none;
-	height: 30px;
-	background: #bcc6df;
-	width: 300px;
-	border-radius: 30px;
-}
-.container-makequote div label {
-	font-weight: bold;
-	color:#5b5b9c;
-	
-}
-
-.container-makequote .main-title {
-	display: grid;
-	grid-column-start: 1;
-	grid-column-end: 4;
-	text-align: center;
-	background-color: #55d1d1;
-	margin-left: -20px;
-}
-
-.container-makequote .data-quote {
-	display: grid;
-	grid-column-start: 1;
-	grid-column-end: 4;
-	color: #26004b;
-	font-size: 400;
-}
-
