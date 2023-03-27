@@ -22,7 +22,6 @@ a{
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows:  auto 1fr auto;    
-    background-color: aqua;
 
     grid-template-areas: "aside header   "
                          "aside  content   "
