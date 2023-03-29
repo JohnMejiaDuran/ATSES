@@ -2,10 +2,10 @@
     
     <?php require('./layout/aside.php') ?>
 
-        <section class="main-content">
-            <img src="http://localhost/ATSES/images/Cotizacion.PNG" alt="">
-            <h1></h1>
-        </section>
+    <section >
+       
+    </section>
+
 
     
 <?php require('./layout/footer.php') ?>
