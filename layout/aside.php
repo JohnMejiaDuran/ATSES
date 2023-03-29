@@ -14,13 +14,13 @@
                         <div class="aside__content">
                             <ul class="aside__sub">
                                 <li class="aside__son"> <!--hijo-->
-                                    <a class="aside__son-link" href="#">
+                                    <a class="aside__son-link" href="http://localhost/ATSES/clientes.php"">
                                      <span>Cliente</span>
                                     </a>
                                 </li>
 
                                 <li class="aside__son">
-                                    <a class="aside__son-link" href="#">
+                                    <a class="aside__son-link" href="http://localhost/ATSES/proveedores.php">
                                         Proveedor
                                     </a> <!--hijo-->
                                 </li>
@@ -44,7 +44,7 @@
                                 <li class="aside__son"><a class="aside__son-link" href="#">Estructuras</a> <!--Hijo-->
             
                                 </li>
-                                <li class="aside__son"><a class="aside__son-link" href="#">Materiales</a> <!--Hijo-->
+                                <li class="aside__son"><a class="aside__son-link" href="http://localhost/ATSES/registromaterial.php">Materiales</a> <!--Hijo-->
                                 </li>
                             </ul>
                         </div>
@@ -63,22 +63,5 @@
                                <li class="aside__son"><a class="aside__son-link" href="/ImprimirCotización.html">Imprimir Cotización</a></li> <!--hijo-->   
                            </ul>
                        </div>
-
-                    </li>
-                    
-                    <li class="aside__father">
-                        <a class="aside__father-link"  href="#">
-                            <span>Consultar</span>
-                            <i class="aside__father-arrow fa-solid fa-chevron-up fa-rotate-180" style="color: #ffffff;"></i>
-                            <input type="checkbox" class="aside__father-check">
-                        </a>
-
-                        <div class="aside__content">
-                            <ul class="aside__sub">
-                                <li class="aside__son"><a href="" class="aside__son-link">Clientes</a>
-                                <li class="aside__son"><a href="" class="aside__son-link">Proveedores</a></li>
-                                <li class="aside__son"><a href="" class="aside__son-link">Materiales</a></li>
-                            </ul>
-                        </div>
-                    </li>   
+  
         </aside>
