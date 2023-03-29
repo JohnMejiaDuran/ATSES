@@ -24,11 +24,7 @@
                                         Proveedor
                                     </a> <!--hijo-->
                                 </li>
-                                <li class="aside__son">
-                                    <a  class="aside__son-link" href="#">
-                                        Administrador
-                                    </a><!--hijo-->
-                                </li>
+                            
                             </ul>
                         </div>
                     </li>   

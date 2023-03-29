@@ -16,6 +16,7 @@
 	width: 50%;
 	float: right;
 }
+
 .form-login {
 	background-color: #fcfcfc;
 	max-width: 400px;
@@ -102,14 +103,16 @@ body {
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
+	height: 100%;
    
     
     
 }
 section {
-    height: 100vh;
+    height: 1500px;
     background-color: #dedede;
 }
+
 
 a{
     text-decoration: none;
@@ -234,6 +237,7 @@ a{
     color: #fff;
     text-align: center;
     padding: 10px;
+	margin-top: auto;
 }
 
 	
@@ -241,14 +245,14 @@ a{
 
 
    /* CLIENTES */
-   .clientes{ 
+	.clientes{ 
     width: 100%;
     height: 100vh;
     background-color: #dedede; 
     
   }
 
-  .container__clientes {
+	.container__clientes {
     width: 100%;
     display:flex;
     justify-content: center;
@@ -548,10 +552,8 @@ h1{
 .bloque1{
   display: flex;
   align-items: center;
-  
   padding: 20px 29px;
   width: 90%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.404);
   border-top: 1px solid rgba(0, 0, 0, 0.404);
  text-align: right;
   
@@ -566,7 +568,6 @@ label{
 }
 /* BLOQUE 2 */
 .bloque2{
-  
   display: flex;   
   border-bottom: 1px solid rgba(0, 0, 0, 0.404);
   padding: 20px 29px;
@@ -589,7 +590,8 @@ label{
   display: flex;
  
 }
-.letf{
+.left{
+align-items: center;
   display: flex; 
 
 }
@@ -633,7 +635,7 @@ label{
   
   text-align: center;
   height: 30px;
-  width: 65%;
+  width: 80%;
 }
 
 
@@ -641,7 +643,7 @@ label{
 
 /*Todos los label*/
 label{
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 
@@ -684,46 +686,11 @@ label{
 
 /*COTIZACION*/
 
-.cotizaciones__contenedor {
-  width: 100%;
-  height: 50px;
-  background-color: #dedede;
-  margin-left: 50px;
-  
- 
-
-  display: grid;
-  grid-template-areas: "titulo titulo titulo"
-                       "cedula nombre telefono"
-                       "direccion email email"
-                       "titulo2 titulo2 titulo2"
-                       "fecha numero elaborado"
-                       "tabla tabla tabla" 
-                       ;
-  
-}
 
 .cotizacion__titulo {
   margin-bottom: 10px;
   grid-area: titulo;
   height: auto;
-  margin-left: -50px;
-}
-.cotizacion__titulo2 {
-  grid-area: titulo2;
-  margin: 20px 0;
-}
-
-.cotizacion__fecha {
-  grid-area: fecha;
-  
-}
-
-.cotizacion__numero {
-  grid-area: numero;
-}
-.cotizacion__elaborado {
-  grid-area: elaborado;
 }
 
 .tabla__cotizacion {
@@ -732,27 +699,31 @@ display: flex;
 justify-content: center;
 margin-top: 20px;
 
-width: 100%;
+
 }
 
 .cotizacion__input {
-width: 200px;
+
+width: 100px;
 height: 30px;
 text-align: center;
 }
 article {
+	margin-top: 20px;
   display: flex;
 justify-content: center;
-width: 100%;
+
 }
 .otrovalor {
   background-color: #dedede;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 20px;
   align-content: center;
 }
-
+.otrovalor input {
+	width: 198px;
+}
 .button__cotizacion {
   display: flex;
   justify-content: center;

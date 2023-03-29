@@ -2,7 +2,7 @@
     
     <?php require('./layout/aside.php') ?>
 
-    <section >
+    <section class="section__material">
     <h1 class="titulo__formulario">Registro de Material</h1> 
             
             <div class="registro-material">
@@ -26,7 +26,7 @@
                     <option value="Pasaporte">Diseño 4</option>
                     </select>
                 </div>
-        
+            
     
                 <!-- Bloque 2 -->
                 <div class="bloque2">
