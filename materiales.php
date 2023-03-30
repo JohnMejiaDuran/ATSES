@@ -28,6 +28,8 @@
         <table class="tablaclientes">
             <thead>
                 <tr>
+                    
+                    <th>Código</th>
                     <th>Material</th>
                     <th>Clasificacion</th>
                     <th>Diseño</th>
@@ -41,6 +43,7 @@
           </thead>
           <tbody>
                 <tr>
+                <td>15151</td>
                     <td>Acero</td>
                     <td>Inoxidable</td>
                     <td>Redondo</td>
@@ -54,6 +57,7 @@
           </tbody>
           <tbody>
           <tr>
+          <td>15151</td>
                     <td>Acero</td>
                     <td>Inoxidable</td>
                     <td>Redondo</td>
@@ -67,6 +71,7 @@
           </tbody>
           <tbody>
           <tr>
+          <td>15151</td>
                     <td>Acero</td>
                     <td>Inoxidable</td>
                     <td>Redondo</td>
@@ -80,6 +85,7 @@
           </tbody>
           <tbody>
           <tr>
+          <td>15151</td>
                     <td>Acero</td>
                     <td>Inoxidable</td>
                     <td>Redondo</td>

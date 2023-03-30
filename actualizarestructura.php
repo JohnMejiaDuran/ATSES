@@ -3,7 +3,7 @@
     <?php require('./layout/aside.php') ?>
 
     <section >
-        <h1 class="titulo__formulario">Registro de Estructuras</h1> 
+        <h1 class="titulo__formulario">Actualizar Estructuras</h1> 
             
             <div class="registro-material">
               
@@ -68,7 +68,7 @@
                
                 
                 <div class="guardar">
-                    <button class="guardar__button" type="submit" name="enviar_formulario" id="Guardar"><a class="Guardar">Guardar</a></button>
+                    <button class="guardar__button" type="submit" name="enviar_formulario" id="Guardar"><a class="Guardar">Actualizar</a></button>
                 </div>
                 
                <!-- --------- -->

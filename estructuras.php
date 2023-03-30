@@ -28,6 +28,7 @@
         <table class="tablaclientes">
             <thead>
                 <tr>
+                    <th>Código</th>
                     <th>Estructura</th>
                     <th>Diseño</th>
                     <th>Medidas</th>
@@ -38,94 +39,82 @@
           </thead>
           <tbody>
                 <tr>
+                <td>15151</td>
                     <td>Puerta</td>
                     <td>3D</td>
                     <td>2x5</td>
                     <td>Acero</td>
                     <td>1.200.000</td>
-                    <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="http://localhost/ATSES/actualizarestructura.php"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
           <tbody>
           <tr>
+          <td>15151</td>
                     <td>Puerta</td>
                     <td>3D</td>
                     <td>2x5</td>
                     <td>Acero</td>
                     <td>1.200.000</td>
-                    <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="http://localhost/ATSES/actualizarestructura.php"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
           <tbody>
           <tr>
+          <td>15151</td>
                     <td>Puerta</td>
                     <td>3D</td>
                     <td>2x5</td>
                     <td>Acero</td>
                     <td>1.200.000</td>
-                    <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="http://localhost/ATSES/actualizarestructura.php"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
           <tbody>
           <tr>
+          <td>15151</td>
                     <td>Puerta</td>
                     <td>3D</td>
                     <td>2x5</td>
                     <td>Acero</td>
                     <td>1.200.000</td>
-                    <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="http://localhost/ATSES/actualizarestructura.php"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
           <tbody>
           <tr>
+          <td>15151</td>
                     <td>Puerta</td>
                     <td>3D</td>
                     <td>2x5</td>
                     <td>Acero</td>
                     <td>1.200.000</td>
-                    <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="http://localhost/ATSES/actualizarestructura.php"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>  
           <tbody>
                 <tr>
+                <td>15151</td>
                     <td>Puerta</td>
                     <td>3D</td>
                     <td>2x5</td>
                     <td>Acero</td>
                     <td>1.200.000</td>
-                    <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="http://localhost/ATSES/actualizarestructura.php"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
           <tbody>
                 <tr>
+                <td>15151</td>
                     <td>Puerta</td>
                     <td>3D</td>
                     <td>2x5</td>
                     <td>Acero</td>
                     <td>1.200.000</td>
-                    <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="http://localhost/ATSES/actualizarestructura.php"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
-          <tbody>
-                <tr>
-                    <td>Puerta</td>
-                    <td>3D</td>
-                    <td>2x5</td>
-                    <td>Acero</td>
-                    <td>1.200.000</td>
-                    <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
-                </tr>
-          </tbody>
-          <tbody>
-                <tr>
-                    <td>Puerta</td>
-                    <td>3D</td>
-                    <td>2x5</td>
-                    <td>Acero</td>
-                    <td>1.200.000</td>
-                    <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
-                </tr>
-          </tbody>  
+        
        </table>
        <div class="guardar">
             <button class="guardar__button" type="submit" name="enviar_formulario" id="Guardar"><a class="Guardar">Guardar</a></button>
