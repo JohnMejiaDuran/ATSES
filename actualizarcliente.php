@@ -26,7 +26,7 @@
                         <label for="Documento" class="seleccionar">Tipo de Documento
                         <span class="obligatorio">*</span>
                       </label>
-                      <select  class="seleccion" id="Seleccionar">
+                      <select  class="seleccion__cliente" id="Seleccionar">
                           <option value="Seleccionar"></option>
                           <option value="Cedula de ciudadania">Cedula de ciudadania</option>
                           <option value="Nit">Nit</option>

@@ -3,7 +3,7 @@
     <?php require('./layout/aside.php') ?>
 
 
-        <section> 
+        <section class="section__cotizacion"> 
                 <div class="cotizacion__titulo">
                     <h1 class="titulo__formulario">Cotizacion</h1>
                 </div>

@@ -14,6 +14,7 @@
                       <label for="nombre" class="colocar_nombre">Nombres
                         <span class="obligatorio">*</span>
                       </label>
+                      
                       <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu Nombre">
                   </div>
                   <div>

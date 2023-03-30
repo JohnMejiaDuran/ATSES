@@ -417,8 +417,16 @@ tbody tr:hover{
   text-align: center;
 }
 
+.bloque1 label {
+  font-weight: 600;
+}
 
-
+.caja label {
+  font-weight: 600;
+}
+.bloque3 label{
+  font-weight: 600;
+}
 .bloque2 {
   line-height: 40px;
   display: grid;
@@ -450,14 +458,21 @@ tbody tr:hover{
   height: 40px;
 }
 
+
 #seleccionar {
   text-align: center;
   margin: 0 5px;
   height: 40px;
-  width: 200px;
+  width: 400px;
 }
 
+.seleccionar {
+  height: 40px;
+  width: 60px;
+  text-align: center;
+}
 .caja__unidad {
+
   display: flex;
   justify-content: center;
 }
@@ -466,7 +481,11 @@ tbody tr:hover{
   width: 100%;
 }
 
+
 /*COTIZACION*/
+.section__cotizacion {
+  height: auto;
+}
 .cotizaciones__contenedor {
   width: 80%;
  display: grid;
@@ -538,7 +557,12 @@ fieldset label {
   color: #26004b;
 }
 
-color
+.caja__input1{
+  width: 400px;
+  height: 40px;
+}
+
+
 
 
 

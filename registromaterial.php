@@ -9,7 +9,7 @@
               
                 <div class="bloque1">
                     <label for="seleccionar-material">Material:</label>
-                    <select class="seleccionar"id="seleccionar" required>
+                    <select id="seleccionar" required>
                     <option value="" selected disabled >Seleccione Material</option>
                     <option value="Cedula de ciudadania"required>Carbon</option>
                     <option value="Nit" required>Acero Inoxidable</option>
@@ -18,12 +18,10 @@
                    </select>
                 
                     <label for="Diseño-Material">Diseño:</label>
-                   <select class="seleccionar"id="seleccionar" required> 
+                   <select id="seleccionar" required> 
                     <option value="" selected disabled >Diseño de material</option>
-                    <option value="Cedula de ciudadania">Diseño 1</option>
-                    <option value="Nit">Diseño 2</option>
-                    <option value="Cedula de extranjera">Diseño 3</option>
-                    <option value="Pasaporte">Diseño 4</option>
+                    <option value="Cedula de ciudadania">Diseño 3D</option>
+                    <option value="Nit">Diseño 2D</option>
                     </select>
                 </div>
         
@@ -41,9 +39,9 @@
                         <input class="caja__input" type="number" required>
                     </div>
     
-                    <div class="caja__unidad">
+                    <div class="caja__unidad caja">
                         <label for="mt-cm">Unidad:</label>
-                        <select id="seleccionar" required> 
+                        <select class="seleccionar " required> 
                            <option value="" selected disabled >MT</option>
                            <option value="Cedula de ciudadania">MT</option>
                            <option value="Nit">CM</option>
@@ -64,12 +62,12 @@
                     
                    <div class="left">
                        <label for="Compra">Valor de Compra:</label>
-                       <input id="compra" class="caja__input" name="numeros" pattern="[0-9]+" required>
+                       <input id="compra" class="caja__input1" name="numeros" pattern="[0-9]+" required>
                    </div>
                
                    <div class="right">
                        <label for="Venta">Valor de Venta:</label>
-                       <input id="Venta" class="caja__input" name="numeros" pattern="[0-9]+" required>
+                       <input id="Venta" class="caja__input1" name="numeros" pattern="[0-9]+" required>
                    </div>
                </div>
                <!-- -------------------------------------- -->
