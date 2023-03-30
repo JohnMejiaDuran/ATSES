@@ -3,7 +3,6 @@
     <?php require('./layout/aside.php') ?>
 
 
-<<<<<<< HEAD
         <section> 
                 <div class="cotizacion__titulo">
                     <h1 class="titulo__formulario">Cotizacion</h1>
@@ -44,46 +43,6 @@
                         <input type="text" placeholder="Elaborado por">
                     </div>
                 </div>
-=======
-        <section class="section__cotizacion"> 
-            <div>
-                <h1 class="titulo__formulario">Cotizacion</h1>
-            </div>
-        <article>
-          
-            <div class="otrovalor">
-            
-                <div>
-                    <label for="">Cedula o Nit</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label for="">Nombre</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label for="">Telefono</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label for="">Dirección</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label for="">Email</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label for="">Mano de obra aluminero</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label for="">Valor total de cotizacion</label>
-                    <input type="text">
-                </div>  
-            </div>
-        </article>
->>>>>>> b02d151ecb6727f89e2221c2eaa4a26fe8b16d33
                     <div class="tabla__cotizacion">
                         <table  >
                             <thead>
@@ -94,7 +53,6 @@
                                 <th>Descripcion</th>
                                 <th>Cantidad</th>
                                 <th>Valor unidad</th> 
-                                <th>Opciones</th>
                             </thead>
                             <tbody>
                                 <td>
@@ -140,10 +98,7 @@
                                 <td>
                                     <input class="cotizacion__input" type="number">
                                 </td>
-                                <td>
-                                <a href=""><i class="fa-solid fa-trash" style="color: red;"></i></a>
-                                <a href=""><i class="fa-solid fa-pen-to-square"></i></a>
-                                </td>
+                                
                             </tbody>
                             <tbody>
                                 <td>
@@ -189,10 +144,7 @@
                                 <td>
                                     <input class="cotizacion__input" type="number">
                                 </td>
-                                <td>
-                                <a href=""><i class="fa-solid fa-trash" style="color: red;"></i></a>
-                                <a href=""><i class="fa-solid fa-pen-to-square"></i></a>
-                                </td>
+                                
                             </tbody>
                             <tbody>
                                 <td>
@@ -238,10 +190,7 @@
                                 <td>
                                     <input class="cotizacion__input" type="number">
                                 </td>
-                                <td>
-                                <a href=""><i class="fa-solid fa-trash" style="color: red;"></i></a>
-                                <a href=""><i class="fa-solid fa-pen-to-square"></i></a>
-                                </td>
+                                
                             </tbody>
                             <tbody>
                                 <td>
@@ -287,10 +236,7 @@
                                 <td>
                                     <input class="cotizacion__input" type="number">
                                 </td>
-                                <td>
-                                <a href=""><i class="fa-solid fa-trash" style="color: red;"></i></a>
-                                <a href=""><i class="fa-solid fa-pen-to-square"></i></a>
-                                </td>
+                                
                             </tbody>
                             <tbody>
                                 <td>
@@ -336,10 +282,7 @@
                                 <td>
                                     <input class="cotizacion__input" type="number">
                                 </td>
-                                <td>
-                                <a href=""><i class="fa-solid fa-trash" style="color: red;"></i></a>
-                                <a href=""><i class="fa-solid fa-pen-to-square"></i></a>
-                                </td>
+                                
                             </tbody>
                             <tbody>
                                 <td>
@@ -385,10 +328,7 @@
                                 <td>
                                     <input class="cotizacion__input" type="number">
                                 </td>
-                                <td>
-                                <a href=""><i class="fa-solid fa-trash" style="color: red;"></i></a>
-                                <a href=""><i class="fa-solid fa-pen-to-square"></i></a>
-                                </td>
+                                
                             </tbody>
                             <tbody>
                                 <td>
@@ -434,10 +374,7 @@
                                 <td>
                                     <input class="cotizacion__input" type="number">
                                 </td>
-                                <td>
-                                <a href=""><i class="fa-solid fa-trash" style="color: red;"></i></a>
-                                <a href=""><i class="fa-solid fa-pen-to-square"></i></a>
-                                </td>
+                                
                             </tbody>
                             <tbody>
                                 <td>
@@ -483,10 +420,7 @@
                                 <td>
                                     <input class="cotizacion__input" type="number">
                                 </td>
-                                <td>
-                                <a href=""><i class="fa-solid fa-trash" style="color: red;"></i></a>
-                                <a href=""><i class="fa-solid fa-pen-to-square"></i></a>
-                                </td>
+                                
                             </tbody>
                             <tbody>
                                 <td>
@@ -532,10 +466,7 @@
                                 <td>
                                     <input class="cotizacion__input" type="number">
                                 </td>
-                                <td>
-                                <a href=""><i class="fa-solid fa-trash" style="color: red;"></i></a>
-                                <a href=""><i class="fa-solid fa-pen-to-square"></i></a>
-                                </td>
+                                
                             </tbody>
                             <tbody>
                                 <td>
@@ -582,16 +513,12 @@
                                 <td>
                                     <input class="cotizacion__input" type="number">
                                 </td>
-                                <td>
-                                <a href=""><i class="fa-solid fa-trash" style="color: red;"></i></a>
-                                <a href=""><i class="fa-solid fa-pen-to-square"></i></a>
-                                </td>
+                                
                             </tbody>
                             
                         </table>
                     </div>
                     <article>
-<<<<<<< HEAD
 
             <div class="otrovalor">
                 <fieldset>
@@ -639,48 +566,6 @@
                   
         </section>
         
-=======
-<h3>Otros valores</h3>
-<div class="otrovalor">
-
-<div>
-    <label for="">Valor materiales</label>
-     <input type="text">
-</div>
-<div>
-    <label for="">Mano de obra</label>
-     <input type="text">
-</div>
-<div>
-    <label for="">Mano de obra menos 40%</label>
-     <input type="text">
-</div>
-<div>
-    <label for="">Materiales en empresa</label>
-     <input type="text">
-</div>
-<div>
-    <label for="">AIU</label>
-     <input type="text">
-</div>
-<div>
-    <label for="">Mano de obra aluminero</label>
-     <input type="text">
-</div>
-<div>
-    <label for="">Valor total de cotizacion</label>
-     <input type="text">
-</div>
-<div class="button__cotizacion">
-    <button>
-        <a href="">Guardar</a>
-    </button>
-</div>    
-</div>
-</article>
-        </section>
-   
->>>>>>> b02d151ecb6727f89e2221c2eaa4a26fe8b16d33
         
 
 <?php require('./layout/footer.php') ?>
