@@ -24,11 +24,7 @@
                                         Proveedor
                                     </a> <!--hijo-->
                                 </li>
-                                <li class="aside__son">
-                                    <a  class="aside__son-link" href="#">
-                                        Administrador
-                                    </a><!--hijo-->
-                                </li>
+                                
                             </ul>
                         </div>
                     </li>   
@@ -41,10 +37,10 @@
                         </a>
                         <div class="aside__content">
                             <ul class="aside__sub">
-                                <li class="aside__son"><a class="aside__son-link" href="#">Estructuras</a> <!--Hijo-->
+                                <li class="aside__son"><a class="aside__son-link" href="http://localhost/ATSES/estructuras.php">Estructuras</a> <!--Hijo-->
             
                                 </li>
-                                <li class="aside__son"><a class="aside__son-link" href="http://localhost/ATSES/registromaterial.php">Materiales</a> <!--Hijo-->
+                                <li class="aside__son"><a class="aside__son-link" href="http://localhost/ATSES/materiales.php">Materiales</a> <!--Hijo-->
                                 </li>
                             </ul>
                         </div>

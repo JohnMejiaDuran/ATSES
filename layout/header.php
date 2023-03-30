@@ -14,7 +14,7 @@
         <header class="header">
             
             <a href="" class="header__perfil">
-                <p class="header__text-welcome">Bienvenido&nbsp<span class="header__admin">Mario</span></p>
+                <p class="header__text-welcome">Bienvenido&nbsp<span class="header__admin">Seneider</span></p>
                 <img for="perfil" src="http://localhost/ATSES/images/admi.png" alt="imagen de perfil" class="header__img-perfil">
             </a>
         </header>

@@ -4,14 +4,15 @@
 
 
         <section> 
-                
+                <div class="cotizacion__titulo">
+                    <h1 class="titulo__formulario">Cotizacion</h1>
+                </div>
                 <div class="cotizaciones__contenedor">
-                    <div class="cotizacion__titulo">
-                        <h1 class="titulo__formulario">Cotizacion</h1>
-                    </div>
+                    
                     <div class="cotizacion__cedula">
                         <label for="">Cedula</label>
-                        <input type="text" placeholder="Cedula o Nit">
+                        <input class="input__cedula"type="text" placeholder="Cedula o Nit">
+                        <a  href=""><i  class=" fa-solid fa-magnifying-glass"></i></a>
                     </div>
                     <div class="cotizacion__nombre">
                         <label for="">Nombre</label>
@@ -29,21 +30,19 @@
                         <label for="">E-mail</label>
                         <input type="text" placeholder="E-mail">
                     </div>
-                    <div class="cotizacion__titulo2">
-                        <h2>Datos de cotizacion:</h2>
-                    </div>
                     <div class="cotizacion__fecha">
                         <label for="">Fecha</label>
                         <input type="date" placeholder="Fecha">
                     </div>
                     <div class="cotizacion__numero">
-                        <label for=""># de cotizacion</label>
+                        <label for=""># cotizacion</label>
                         <input type="text" placeholder="# de Cotizacion">
                     </div>
                     <div class="cotizacion__elaborado">
                         <label for="">Elaborado por</label>
                         <input type="text" placeholder="Elaborado por">
                     </div>
+                </div>
                     <div class="tabla__cotizacion">
                         <table  >
                             <thead>
@@ -58,6 +57,7 @@
                             <tbody>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">Puerta</option>
                                         <option value="">Ventana</option>
                                         <option value="">Porton Normal</option>
@@ -70,6 +70,7 @@
                                 </td>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">Acero</option>
                                         <option value="">Aluminio</option>
                                         <option value="">PVC</option>
@@ -79,6 +80,7 @@
                                 </td>  
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">3D</option>
                                         <option value="">Lisas</option>
                                         <option value="">Geometricas</option>
@@ -101,6 +103,7 @@
                             <tbody>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">Puerta</option>
                                         <option value="">Ventana</option>
                                         <option value="">Porton Normal</option>
@@ -113,6 +116,7 @@
                                 </td>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">Acero</option>
                                         <option value="">Aluminio</option>
                                         <option value="">PVC</option>
@@ -122,6 +126,7 @@
                                 </td>  
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">3D</option>
                                         <option value="">Lisas</option>
                                         <option value="">Geometricas</option>
@@ -144,6 +149,7 @@
                             <tbody>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">Puerta</option>
                                         <option value="">Ventana</option>
                                         <option value="">Porton Normal</option>
@@ -156,6 +162,7 @@
                                 </td>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">Acero</option>
                                         <option value="">Aluminio</option>
                                         <option value="">PVC</option>
@@ -165,6 +172,7 @@
                                 </td>  
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">3D</option>
                                         <option value="">Lisas</option>
                                         <option value="">Geometricas</option>
@@ -187,6 +195,7 @@
                             <tbody>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">Puerta</option>
                                         <option value="">Ventana</option>
                                         <option value="">Porton Normal</option>
@@ -199,6 +208,7 @@
                                 </td>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">Acero</option>
                                         <option value="">Aluminio</option>
                                         <option value="">PVC</option>
@@ -208,6 +218,7 @@
                                 </td>  
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">3D</option>
                                         <option value="">Lisas</option>
                                         <option value="">Geometricas</option>
@@ -230,6 +241,7 @@
                             <tbody>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">Puerta</option>
                                         <option value="">Ventana</option>
                                         <option value="">Porton Normal</option>
@@ -242,6 +254,7 @@
                                 </td>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">Acero</option>
                                         <option value="">Aluminio</option>
                                         <option value="">PVC</option>
@@ -251,6 +264,7 @@
                                 </td>  
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">3D</option>
                                         <option value="">Lisas</option>
                                         <option value="">Geometricas</option>
@@ -273,6 +287,7 @@
                             <tbody>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">Puerta</option>
                                         <option value="">Ventana</option>
                                         <option value="">Porton Normal</option>
@@ -285,6 +300,7 @@
                                 </td>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">Acero</option>
                                         <option value="">Aluminio</option>
                                         <option value="">PVC</option>
@@ -294,6 +310,7 @@
                                 </td>  
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">3D</option>
                                         <option value="">Lisas</option>
                                         <option value="">Geometricas</option>
@@ -316,6 +333,7 @@
                             <tbody>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">Puerta</option>
                                         <option value="">Ventana</option>
                                         <option value="">Porton Normal</option>
@@ -328,6 +346,7 @@
                                 </td>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                    <option value=""></option>
                                         <option value="">Acero</option>
                                         <option value="">Aluminio</option>
                                         <option value="">PVC</option>
@@ -337,6 +356,7 @@
                                 </td>  
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                        <option value=""></option>
                                         <option value="">3D</option>
                                         <option value="">Lisas</option>
                                         <option value="">Geometricas</option>
@@ -359,6 +379,7 @@
                             <tbody>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                        <option value=""></option>
                                         <option value="">Puerta</option>
                                         <option value="">Ventana</option>
                                         <option value="">Porton Normal</option>
@@ -371,6 +392,7 @@
                                 </td>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                        <option value=""></option>
                                         <option value="">Acero</option>
                                         <option value="">Aluminio</option>
                                         <option value="">PVC</option>
@@ -380,6 +402,7 @@
                                 </td>  
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                        <option value=""></option>
                                         <option value="">3D</option>
                                         <option value="">Lisas</option>
                                         <option value="">Geometricas</option>
@@ -402,6 +425,7 @@
                             <tbody>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                        <option value=""></option>
                                         <option value="">Puerta</option>
                                         <option value="">Ventana</option>
                                         <option value="">Porton Normal</option>
@@ -414,6 +438,7 @@
                                 </td>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                        <option value=""></option>
                                         <option value="">Acero</option>
                                         <option value="">Aluminio</option>
                                         <option value="">PVC</option>
@@ -423,6 +448,7 @@
                                 </td>  
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                        <option value=""></option>
                                         <option value="">3D</option>
                                         <option value="">Lisas</option>
                                         <option value="">Geometricas</option>
@@ -445,6 +471,7 @@
                             <tbody>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                        <option value=""></option>
                                         <option value="">Puerta</option>
                                         <option value="">Ventana</option>
                                         <option value="">Porton Normal</option>
@@ -457,6 +484,8 @@
                                 </td>
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                        
+                                    <option value=""></option>
                                         <option value="">Acero</option>
                                         <option value="">Aluminio</option>
                                         <option value="">PVC</option>
@@ -466,6 +495,7 @@
                                 </td>  
                                 <td>
                                     <select name="" id="" class="cotizacion__input">
+                                        <option value=""></option>
                                         <option value="">3D</option>
                                         <option value="">Lisas</option>
                                         <option value="">Geometricas</option>
@@ -488,47 +518,54 @@
                             
                         </table>
                     </div>
-                  
-        </section>
-        <article>
+                    <article>
 
             <div class="otrovalor">
-            <h3>Otros valores</h3>
-            <div>
-                <label for="">Valor materiales</label>
-                 <input type="text">
+                <fieldset>
+                        <legend>Otros valores</legend>
+                    <div>
+                        <label for="">Valor materiales</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="">Mano de obra</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="">Mano de obra menos 40%</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="">Materiales en empresa</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="">AIU</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="">Mano de obra aluminero</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="">Valor total de cotizacion</label>
+                        <input type="text">
+                    </div>
+                     
+                
+                </fieldset>
+                <div class="guardar">
+                    <button class="guardar__button" type="submit" name="enviar_formulario" id="Guardar"><a class="Guardar">Guardar</a></button>
+                
+
+                        <button style="background-color:#26004b ; margin-left: 10px;" class="guardar__button" type="submit" name="enviar_formulario" id="Guardar"><a class="Guardar">Imprimir</a></button>
+                    </div>
+                </div> 
             </div>
-            <div>
-                <label for="">Mano de obra</label>
-                 <input type="text">
-            </div>
-            <div>
-                <label for="">Mano de obra menos 40%</label>
-                 <input type="text">
-            </div>
-            <div>
-                <label for="">Materiales en empresa</label>
-                 <input type="text">
-            </div>
-            <div>
-                <label for="">AIU</label>
-                 <input type="text">
-            </div>
-            <div>
-                <label for="">Mano de obra aluminero</label>
-                 <input type="text">
-            </div>
-            <div>
-                <label for="">Valor total de cotizacion</label>
-                 <input type="text">
-            </div>
-            <div class="button__cotizacion">
-                <button>
-                    <a href="">Guardar</a>
-                </button>
-            </div>    
-        </div>
         </article>
+                  
+        </section>
+        
         
 
 <?php require('./layout/footer.php') ?>

@@ -5,7 +5,7 @@
     <section class="container__registrocliente">
     <div class="contact_form">
         <div class="formulario">      
-            <h1 class="titulo__formulario">Registro de Proveedores</h1>
+            <h1 class="titulo__formulario">Actualización de Proveedores</h1>
     
         </div>
          
@@ -75,7 +75,7 @@
                 </div>   
           </div> 
                 <div class="guardar">
-                    <button  class="guardar__button"type="submit" name="enviar_formulario" id="enviar"><a class="enviar">guardar</a></button>
+                    <button  class="guardar__button"type="submit" name="enviar_formulario" id="enviar"><a class="enviar">actualizar</a></button>
                 </div>
                 <div class="aviso">
                   <span class="obligatorio"> * </span>los campos son obligatorios.
