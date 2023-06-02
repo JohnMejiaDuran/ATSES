@@ -138,34 +138,6 @@
                     <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
-          <tbody>
-                <tr>
-                    <td>Alcides Jabier</td>
-                    <td>Toloza Diaz</td>
-                    <td>cedula de ciudadania</td>
-                    <td>23976327</td>
-                    <td>Juridica</td>
-                    <td>3145903867</td>
-                    <td>arturo_prieto@hmail.com</td>
-                    <td>Bucaramanga</td>
-                    <td>crr. 20 # 23-45</td>
-                    <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
-                </tr>
-          </tbody>
-          <tbody>
-                <tr>
-                    <td>Rolando Luis</td>
-                    <td>Peinado Castañeda</td>
-                    <td>cedula de ciudadania</td>
-                    <td>23976327</td>
-                    <td>Juridica</td>
-                    <td>3145903867</td>
-                    <td>arturo_prieto@hmail.com</td>
-                    <td>Bucaramanga</td>
-                    <td>crr. 20 # 23-45</td>
-                    <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
-                </tr>
-          </tbody>  
        </table>
        <div class="guardar">
             <button class="guardar__button" type="submit" name="enviar_formulario" id="Guardar"><a class="Guardar">Guardar</a></button>

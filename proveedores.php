@@ -70,34 +70,6 @@
           </tbody>
           <tbody>
                 <tr>
-                    <td>pedro </td>
-                    <td>Sierra</td>
-                    <td>cedula de ciudadania</td>
-                    <td>23976327</td>
-                    <td>Juridica</td>
-                    <td>3145903867</td>
-                    <td>arturo_prieto@hmail.com</td>
-                    <td>Bucaramanga</td>
-                    <td>crr. 20 # 23-45</td>
-                    <td><a href="http://localhost/ATSES/actualizarproveedor.php"><span class="fas fa-edit"></span></a></td>
-                </tr>
-          </tbody>
-          <tbody>
-                <tr>
-                    <td>Fransisco Jose</td>
-                    <td>Alvear Porras</td>
-                    <td>cedula de ciudadania</td>
-                    <td>23976327</td>
-                    <td>Juridica</td>
-                    <td>3145903867</td>
-                    <td>arturo_prieto@hmail.com</td>
-                    <td>Bucaramanga</td>
-                    <td>crr. 20 # 23-45</td>
-                    <td><a href="http://localhost/ATSES/actualizarproveedor.php"><span class="fas fa-edit"></span></a></td>
-                </tr>
-          </tbody>
-          <tbody>
-                <tr>
                     <td>Sergio Andres </td>
                     <td>Pontes</td>
                     <td>cedula de ciudadania</td>
