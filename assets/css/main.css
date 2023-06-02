@@ -316,7 +316,7 @@ tbody tr:hover{
   
   .columnas div {
     display: grid;
-    grid-template-columns: repeat(2,300px);
+    grid-template-columns: 1fr;
     gap: 0;
 
     height: 40px;
@@ -486,7 +486,7 @@ tbody tr:hover{
 .section__cotizacion {
   height: auto;
 }
-.cotizaciones__contenedor {
+.cotizacion__contenedor {
   width: 80%;
  display: grid;
  grid-template-columns: repeat(3,1fr);
@@ -561,6 +561,8 @@ fieldset label {
   width: 400px;
   height: 40px;
 }
+
+
 
 
 

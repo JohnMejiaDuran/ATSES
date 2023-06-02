@@ -5,28 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="http://localhost/ATSES/assets/css/main.css">
+    <link rel="stylesheet" href="http://localhost/ATSES/assets/css/login.css">
 </head>
-<body class="body-login">
-    <section id="screen-login">
-        <div class="logo-login">
+<body id="body__login">
+    <section id="screen__login">
+        <div id="login__logo">
             <img src="http://localhost/ATSES/images/logo2.png" alt="logo" >
         </div>
-        <div class="container-login">
-            <form action="" method="" class="form-login">
-                <h1 class="login_title">Bienvenido</h1>
-                <div class="login-group">
+        <div id="form__login">
+            <form action="" method="" class="">
+                <h1 class="login__title">Bienvenido</h1>
+                <div class="login__input">
                     <label class="login-label" for="user">Usuario</label>
-                    <input class="login-input" type="text" id="user" name="user" placeholder="">
+                    <input class="input__user" type="text" id="user" name="user" placeholder="usuario">
                 </div>
-                <div class="login-group">
+                <div class="login__input">
                     <label class="login-label" for="password">Contraseña</label>
-                    <input class="login-input" type="password" name="password" id="password" placeholder=" ">
+                    <input class="input__password" type="password" name="password" id="password" placeholder="contraseña">
                 </div>
-                <div class="input-button">
-                    <a class="login-button" href="http://localhost/ATSES/index.php"><input type="button" name="Entrar" value="Entrar"></a>
+                <div class="input__button">
+                    <a href="http://localhost/ATSES/index.php"><input type="button" name="Entrar" value="Entrar"></a>
                 </div>
-                <p class="login-parragraph"><a href="#" class="login-link">¿Olvidaste tu Contraseña?</a></p>
+                <p><a href="#" class="login-link">¿Olvidaste tu Contraseña?</a></p>
             </form>
         </div>
     </section>
