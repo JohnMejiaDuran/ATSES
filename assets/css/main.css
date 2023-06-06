@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    
+
 }
 
 body {
@@ -86,6 +86,7 @@ a{
 }
 .aside__name{
   margin-left: 10px;
+  font-weight: 600;
 }
 .aside__father-link,
 .aside__son-link {
@@ -115,11 +116,11 @@ a{
     transition: .7s grid-template-rows  ;
 }
 
-
 .aside__sub{
     overflow: hidden;
     list-style: none;
 }
+
 .aside__son{
     width: 85%;
     margin-left: auto;
