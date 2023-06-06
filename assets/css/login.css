@@ -55,16 +55,22 @@
 .login__input input {
     width: 200px;
     height: 20px;
-    border-radius: 30px;
-    border: 1px solid black;
+    border: none;
+    border-bottom: 2px solid #8f8d8d;
+    outline: none;
     text-align: center;
+    transition: border-bottom 0.5s ease;
+}
+
+.login__input input:focus{
+    border-bottom: 2px solid black;
 }
 .input__button {
     text-align: center;
    
 }
-.input__button a:hover {
-    box-shadow: 0 0 10px;
+.input__button a:hover{
+    box-shadow: 2px 2px 5px black ;
 }
 .input__button input {
     font-family: 'Montserrat', sans-serif;
@@ -80,7 +86,7 @@
 }
 
 .input__button input:hover {
-    background-color:#04d8f8;
+    background-color:#381570;
 }
 
 #form__login p {

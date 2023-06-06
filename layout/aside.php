@@ -5,11 +5,11 @@
                     </a>
                     <li class="aside__father">  <!--padre-->
                         <a class="aside__father-link"  href="#"> 
-                        <i class="fa-solid fa-user-gear fa-lg" style="color: #ffffff;"></i>
+                            <i class="fa-solid fa-user-gear fa-lg" style="color: #ffffff;"></i>
                             <span class="aside__name">Gestionar Datos</span>
                             <i class="aside__father-arrow fa-solid fa-chevron-up fa-rotate-180" style="color: #ffffff;"></i>
                             <input type="checkbox" class="aside__father-check">
-                            </a>
+                        </a>
                             
                         <div class="aside__content">
                             <ul class="aside__sub">
