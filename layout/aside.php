@@ -4,10 +4,10 @@
                         <img src="http://localhost/ATSES/images/logo2.PNG" alt="" class="aside__img">
                     </a>
                     <li class="aside__father">  <!--padre-->
-                        <a class="aside__father-link"  href="#"> 
-                            <i class="fa-solid fa-user-gear fa-lg" style="color: #ffffff;"></i>
+                        <a class="aside__father-link"  href="#">
+                            <i class="aside__icons fa-solid fa-user"></i>
                             <span class="aside__name">Gestionar Datos</span>
-                            <i class="aside__father-arrow fa-solid fa-chevron-up fa-rotate-180" style="color: #ffffff;"></i>
+                            <i class="aside__icons aside__father-arrow fa-solid fa-chevron-up fa-rotate-180" style="color: #ffffff;"></i>
                             <input type="checkbox" class="aside__father-check">
                         </a>
                             
@@ -29,9 +29,9 @@
 
                     <li class="aside__father"> <!--padre-->
                         <a class="aside__father-link" href="#"> 
-                            <i class="fa-solid fa-cube fa-lg" style="color: #ffffff;"></i>
+                            <i class=" aside__icons fa-solid fa-cube fa-lg" style="color: #ffffff;"></i>
                             <span class="aside__name">Gestionar Estructuras</span> 
-                            <i class="aside__father-arrow fa-solid fa-chevron-up fa-rotate-180" style="color: #ffffff;"></i>
+                            <i class="aside__icons aside__father-arrow fa-solid fa-chevron-up fa-rotate-180" style="color: #ffffff;"></i>
                             <input type="checkbox" class="aside__father-check">
                         </a>
                         <div class="aside__content">
@@ -47,9 +47,9 @@
 
                     <li class="aside__father">
                         <a class="aside__father-link"  href="#">
-                            <i class="fa-solid fa-file fa-lg" style="color: #ffffff;"></i>
+                            <i class="aside__icons fa-solid fa-file fa-lg" style="color: #ffffff;"></i>
                             <span class="aside__name">Gestionar Cotizaciones</span>
-                            <i class="aside__father-arrow fa-solid fa-chevron-up fa-rotate-180" style="color: #ffffff;"></i>
+                            <i class="aside__icons aside__father-arrow fa-solid fa-chevron-up fa-rotate-180" style="color: #ffffff;"></i>
                             <input type="checkbox" class="aside__father-check">
                         </a> <!--padre-->
 
