@@ -99,9 +99,7 @@
           </tbody>
     
        </table>
-       <div class="guardar">
-            <button class="guardar__button" type="submit" name="enviar_formulario" id="Guardar"><a class="Guardar">Guardar</a></button>
-        </div>
+    
       </div>
   </div>
         </section>

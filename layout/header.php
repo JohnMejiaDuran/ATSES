@@ -19,6 +19,24 @@
                 <p class="header__text-welcome">Bienvenido&nbsp<span class="header__admin">Seneider</span></p>
                 <img for="perfil" src="http://localhost/ATSES/images/admi.png" alt="imagen de perfil" class="header__img-perfil">
             </a>
+            <div class="menu-container">
+                <div class="user-profile">
+                  <span class="user-name" onclick="toggleMenu()">Usuario</span>
+                  <ul class="menu" id="userMenu">
+                    <li><a href="#">Editar perfil</a></li>
+                    <li><a href="#">Configuración</a></li>
+                    <li><a href="#">Cerrar sesión</a></li>
+                  </ul>
+                </div>
+              </div>
+              <script>
+                function toggleMenu() {
+                  var menu = document.getElementById("userMenu");
+                  menu.classList.toggle("show");
+                }
+              </script>
         </header>
+
+        
         
     

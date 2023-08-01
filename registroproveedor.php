@@ -29,12 +29,19 @@
                         <option value="Pasaporte">Pasaporte</option>
                     </select>
                 </div>
+                
                 <div>
                     <label for="#documento" class="colocar_documento">Número de Documento
                       <span class="obligatorio">*</span>
                     </label>
                       <input type="text" name="introducir_Cedula o Nit" id="Cedula o Nit" required="obligatorio" placeholder="Cedula o Nit">
                 </div>
+                <div>
+                  <label for="Dirección" class="colocar_Dirección">Dirección donde Reside
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="text" name="introducir_Dirección" id="Dirección" required="obligatorio" placeholder="Escribe Dirección de Residencia.">
+                </div>     
             </div>
           
           <div class="columnas">
@@ -59,14 +66,10 @@
                 <span class="obligatorio">*</span>
               </label>
                 <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
-            </div>
+            
+              </div>
   
-                <div>
-                  <label for="Ciudad" class="colocar_Ciudad">Ciudad Donde Resides
-                    <span class="obligatorio">*</span>
-                  </label>
-                    <input type="text" name="introducir_Ciudad" id="Ciudad" required="obligatorio" placeholder="Escribe Ciudad donde Reside">
-                </div>    
+                
                 <div>
                   <label for="Dirección" class="colocar_Dirección">Dirección donde Reside
                     <span class="obligatorio">*</span>

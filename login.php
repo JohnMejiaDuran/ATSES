@@ -19,11 +19,11 @@
                 <h1 class="login__title">Bienvenido</h1>
                 <div class="login__input">
                     <label class="login-label" for="user">Usuario</label>
-                    <input class="input__user" type="text" id="user" name="user" placeholder="usuario">
+                    <input class="input__user" type="text" id="user" name="user">
                 </div>
                 <div class="login__input">
                     <label class="login-label" for="password">Contraseña</label>
-                    <input class="input__password" type="password" name="password" id="password" placeholder="contraseña">
+                    <input class="input__password" type="password" name="password" id="password" >
                 </div>
                 <div class="input__button">
                     <a href="http://localhost/ATSES/index.php"><input type="button" name="Entrar" value="Entrar"></a>

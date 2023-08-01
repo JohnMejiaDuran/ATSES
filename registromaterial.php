@@ -58,6 +58,7 @@
                 <!-- ------------------- -->
     
                 <!-- Bloque 3 -->
+                
                 <div class="bloque3">
                     
                    <div class="left">
@@ -86,7 +87,6 @@
     
             </div>   
     </section>
-
 
     
 <?php require('./layout/footer.php') ?>
