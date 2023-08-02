@@ -5,7 +5,7 @@
     <section class="container__clientes">
         <div class="clientes">
             <div class="formulario__clientes">
-                <h1 class="titulo__formulario">Base de datos Clientes y mas clientes</h1>
+                <h1 class="titulo__formulario">Base de datos Clientes</h1>
                 
             </div>
             <div class="tabla__nav">
