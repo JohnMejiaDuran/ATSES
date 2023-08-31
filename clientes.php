@@ -33,7 +33,7 @@
                     <th>T. Documento</th>
                     <th>N° de Documento</th>
                     <th>T. de Persona</th>
-                    <th>N° de Contacto</th>
+                    <th>N de Contacto</th>
                     <th>Email</th>
                     <th>Ciudad</th>
                     <th>Dirección</th>
