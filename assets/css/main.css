@@ -454,8 +454,11 @@ tbody tr:hover{
    
 /* REGISTRO MATERIAL */
 
+.misec{
+  overflow: hidden;
+}
 .registro-material{
-  width: 80%  ;
+  width: 90% ;
   background-color: #fff;
   display: grid;
   margin: auto;
@@ -465,75 +468,88 @@ tbody tr:hover{
 }
 
 /* BLOQUE 1 */
-.bloque1{
+.bloque1 {
   margin-top: 30px;
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  padding: 20px;
+  grid-template-columns: auto auto;
+  grid-column-gap: 530px; /* Espacio entre las columnas */
+  padding: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.404);
-
   line-height: 40px;
-
-  
 }
 
-.bloque1 select{
-  text-align: center;
+.bloque1 .material-select,
+.bloque1 .diseno-select {
+  display: flex;
+  align-items: center;
+}
+
+.bloque1 .selec2{
+  width: auto;
+  height: 45px;
 }
 
 .bloque1 label {
   font-weight: 600;
+  padding-right: 10px;
 }
 
-.caja label {
-  font-weight: 600;
-}
-.bloque3 label{
-  font-weight: 600;
-}
+/* BLOQUE 2 */
 .bloque2 {
-  line-height: 40px;
+  margin-top: 30px;
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  padding: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px; /* Espacio entre las columnas */
+  padding: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.404);
-}
-.bloque3{
-  line-height: 40px;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  padding: 20px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.404);
-
-
+  line-height: 20px;
 }
 
-.left{
-  
-  padding-left: 12px;
-}
-.right {
-
-  padding-left: 12px;
-}
-.caja__input {
-  float: right;
-  width: 200px;
-  height: 40px;
+.bloque2 .caja__input{
+  width: 40px;
+  height: 25px;
 }
 
-
-
-.caja__unidad {
-
+.bloque2 .b2caja {
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
 
-.comentarios textarea{
-  width: 100%;
+.bloque2 label {
+  font-weight: 600;
+  padding-right: 10px;
 }
 
+.bloque2 .seleccionar{
+  height: 45px;
+  width: 78px;
+}
+
+
+/* BLOQUE 3 */
+.bloque3 {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 350px; /* Espacio entre las columnas */
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.404);
+  line-height: 40px;
+}
+
+.bloque3 .b3caja {
+  display: flex;
+  align-items: center;
+}
+
+.bloque3 label {
+  font-weight: 600;
+  padding-right: 10px;
+}
+
+.bloque3 .cajainput3{
+  height: 45px;
+}
 
 /*COTIZACION*/
 .section__cotizacion {
