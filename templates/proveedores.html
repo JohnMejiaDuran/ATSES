@@ -1,11 +1,11 @@
-<?php require('./layout/header.php') ?>
-    
-    <?php require('./layout/aside.php') ?>
+{% extends "index.html" %}
+
+{% block content %}
 
     <section class="container__clientes">
         <div class="clientes">
             <div class="formulario__clientes">
-                <h1 class="titulo__formulario">Base de datos Clientes</h1>
+                <h1 class="titulo__formulario">Base de datos Proveedores</h1>
                 
             </div>
             <div class="tabla__nav">
@@ -21,7 +21,7 @@
             
                 <div class="tabla__button-nav">
                     <button class="button__add">
-                        <a href="http://localhost/ATSES/registrocliente.php"><i class="fa-solid fa-plus" style="color: #ffffff;">&nbsp;</i>Añadir</a>
+                        <a href="http://localhost/ATSES/registroproveedor.php"><i class="fa-solid fa-plus" style="color: #ffffff;">&nbsp;</i>Añadir</a>
                     </button>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                     <td>arturo_prieto@hmail.com</td>
                     <td>Bucaramanga</td>
                     <td>crr. 20 # 23-45</td>
-                    <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="http://localhost/ATSES/actualizarproveedor.php"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
           <tbody>
@@ -65,35 +65,7 @@
                     <td>arturo_prieto@hmail.com</td>
                     <td>Bucaramanga</td>
                     <td>crr. 20 # 23-45</td>
-                    <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
-                </tr>
-          </tbody>
-          <tbody>
-                <tr>
-                    <td>pedro </td>
-                    <td>Sierra</td>
-                    <td>cedula de ciudadania</td>
-                    <td>23976327</td>
-                    <td>Juridica</td>
-                    <td>3145903867</td>
-                    <td>arturo_prieto@hmail.com</td>
-                    <td>Bucaramanga</td>
-                    <td>crr. 20 # 23-45</td>
-                    <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
-                </tr>
-          </tbody>
-          <tbody>
-                <tr>
-                    <td>Fransisco Jose</td>
-                    <td>Alvear Porras</td>
-                    <td>cedula de ciudadania</td>
-                    <td>23976327</td>
-                    <td>Juridica</td>
-                    <td>3145903867</td>
-                    <td>arturo_prieto@hmail.com</td>
-                    <td>Bucaramanga</td>
-                    <td>crr. 20 # 23-45</td>
-                    <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="http://localhost/ATSES/actualizarproveedor.php"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
           <tbody>
@@ -107,7 +79,7 @@
                     <td>arturo_prieto@hmail.com</td>
                     <td>Bucaramanga</td>
                     <td>crr. 20 # 23-45</td>
-                    <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="http://localhost/ATSES/actualizarproveedor.php"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>  
           <tbody>
@@ -121,7 +93,7 @@
                     <td>arturo_prieto@hmail.com</td>
                     <td>Bucaramanga</td>
                     <td>crr. 20 # 23-45</td>
-                    <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="http://localhost/ATSES/actualizarproveedor.php"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
           <tbody>
@@ -135,14 +107,41 @@
                     <td>arturo_prieto@hmail.com</td>
                     <td>Bucaramanga</td>
                     <td>crr. 20 # 23-45</td>
-                    <td><a href="http://localhost/ATSES/actualizarcliente.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="http://localhost/ATSES/actualizarproveedor.php"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
+          <tbody>
+                <tr>
+                    <td>Alcides Jabier</td>
+                    <td>Toloza Diaz</td>
+                    <td>cedula de ciudadania</td>
+                    <td>23976327</td>
+                    <td>Juridica</td>
+                    <td>3145903867</td>
+                    <td>arturo_prieto@hmail.com</td>
+                    <td>Bucaramanga</td>
+                    <td>crr. 20 # 23-45</td>
+                    <td><a href="http://localhost/ATSES/actualizarproveedor.php"><span class="fas fa-edit"></span></a></td>
+                </tr>
+          </tbody>
+          <tbody>
+                <tr>
+                    <td>Rolando Luis</td>
+                    <td>Peinado Castañeda</td>
+                    <td>cedula de ciudadania</td>
+                    <td>23976327</td>
+                    <td>Juridica</td>
+                    <td>3145903867</td>
+                    <td>arturo_prieto@hmail.com</td>
+                    <td>Bucaramanga</td>
+                    <td>crr. 20 # 23-45</td>
+                    <td><a href="http://localhost/ATSES/actualizarproveedor.php"><span class="fas fa-edit"></span></a></td>
+                </tr>
+          </tbody>  
        </table>
-       
+      
       </div>
   </div>
         </section>
 
-    
-<?php require('./layout/footer.php') ?>
+{% endblock %}

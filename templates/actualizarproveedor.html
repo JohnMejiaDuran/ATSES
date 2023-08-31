@@ -1,11 +1,11 @@
-<?php require('./layout/header.php') ?>
-    
-    <?php require('./layout/aside.php') ?>
+{% extends "index.html" %}
+
+{% block content %}
 
     <section class="container__registrocliente">
     <div class="contact_form">
         <div class="formulario">      
-            <h1 class="titulo__formulario">Registro de Proveedores</h1>
+            <h1 class="titulo__formulario">Actualización de Proveedores</h1>
     
         </div>
          
@@ -41,7 +41,7 @@
                     <span class="obligatorio">*</span>
                   </label>
                     <input type="text" name="introducir_Dirección" id="Dirección" required="obligatorio" placeholder="Escribe Dirección de Residencia.">
-                </div>     
+                </div>   
             </div>
           
           <div class="columnas">
@@ -66,19 +66,18 @@
                 <span class="obligatorio">*</span>
               </label>
                 <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
-            
-              </div>
+            </div>
   
-                
                 <div>
-                  <label for="Dirección" class="colocar_Dirección">Dirección donde Reside
+                  <label for="Ciudad" class="colocar_Ciudad">Ciudad Donde Resides
                     <span class="obligatorio">*</span>
                   </label>
-                    <input type="text" name="introducir_Dirección" id="Dirección" required="obligatorio" placeholder="Escribe Dirección de Residencia.">
-                </div>   
+                    <input type="text" name="introducir_Ciudad" id="Ciudad" required="obligatorio" placeholder="Escribe Ciudad donde Reside">
+                </div>    
+               
           </div> 
                 <div class="guardar">
-                    <button  class="guardar__button"type="submit" name="enviar_formulario" id="enviar"><a class="enviar">guardar</a></button>
+                    <button  class="guardar__button"type="submit" name="enviar_formulario" id="enviar"><a class="enviar">actualizar</a></button>
                 </div>
                 <div class="aviso">
                   <span class="obligatorio"> * </span>los campos son obligatorios.
@@ -88,5 +87,4 @@
   </div>
         </section>
 
-    
-<?php require('./layout/footer.php') ?>
+{% endblock %}

@@ -1,6 +1,6 @@
-<?php require('./layout/header.php') ?>
-    
-    <?php require('./layout/aside.php') ?>
+{% extends "index.html" %}
+
+{% block content %}
 
     <section class="container__clientes">
         <div class="clientes">
@@ -122,4 +122,4 @@
         </section>
 
     
-<?php require('./layout/footer.php') ?>
+{% endblock %}
