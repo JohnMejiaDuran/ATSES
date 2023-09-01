@@ -4,11 +4,25 @@ from conectar import * #Importando conexion BD
 
 app = Flask(__name__) 
 
+@app.route('/registrocliente')
+def registro_cliente():
+    return render_template('registrocliente.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
 
 @app.route('/') 
 def inicio(): 
     return render_template('index.html')
 
+@app.route('/clientes')
+def clientes():
+    return render_template('clientes.html')
+
+@app.route('/actualizarcliente')
+def actualizar_cliente():
+    return render_template('actualizarcliente.html')
 
 @app.route('/form', methods=['GET', 'POST'])
 def registrarForm():
