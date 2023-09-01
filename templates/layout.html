@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atses soluciones estructurales</title>
+    <script src="https://kit.fontawesome.com/ad3f926aa1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+</head>
+<body >
+    <div class="container">
+        <header class="header">
+            
+            <a href="" class="header__perfil">
+                <p class="header__text-welcome">Bienvenido&nbsp<span class="header__admin">Seneider</span></p>
+                <img for="perfil" src="{{ url_for('static', filename='img/admi.png')}}" alt="imagen de perfil" class="header__img-perfil">
+            </a>
+            <div class="menu-container">                
+                <div class="user-profile">
+                  <span class="user-name" onclick="toggleMenu()">Usuario</span>
+                  <ul class="menu" id="userMenu">
+                    <li><a href="#">Editar perfil</a></li>
+                    <li><a href="#">Configuración</a></li>
+                    <li><a href="#">Cerrar sesión</a></li>
+                  </ul>
+                </div>
+              </div>
+              <script>
+                function toggleMenu() {
+                  var menu = document.getElementById("userMenu");
+                  menu.classList.toggle("show");
+                }
+              </script>
+        </header>
+        <aside class="aside"> 
+            <a href="http://localhost/ATSES/index.php" class="aside__logo"> 
+                <img src="{{ url_for('static', filename='img/logo2.PNG')}}" alt="" class="aside__img">
+            </a>
+            <li class="aside__father">  <!--padre-->
+                <a class="aside__father-link"  href="#">
+                    <i class="aside__icons fa-solid fa-user"></i>
+                    <span class="aside__name">Gestionar Datos</span>
+                    <i class="aside__icons aside__father-arrow fa-solid fa-chevron-up fa-rotate-180" style="color: #ffffff;"></i>
+                    <input type="checkbox" class="aside__father-check">
+                </a>
+                    
+                <div class="aside__content">
+                    <ul class="aside__sub">
+                        <li class="aside__son"> <!--hijo-->
+                        <a class="aside__son-link" href="/clientes">Cliente</a>
+                        </li>
+
+                        <li class="aside__son">
+                            <a class="aside__son-link" href="http://localhost/ATSES/proveedores.php">
+                                Proveedor
+                            </a> <!--hijo-->
+                        </li>
+                        
+                    </ul>
+                </div>
+            </li>   
+
+            <li class="aside__father"> <!--padre-->
+                <a class="aside__father-link" href="#"> 
+                    <i class=" aside__icons fa-solid fa-cube fa-lg" style="color: #ffffff;"></i>
+                    <span class="aside__name">Gestionar Estructuras</span> 
+                    <i class="aside__icons aside__father-arrow fa-solid fa-chevron-up fa-rotate-180" style="color: #ffffff;"></i>
+                    <input type="checkbox" class="aside__father-check">
+                </a>
+                <div class="aside__content">
+                    <ul class="aside__sub">
+                        <li class="aside__son"><a class="aside__son-link" href="http://localhost/ATSES/estructuras.php">Estructuras</a> <!--Hijo-->
+    
+                        </li>
+                        <li class="aside__son"><a class="aside__son-link" href="http://localhost/ATSES/materiales.php">Materiales</a> <!--Hijo-->
+                        </li>
+                    </ul>
+                </div>
+            </li>   
+
+            <li class="aside__father">
+                <a class="aside__father-link"  href="#">
+                    <i class="aside__icons fa-solid fa-file fa-lg" style="color: #ffffff;"></i>
+                    <span class="aside__name">Gestionar Cotizaciones</span>
+                    <i class="aside__icons aside__father-arrow fa-solid fa-chevron-up fa-rotate-180" style="color: #ffffff;"></i>
+                    <input type="checkbox" class="aside__father-check">
+                </a> <!--padre-->
+
+               <div class="aside__content">
+                   <ul class="aside__sub" >
+                   <li class="aside__son"><a class="aside__son-link" href="http://localhost/ATSES/cotizacion.php">Crear Cotización</a></li> <!--Hijo-->
+                       <li class="aside__son"><a class="aside__son-link" href="/ImprimirCotización.html">Imprimir Cotización</a></li> <!--hijo-->   
+                   </ul>
+               </div>
+        </aside>
+        
+        <main class="content">
+            {% block content %}{% endblock %}
+        </main>
+        
+        <footer class="footer">
+            <div class="footer__container">
+                <p class="footer__text">ATSES soluciones estructurales</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
