@@ -24,25 +24,24 @@ def clientes():
 def actualizar_cliente():
     return render_template('actualizarcliente.html')
 
-@app.route('/form', methods=['GET', 'POST'])
+@app.route('/registrocliente', methods=['GET', 'POST'])
 def registrarForm():
     msg =''
     if request.method == 'POST':
-        Nombre              = request.form[' Nombre ']
-        Apellido            = request.form['Apellido']
-        T_Documento         = request.form['T. Documento']
+        Nombres             = request.form['Nombres']
+        Apellidos            = request.form['Apellidos']
+        T_Documento         = request.form['T_Documento']
         id_cliente          = request.form['id_cliente']
         T_de_Persona        = request.form['T_de_persona']
         N_de_Contacto       = request.form['N_de_Contacto']
         Email               = request.form['Email']
         Ciudad              = request.form['Ciudad']
-        Dirección           = request.form['Dirección']
-        Opciones            = request.form['Opciones']  
+        Dirección           = request.form['Direccion']
             
         conexion_MySQLdb = conexionBD()
         cursor           = conexion_MySQLdb.cursor(dictionary=True)
         
-        cursor.execute('INSERT INTO cliente (Nombre , Apellido, T_Documento, id_cliente, T_de_Persona, N_de_Contacto, Email, Ciudad, Dirección, Opciones) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)', ( Nombre , Apellido, T_Documento, id_cliente, T_de_Persona, N_de_Contacto, Email, Ciudad, Dirección, Opciones))
+        cursor.execute('INSERT INTO clientes(Nombre, Apellidos, T_Documento, id_cliente, T_de_Persona, N_de_Contacto, Email, Ciudad, Dirección) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)', ( Nombres , Apellidos, T_Documento, id_cliente, T_de_Persona, N_de_Contacto, Email, Ciudad, Dirección))
             
             
         # sql         = ("INSERT INTO administradores(cedula, nombre, correo, celular, usuario, contrasena) VALUES (%s, %s, %s, %s, %s, %s)")

@@ -4,30 +4,31 @@
 
     <section class="container__registrocliente">
       <div class="contact_form">
-          <div class="formulario">      
+          <div class="formulario">
+            <a href="/clientes"><img for="perfil" src="{{ url_for('static', filename='icons/flecha.png')}}" alt="imagen de regreso" class="flecha"></a>     
               <h1 class="titulo__formulario">Registro de Clientes</h1>
           </div>
           
-          <form action="" method="post">       
+          <form action="{{ url_for('registrarForm') }}" method="POST">      
               <div class="columnas" >
                   <div>
-                      <label for="nombre" class="colocar_nombre">Nombres
+                      <label for="Nombres" class="colocar_nombre">Nombres
                         <span class="obligatorio">*</span>
                       </label>
                       
-                      <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu Nombre">
+                      <input type="text" name="Nombres" id="Nombres" required="obligatorio" placeholder="Escribe tu Nombre">
                   </div>
                   <div>
                         <label for="Apellidos" class="colocar_nombre">Apellidos
                           <span class="obligatorio">*</span>
                         </label>
-                        <input type="text" name="introducir_Apellidos" id="Apellidos" required="obligatorio" placeholder="Escribe tu Apellido">
+                        <input type="text" name="Apellidos" id="Apellidos" required="obligatorio" placeholder="Escribe tu Apellido">
                   </div>
                   <div>
-                        <label for="Documento" class="seleccionar">Tipo de Documento
+                        <label for="T_Documento" class="seleccionar">Tipo de Documento
                         <span class="obligatorio">*</span>
                       </label>
-                      <select  class="seleccion" id="Seleccionar">
+                      <select  class="seleccion" id="T_Documento" name="T_Documento">
                           <option value="Seleccionar"></option>
                           <option value="Cedula de ciudadania">Cedula de ciudadania</option>
                           <option value="Nit">Nit</option>
@@ -36,48 +37,48 @@
                       </select>
                   </div>
                   <div>
-                      <label for="#documento" class="colocar_documento">Número de Documento
+                      <label for="id_cliente" class="colocar_documento">Número de Documento
                         <span class="obligatorio">*</span>
                       </label>
-                        <input type="text" name="introducir_Cedula o Nit" id="Cedula o Nit" required="obligatorio" placeholder="Cedula o Nit">
+                        <input type="text" name="id_cliente" id="id_cliente" required="obligatorio" placeholder="Cedula o Nit">
                   </div>
               </div>
         
             <div class="columnas">
               <div>
-                  <label for="tipo de persona" class="colocar_tipo_persona">Tipo de Persona 
+                  <label for="T_de_persona" class="colocar_tipo_persona">Tipo de Persona 
                     <span class="obligatorio">*</span>
                   </label>
-                  <select  class="seleccion" id="Seleccionar">
+                  <select  class="seleccion" id="T_de_persona" name="T_de_persona">
                     <option value="seleccional"></option>
                       <option value="Persona Natural">Persona Natural</option>
                       <option value="Persona Juridica">Persona Juridica</option>
                   </select>
               </div> 
               <div>
-                <label for="telefone" class="colocar_telefono">Teléfono o Celular
+                <label for="N_de_Contacto" class="colocar_telefono">Teléfono o Celular
                   <span class="obligatorio">*</span>
                 </label>
-                  <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                  <input type="tel" name="N_de_Contacto" id="N_de_Contacto" placeholder="Escribe tu teléfono">
               </div> 
               <div>
-                <label for="email" class="colocar_email">Email
+                <label for="Email" class="colocar_email">Email
                   <span class="obligatorio">*</span>
                 </label>
-                  <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                  <input type="email" name="Email" id="Email" required="obligatorio" placeholder="Escribe tu Email">
               </div>
     
                   <div>
                     <label for="Ciudad" class="colocar_Ciudad">Ciudad Donde Resides
                       <span class="obligatorio">*</span>
                     </label>
-                      <input type="text" name="introducir_Ciudad" id="Ciudad" required="obligatorio" placeholder="Escribe Ciudad donde Reside">
+                      <input type="text" name="Ciudad" id="Ciudad" required="obligatorio" placeholder="Escribe Ciudad donde Reside">
                   </div>    
                   <div>
-                    <label for="Dirección" class="colocar_Dirección">Dirección donde Reside
+                    <label for="Direccion" class="colocar_Dirección">Dirección donde Reside
                       <span class="obligatorio">*</span>
                     </label>
-                      <input type="text" name="introducir_Dirección" id="Dirección" required="obligatorio" placeholder="Escribe Dirección de Residencia.">
+                      <input type="text" name="Direccion" id="Direccion" required="obligatorio" placeholder="Escribe Dirección de Residencia.">
                   </div>   
             </div> 
                   <div class="guardar">
