@@ -35,7 +35,7 @@
               </script>
         </header>
         <aside class="aside"> 
-            <a href="http://localhost/ATSES/index.php" class="aside__logo"> 
+            <a href="" class="aside__logo"> 
                 <img src="{{ url_for('static', filename='img/logo2.PNG')}}" alt="" class="aside__img">
             </a>
             <li class="aside__father">  <!--padre-->
@@ -53,7 +53,7 @@
                         </li>
 
                         <li class="aside__son">
-                            <a class="aside__son-link" href="http://localhost/ATSES/proveedores.php">
+                            <a class="aside__son-link" href="/proveedores">
                                 Proveedor
                             </a> <!--hijo-->
                         </li>
@@ -71,10 +71,12 @@
                 </a>
                 <div class="aside__content">
                     <ul class="aside__sub">
-                        <li class="aside__son"><a class="aside__son-link" href="http://localhost/ATSES/estructuras.php">Estructuras</a> <!--Hijo-->
+                        <li class="aside__son">
+                            <a class="aside__son-link" href="/estructuras">Estructuras</a> <!--Hijo-->
     
                         </li>
-                        <li class="aside__son"><a class="aside__son-link" href="http://localhost/ATSES/materiales.php">Materiales</a> <!--Hijo-->
+                        <li class="aside__son">
+                        <a class="aside__son-link" href="/materiales">Materiales</a> <!--Hijo-->
                         </li>
                     </ul>
                 </div>
@@ -90,7 +92,7 @@
 
                <div class="aside__content">
                    <ul class="aside__sub" >
-                   <li class="aside__son"><a class="aside__son-link" href="http://localhost/ATSES/cotizacion.php">Crear Cotización</a></li> <!--Hijo-->
+                   <li class="aside__son"><a class="aside__son-link" href="/cotizacion">Crear Cotización</a></li> <!--Hijo-->
                        <li class="aside__son"><a class="aside__son-link" href="/ImprimirCotización.html">Imprimir Cotización</a></li> <!--hijo-->   
                    </ul>
                </div>
