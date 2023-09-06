@@ -13,10 +13,6 @@ def registroestructuras():
     return render_template('registroestructuras.html')
 
 
-@app.route('/registrocliente')
-def registrocliente():
-    return render_template('registrocliente.html')
-
 @app.route('/actualizarproveedor')
 def actualizarproveedor():
     return render_template('actualizarproveedor.html')
