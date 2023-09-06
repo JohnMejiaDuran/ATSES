@@ -10,17 +10,13 @@ app = Flask(__name__)
 def login():
     return render_template('login.html')
 
-@app.route('/') 
-def inicio(): 
+@app.route('/index')
+def login():
     return render_template('index.html')
 
 @app.route('/clientes')
 def clientes():
     return render_template('clientes.html')
-
-@app.route('/actualizarcliente')
-def actualizar_cliente():
-    return render_template('actualizarcliente.html')
 
 @app.route('/registrocliente', methods=['GET', 'POST'])
 def registrarForm():
@@ -54,9 +50,84 @@ def registrarForm():
         print(cursor.rowcount, "registro insertado")
         print("1 registro insertado, id", cursor.lastrowid)
   
-        return render_template('index.html', msg='Cliente Registrado')
+        return render_template('registrocliente.html', msg='Cliente Registrado')
     else:
-        return render_template('index.html', msg = 'Metodo HTTP incorrecto')
+        return render_template('registrocliente.html', msg = 'Metodo HTTP incorrecto')
+
+@app.route('/actualizarcliente')
+def actualizar_cliente():
+    return render_template('actualizarcliente.html')
+
+@app.route('/proveedores')
+def proveedores():
+    return render_template('proveedores.html')
+
+@app.route('/registroproveedor', methods=['GET', 'POST'])
+def registrar_proveedores():
+    msg =''
+    if request.method == 'POST':
+        nombre              = request.form['nombre']
+        t_documento         = request.form['t_documento']
+        id_proveedor        = request.form['id_proveedor']
+        t_de_Persona        = request.form['t_de_persona']
+        direccion           = request.form['direccion']
+        contacto            = request.form['contacto']
+        email               = request.form['email']
+        ciudad              = request.form['ciudad']
+       
+            
+        conexion_MySQLdb = conexionBD()
+        cursor           = conexion_MySQLdb.cursor(dictionary=True)
+        
+        cursor.execute('INSERT INTO proveedores(nombre, t_documento, id_proveedor, t_de_Persona, direccion, contacto, email, ciudad) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)', (nombre, t_documento, id_proveedor, t_de_Persona, direccion, contacto, email, ciudad))
+            
+        # sql         = ("INSERT INTO administradores(cedula, nombre, correo, celular, usuario, contrasena) VALUES (%s, %s, %s, %s, %s, %s)")
+        # valores     = (cedula,nombre,correo,celular,usuario,contrasena)
+        # cursor.execute(sql, valores)
+        conexion_MySQLdb.commit()
+        
+        cursor.close() #Cerrando conexion SQL
+        conexion_MySQLdb.close() #cerrando conexion de la BD
+        msg = 'Registro con exito'
+        
+        print(cursor.rowcount, "registro insertado")
+        print("1 registro insertado, id", cursor.lastrowid)
+  
+        return render_template('registroproveedor.html', msg='Cliente Registrado')
+    else:
+        return render_template('registroproveedor.html', msg = 'Metodo HTTP incorrecto')
+    
+@app.route('/actualizarproveedor')
+def actualizarproveedor():
+    return render_template('actualizarproveedor.html')
+
+@app.route('/estructuras')
+def estructuras():
+    return render_template('estructuras.html')
+
+@app.route('/registroestructuras')
+def registroestructuras():
+    return render_template('registroestructuras.html')
+
+@app.route('/actualizarestructura')
+def actualizarestructura():
+    return render_template('actualizarestructura.html')
+
+@app.route('/materiales')
+def materiales():
+    return render_template('materiales.html')
+
+@app.route('/registromaterial')
+def registromaterial():
+    return render_template('registromaterial.html')
+
+@app.route('/actualizarmaterial')
+def actualizarmaterial():
+    return render_template('actualizarmaterial.html')
+
+@app.route('/cotizacion')
+def cotizacion():
+    return render_template('cotizacion.html')
 
 
 if __name__ == '__main__': 
