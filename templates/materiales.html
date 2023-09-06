@@ -1,11 +1,11 @@
-{% extends "index.html" %}
+{% extends "layout.html" %}
 
 {% block content %}
     <section class="container__clientes">
         <div class="clientes">
-            <div class="formulario__clientes">
-                <h1 class="titulo__formulario">Materiales</h1>
-                
+            <div class="formulario__material">
+                <a href="/"><img for="perfil" src="{{ url_for('static', filename='icons/flecha.png')}}" alt="imagen de regreso" class="flecha"></a>
+                <h1 class="titulo__materiales">Materiales</h1>
             </div>
             <div class="tabla__nav">
 
@@ -20,7 +20,7 @@
             
                 <div class="tabla__button-nav">
                     <button class="button__add">
-                        <a href="http://localhost/ATSES/registromaterial.php"><i class="fa-solid fa-plus" style="color: #ffffff;">&nbsp;</i>Añadir</a>
+                        <a href="/registromaterial"><i class="fa-solid fa-plus" style="color: #ffffff;">&nbsp;</i>Añadir</a>
                     </button>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                     <td>6 metros</td>
                     <td>35.000</td>
                     <td>40.000</td>
-                    <td><a href="http://localhost/ATSES/actualizarmaterial.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href=/actualizarmaterial><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
           <tbody>
@@ -65,7 +65,7 @@
                     <td>6 metros</td>
                     <td>35.000</td>
                     <td>40.000</td>
-                    <td><a href="http://localhost/ATSES/actualizarmaterial.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href=/actualizarmaterial><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
           <tbody>
@@ -79,7 +79,7 @@
                     <td>6 metros</td>
                     <td>35.000</td>
                     <td>40.000</td>
-                    <td><a href="http://localhost/ATSES/actualizarmaterial.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href=/actualizarmaterial><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
           <tbody>
@@ -93,7 +93,7 @@
                     <td>6 metros</td>
                     <td>35.000</td>
                     <td>40.000</td>
-                    <td><a href="http://localhost/ATSES/actualizarmaterial.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="/actualizarmaterial"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
     

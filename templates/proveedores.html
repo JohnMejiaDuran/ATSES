@@ -1,12 +1,12 @@
-{% extends "index.html" %}
+{% extends "layout.html" %}
 
 {% block content %}
 
     <section class="container__clientes">
         <div class="clientes">
             <div class="formulario__clientes">
+                <a href="/"><img for="perfil" src="{{ url_for('static', filename='icons/flecha.png')}}" alt="imagen de regreso" class="flecha"></a>
                 <h1 class="titulo__formulario">Base de datos Proveedores</h1>
-                
             </div>
             <div class="tabla__nav">
 
@@ -21,7 +21,7 @@
             
                 <div class="tabla__button-nav">
                     <button class="button__add">
-                        <a href="http://localhost/ATSES/registroproveedor.php"><i class="fa-solid fa-plus" style="color: #ffffff;">&nbsp;</i>Añadir</a>
+                        <a href="/registroproveedor"><i class="fa-solid fa-plus" style="color: #ffffff;">&nbsp;</i>Añadir</a>
                     </button>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                     <td>arturo_prieto@hmail.com</td>
                     <td>Bucaramanga</td>
                     <td>crr. 20 # 23-45</td>
-                    <td><a href="http://localhost/ATSES/actualizarproveedor.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="/actualizarproveedor"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
           <tbody>
@@ -65,7 +65,7 @@
                     <td>arturo_prieto@hmail.com</td>
                     <td>Bucaramanga</td>
                     <td>crr. 20 # 23-45</td>
-                    <td><a href="http://localhost/ATSES/actualizarproveedor.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="/actualizarproveedor"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
           <tbody>
@@ -79,7 +79,7 @@
                     <td>arturo_prieto@hmail.com</td>
                     <td>Bucaramanga</td>
                     <td>crr. 20 # 23-45</td>
-                    <td><a href="http://localhost/ATSES/actualizarproveedor.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="/actualizarproveedor"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>  
           <tbody>
@@ -93,7 +93,7 @@
                     <td>arturo_prieto@hmail.com</td>
                     <td>Bucaramanga</td>
                     <td>crr. 20 # 23-45</td>
-                    <td><a href="http://localhost/ATSES/actualizarproveedor.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="/actualizarproveedor"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
           <tbody>
@@ -107,7 +107,7 @@
                     <td>arturo_prieto@hmail.com</td>
                     <td>Bucaramanga</td>
                     <td>crr. 20 # 23-45</td>
-                    <td><a href="http://localhost/ATSES/actualizarproveedor.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="/actualizarproveedor"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
           <tbody>
@@ -121,7 +121,7 @@
                     <td>arturo_prieto@hmail.com</td>
                     <td>Bucaramanga</td>
                     <td>crr. 20 # 23-45</td>
-                    <td><a href="http://localhost/ATSES/actualizarproveedor.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="/actualizarproveedor"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>
           <tbody>
@@ -135,7 +135,7 @@
                     <td>arturo_prieto@hmail.com</td>
                     <td>Bucaramanga</td>
                     <td>crr. 20 # 23-45</td>
-                    <td><a href="http://localhost/ATSES/actualizarproveedor.php"><span class="fas fa-edit"></span></a></td>
+                    <td><a href="/actualizarproveedor"><span class="fas fa-edit"></span></a></td>
                 </tr>
           </tbody>  
        </table>
