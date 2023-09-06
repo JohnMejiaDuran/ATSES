@@ -4,9 +4,57 @@ from conectar import * #Importando conexion BD
 
 app = Flask(__name__)
 
-@app.route('/') 
-def inicio(): 
-    return render_template('index.html')
+@app.route('/registroproveedor')
+def registroproveedor():
+    return render_template('registroproveedor.html')
+
+@app.route('/registroestructuras')
+def registroestructuras():
+    return render_template('registroestructuras.html')
+
+
+@app.route('/actualizarproveedor')
+def actualizarproveedor():
+    return render_template('actualizarproveedor.html')
+
+
+@app.route('/actualizarmaterial')
+def actualizarmaterial():
+    return render_template('actualizarmaterial.html')
+
+@app.route('/actualizarestructura')
+def actualizarestructura():
+    return render_template('actualizarestructura.html')
+
+
+@app.route('/estructuras')
+def estructuras():
+    return render_template('estructuras.html')
+ 
+
+@app.route('/cotizacion')
+def cotizacion():
+    return render_template('cotizacion.html')
+
+
+@app.route('/proveedores')
+def proveedores():
+    return render_template('proveedores.html')
+
+
+@app.route('/registromaterial')
+def registromaterial():
+    return render_template('registromaterial.html')
+
+
+@app.route('/materiales')
+def materiales():
+    return render_template('materiales.html')
+
+
+@app.route('/registrocliente')
+def registro_cliente():
+    return render_template('registrocliente.html')
 
 @app.route('/login')
 def login():
