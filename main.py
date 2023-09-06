@@ -76,25 +76,24 @@ def clientes():
 def actualizar_cliente():
     return render_template('actualizarcliente.html')
 
-@app.route('/form', methods=['GET', 'POST'])
+@app.route('/registrocliente', methods=['GET', 'POST'])
 def registrarForm():
     msg =''
     if request.method == 'POST':
-        Nombre              = request.form[' Nombre ']
-        Apellido            = request.form['Apellido']
-        T_Documento         = request.form['T. Documento']
+        nombres             = request.form['nombres']
+        apellidos           = request.form['apellidos']
+        t_documento         = request.form['t_documento']
         id_cliente          = request.form['id_cliente']
-        T_de_Persona        = request.form['T_de_persona']
-        N_de_Contacto       = request.form['N_de_Contacto']
-        Email               = request.form['Email']
-        Ciudad              = request.form['Ciudad']
-        Dirección           = request.form['Dirección']
-        Opciones            = request.form['Opciones']  
+        t_de_Persona        = request.form['t_de_persona']
+        contacto            = request.form['contacto']
+        email               = request.form['email']
+        ciudad              = request.form['ciudad']
+        dirección           = request.form['direccion']
             
         conexion_MySQLdb = conexionBD()
         cursor           = conexion_MySQLdb.cursor(dictionary=True)
         
-        cursor.execute('INSERT INTO cliente (Nombre , Apellido, T_Documento, id_cliente, T_de_Persona, N_de_Contacto, Email, Ciudad, Dirección, Opciones) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)', ( Nombre , Apellido, T_Documento, id_cliente, T_de_Persona, N_de_Contacto, Email, Ciudad, Dirección, Opciones))
+        cursor.execute('INSERT INTO clientes(nombres, apellidos, t_documento, id_cliente, t_de_Persona, contacto, email, ciudad, direccion) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)', ( nombres , apellidos, t_documento, id_cliente, t_de_Persona, contacto, email, ciudad, dirección))
             
             
         # sql         = ("INSERT INTO administradores(cedula, nombre, correo, celular, usuario, contrasena) VALUES (%s, %s, %s, %s, %s, %s)")
