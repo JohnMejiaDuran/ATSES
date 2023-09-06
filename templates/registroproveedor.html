@@ -9,19 +9,19 @@
     
         </div>
          
-        <form action="" method="post">       
+        <form action="{{ url_for('registrarForm') }}" method="post">       
             <div class="columnas" >
                 <div>
-                  <label for="nombre" class="colocar_nombre">Nombre de la emprea
+                  <label for="nombre" class="colocar_nombre">Nombre de la empresa
                     <span class="obligatorio">*</span>
                   </label>
-                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Nombre Empresa">
+                    <input type="text" name="nombre" id="nombre" required="obligatorio" placeholder="Nombre Empresa">
                 </div>
                 <div>
-                    <label for="Documento" class="seleccionar">Tipo de Documento
+                    <label for="t_documento" class="seleccionar">Tipo de Documento
                       <span class="obligatorio">*</span>
                     </label>
-                    <select  class="seleccion" id="Seleccionar">
+                    <select  class="seleccion" id="t_documento" name="t_documento">
                         <option value="Seleccionar"></option>
                         <option value="Cedula de ciudadania">Cedula de ciudadania</option>
                         <option value="Nit">Nit</option>
@@ -31,10 +31,10 @@
                 </div>
                 
                 <div>
-                    <label for="#documento" class="colocar_documento">Número de Documento
+                    <label for="id_proveedor" class="colocar_documento">Número de Documento
                       <span class="obligatorio">*</span>
                     </label>
-                      <input type="text" name="introducir_Cedula o Nit" id="Cedula o Nit" required="obligatorio" placeholder="Cedula o Nit">
+                      <input type="text" name="id_proveedorCedula o nit" id="id_proveedor" required="obligatorio" placeholder="Cedula o Nit">
                 </div>
                 <div>
                   <label for="Dirección" class="colocar_Dirección">Dirección donde Reside

@@ -60,6 +60,41 @@ def registrarForm():
     else:
         return render_template('index.html', msg = 'Metodo HTTP incorrecto')
 
+@app.route('/registroproveedor', methods=['GET', 'POST'])
+def registrarForm():
+    msg =''
+    if request.method == 'POST':
+        nombre              = request.form['nombre']
+        t_documento         = request.form['t_documento']
+        id_proveedor        = request.form['id_proveedor']
+        dirección           = request.form['direccion']
+        t_de_Persona        = request.form['t_de_persona']
+        contacto            = request.form['contacto']
+        email               = request.form['email']
+        ciudad              = request.form['ciudad']
+       
+            
+        conexion_MySQLdb = conexionBD()
+        cursor           = conexion_MySQLdb.cursor(dictionary=True)
+        
+        cursor.execute('INSERT INTO clientes(nombre, t_documento, id_proveedor, direccion, t_de_Persona, contacto, email, ciudad) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)', ( nombre, t_documento, id_proveedor, dirección, t_de_Persona, contacto, email, ciudad, ))
+            
+            
+        # sql         = ("INSERT INTO administradores(cedula, nombre, correo, celular, usuario, contrasena) VALUES (%s, %s, %s, %s, %s, %s)")
+        # valores     = (cedula,nombre,correo,celular,usuario,contrasena)
+        # cursor.execute(sql, valores)
+        conexion_MySQLdb.commit()
+        
+        cursor.close() #Cerrando conexion SQL
+        conexion_MySQLdb.close() #cerrando conexion de la BD
+        msg = 'Registro con exito'
+        
+        print(cursor.rowcount, "registro insertado")
+        print("1 registro insertado, id", cursor.lastrowid)
+  
+        return render_template('index.html', msg='Cliente Registrado')
+    else:
+        return render_template('index.html', msg = 'Metodo HTTP incorrecto')
 
 if __name__ == '__main__': 
     app.run(debug=True, host='localhost', port=5500)
