@@ -52,7 +52,7 @@ def registrarForm():
     else:
         return render_template('registrocliente.html', msg = 'Metodo HTTP incorrecto')
 
-@app.route('/actualizacion_cliente')
+@app.route('/actualizarcliente', methods=['GET', 'POST'])
 def actualizarcliente():
     msg =''
     if request.method == 'POST':
@@ -69,7 +69,7 @@ def actualizarcliente():
         conexion_MySQLdb = conexionBD()
         cursor           = conexion_MySQLdb.cursor(dictionary=True)
         
-        cursor.execute('INSERT INTO actualizacion_cliente(nombres, apellidos, t_documento, id_cliente, t_de_Persona, contacto, email, ciudad, direccion) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)', ( nombres , apellidos, t_documento, id_cliente, t_de_Persona, contacto, email, ciudad, dirección))
+        cursor.execute('INSERT INTO actualizacion_cliente (nombres, apellidos, t_documento, id_cliente, t_de_Persona, contacto, email, ciudad, direccion) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)', ( nombres , apellidos, t_documento, id_cliente, t_de_Persona, contacto, email, ciudad, dirección))
             
         conexion_MySQLdb.commit()
         
