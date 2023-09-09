@@ -1,5 +1,5 @@
 from flask import Flask
-from routes.atses import atses
+from routes.clientes import atses
 
 app = Flask(__name__)
 
