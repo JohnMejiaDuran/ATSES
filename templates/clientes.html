@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-
+{% block title %}Clientes{% endblock %}
 {% block content %}
     <section class="container__clientes">
         <div class="clientes">
@@ -20,7 +20,7 @@
             
                 <div class="tabla__button-nav">
                     <button class="button__add">
-                        <a href="/registrocliente"><i class="fa-solid fa-plus" style="color: #ffffff;">&nbsp;</i>Añadir</a>
+                        <a href="{{url_for('cliente.registro_cliente')}}"><i class="fa-solid fa-plus" style="color: #ffffff;">&nbsp;</i>Añadir</a>
                     </button>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                     <td>{{cliente.direccion}}</td>
                     <td>{{cliente.ciudad}}</td>
                     <td>{{cliente.correo}}</td>
-                    <td><a href="{{ url_for('atses.actualizarcliente')}}"><span class="fas fa-edit"></span></a><a href="{{url_for('atses.eliminar_cliente',id_cliente=cliente.id_cliente)}}"><i class="fa-solid fa-trash" style="color: #190c4b;"></i></a></td>
+                    <td><a href="{{ url_for('cliente.actualizar_cliente', id_cliente=cliente.id_cliente)}}"><span class="fas fa-edit"></span></a><a href="{{url_for('cliente.eliminar_cliente',id_cliente=cliente.id_cliente)}}"><i class="fa-solid fa-trash" style="color: #190c4b;"></i></a></td>
                 </tr>
                 {% endfor %}
           </tbody>

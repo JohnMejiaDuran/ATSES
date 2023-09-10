@@ -38,7 +38,7 @@ a{
 .container .header {
     background: #26004b;
     grid-area: header;
-    height: 60px;
+    height: 40px;
 }
 /* menu usuario*/
 
@@ -111,6 +111,7 @@ a{
     border-radius: 50px;
     border: solid 2px black;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 /* ASIDE */
