@@ -12,18 +12,7 @@ class Clientes(db.Model):
     ciudad = db.Column(db.String(50))
     correo = db.Column(db.String(50))
 
-    def __init__(
-        self,
-        id_cliente,
-        tipo_doc,
-        nombre,
-        apellido,
-        tipo_persona,
-        telefono,
-        direccion,
-        ciudad,
-        correo,
-    ):
+    def __init__(self,id_cliente,tipo_doc,nombre,apellido,tipo_persona,telefono,direccion,ciudad,correo):
         self.id_cliente = id_cliente
         self.tipo_doc = tipo_doc
         self.nombre = nombre
@@ -43,7 +32,7 @@ class Proveedores(db.Model):
     ciudad = db.Column(db.String(50))
     correo = db.Column(db.String(50))
 
-    def __init__(self, id_proveedor, nombre, telefono, direccion, ciudad, correo):
+    def __init__(self,id_proveedor, nombre, telefono, direccion, ciudad, correo):
         self.id_proveedor = id_proveedor
         self.nombre = nombre
         self.telefono = telefono
