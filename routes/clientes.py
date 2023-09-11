@@ -1,6 +1,7 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, url_for, flash
 from models.atses import Clientes
 from utils.db import db
+
 
 # Creación del Blueprint para Clientes
 cliente = Blueprint("cliente", __name__)
@@ -35,11 +36,13 @@ def registro_cliente():
 
     # Crea un nuevo objeto Clientes con los datos del formulario
     nuevo_cliente = Clientes(id_cliente, tipo_doc, nombre, apellido, tipo_persona, telefono, direccion, ciudad, correo)
-
+    
     # Agrega el nuevo cliente a la sesión de la base de datos
     db.session.add(nuevo_cliente)
     # Confirma los cambios en la base de datos
     db.session.commit()
+
+    flash("Contacto guardado satisfactoriamente", 'success')    
 
     # Redirige a la página de lista de clientes después de registrar uno nuevo
     return redirect(url_for('cliente.clientes'))

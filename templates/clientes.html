@@ -16,6 +16,15 @@
 
                         <a  href=""><i  class=" fa-solid fa-magnifying-glass"></i></a>
                     </div>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages%}
+                                <div class="alert alert-{{ messages[0]['category'] }}" role="alert">
+                                    {{ messages[0] }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
                 </div>
             
                 <div class="tabla__button-nav">
