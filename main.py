@@ -127,35 +127,8 @@ def estructuras():
 
 @app.route('/registroestructuras')
 def registroestructuras():
-   msg =''
-   if request.method == 'POST':
-        nombre_est              = request.form['nombre_est']
-        diseño                  = request.form['diseño']
-        calibre                 = request.form['calibre']
-        medida                  = request.form['medida']
-        pulgada                 = request.form['pulgada']
-        valor_venta             = request.form['valor_venta']
-        comentario              = request.form['comentario']
-           
-        conexion_MySQLdb = conexionBD()
-        cursor           = conexion_MySQLdb.cursor(dictionary=True)
-        
-        cursor.execute('INSERT INTO registro_estructuras(nombre_est, diseño, calibre, medida, pulgada, valor_venta, comentario, ciudad) VALUES (%s, %s, %s, %s, %s, %s, %s)', (nombre_est, diseño, calibre, medida, pulgada, valor_venta, comentario))
-            
-        conexion_MySQLdb.commit()
-        
-        cursor.close() #Cerrando conexion SQL
-        conexion_MySQLdb.close() #cerrando conexion de la BD
-        msg = 'Registro con exito'
-        
-        print(cursor.rowcount, "registro insertado")
-        print("1 registro insertado, id", cursor.lastrowid)
-  
-        return render_template('registroestructuras.html', msg='Proveedor Registrado')
-   else:
-        return render_template('registroestructuras.html', msg = 'Metodo HTTP incorrecto')
+   
     
-
 @app.route('/actualizarestructura')
 def actualizarestructura():
     return render_template('actualizarestructura.html')
