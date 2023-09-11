@@ -1,5 +1,5 @@
-{% extends "index.html" %}
-
+{% extends "layout.html" %}
+{% block title %}Actualizar clientes{% endblock %}
 {% block content %}
     <section class="container__registrocliente">
       <div class="contact_form">
@@ -8,66 +8,112 @@
               <h1 class="titulo__formulario">Actualizar Clientes</h1>
           </div>
           
-          <form action="{{ url_for('actualizarcliente') }}" method="POST">       
-              <div class="columnas" >
-                  <div>
-                      <label for="nombres" class="colocar_nombre">Nombres<span class="obligatorio">*</span></label>
-                      <input type="text" name="nombres" id="nombres" required="obligatorio" placeholder="Escribe tu Nombre" value="{{main.nombres}}">
-                  </div>
-                  <div>
-                        <label for="apellidos" class="colocar_nombre">Apellidos<span class="obligatorio">*</span></label>
-                        <input type="text" name="apellidos" id="apellidos" required="obligatorio" placeholder="Escribe tu Apellido">
-                  </div>
-                  <div>
-                      <label for="t_documento" class="seleccionar">Tipo de Documento<span class="obligatorio">*</span></label>
-                      <select  class="seleccion__cliente" id="t_documento" name="t_documento">
-                          <option value="Seleccionar"></option>
-                          <option value="Cedula de ciudadania">Cedula de ciudadania</option>
-                          <option value="Nit">Nit</option>
-                          <option value="Cedula de Extrangeria">Cedula de Extrangeria</option>
-                          <option value="Pasaporte">Pasaporte</option>
-                      </select>
-                  </div>
-                  <div>
-                      <label for="id_cliente" class="colocar_documento">Número de Documento<span class="obligatorio">*</span></label>
-                        <input type="text" name="id_cliente" id="id_cliente" required="obligatorio" placeholder="Cedula o Nit">
-                  </div>
-              </div>
-        
-            <div class="columnas">
-              <div>
-                <label for="t_de_persona" class="colocar_tipo_persona">Tipo de Persona <span class="obligatorio">*</span></label>
-                <select  class="seleccion" id="t_de_persona" name="t_de_persona">
-                  <option value="seleccional"></option>
-                  <option value="Persona Natural">Persona Natural</option>
-                  <option value="Persona Juridica">Persona Juridica</option>
-                </select> 
-              </div> 
-              <div>
-                <label for="contacto" class="colocar_telefono">Teléfono o Celular<span class="obligatorio">*</span></label>
-                <input type="tel" name="contacto" id="contacto" placeholder="Escribe tu teléfono">
-              </div> 
-              <div>
-                <label for="email" class="colocar_email">Email<span class="obligatorio">*</span></label>
-                  <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
-              </div>
-              <div>
-                <label for="ciudad" class="colocar_Ciudad">Ciudad de residencia<span class="obligatorio">*</span></label>
-                <input type="text" name="ciudad" id="ciudad" required="obligatorio" placeholder="Escribe Ciudad donde Reside">
-              </div>    
-              <div>
-                <label for="direccion" class="colocar_Dirección">Dirección donde Reside<span class="obligatorio">*</span></label>
-                <input type="text" name="direccion" id="direccion" required="obligatorio" placeholder="Escribe Dirección de Residencia.">
-              </div>   
-            </div> 
-            
-            <div class="guardar">
-              <button  class="guardar__button" type="submit" name="enviar_formulario" id="enviar"><a class="enviar">Actualizar</a></button>
+          <form action="/actualizarcliente/{{cliente.id_cliente}}", method="POST">      
+            <div class="columnas" >
+                <div>
+                    <label for="nombre" class="colocar_nombre">Nombres
+                      <span class="obligatorio">*</span>
+                    </label>
+                    
+                    <input type="text" name="nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre" value="{{cliente.nombre}}">
+                </div>
+                <div>
+                      <label for="apellido" class="colocar_nombre">Apellidos
+                        <span class="obligatorio">*</span>
+                      </label>
+                      <input type="text" name="apellido" id="apellido" required="obligatorio" placeholder="Escribe tu apellido" value="{{cliente.apellido}}">
+                </div>
+                
+                <div>
+                      <label for="tipo_doc" class="seleccionar">Tipo de documento
+                      <span class="obligatorio">*</span>
+                    </label>
+                    
+                    <select  class="seleccion" id="tipo_doc " name="tipo_doc">
+                        <{% if cliente.tipo_doc == 'CC' %}
+                        <option value="CC" selected>Cedula de ciudadania</option>
+                        <option value="CE">Cedula de Extrangeria</option>
+                        <option value="NIT">NIT</option>
+                        <option value="Pasaporte">Pasaporte</option>
+                        {% endif %}
+                        <{% if cliente.tipo_doc == 'CE' %}
+                        <option value="CC" selected>Cedula de extrangeria</option>
+                        <option value="CE">Cedula de ciudadania</option>
+                        <option value="NIT">NIT</option>
+                        <option value="Pasaporte">Pasaporte</option>
+                        {% endif %}
+                        <{% if cliente.tipo_doc == 'NIT' %}
+                        <option value="CC" selected>NIT</option>
+                        <option value="NIT">Cedula de ciudadania</option>
+                        <option value="CE">Cedula de extrangeria</option>
+                        <option value="Pasaporte">Pasaporte</option>
+                        {% endif %}
+                        <{% if cliente.tipo_doc == 'Pasaporte' %}
+                        <option value="CC" selected>Pasaporte</option>
+                        <option value="Pasaporte">Cedula de ciudadania</option>
+                        <option value="CE">Cedula de extrangeria</option>
+                        <option value="NIT">NIT</option>
+                        {% endif %}
+                    
+                        
+                    </select>
+                    
+                </div>
+                <div>
+                    <label for="id_cliente">Número de documento
+                      <span class="obligatorio">*</span>
+                    </label>
+                      <input type="text" name="id_cliente" id="id_cliente" required="obligatorio" placeholder="Cedula o Nit" value="{{cliente.id_cliente}}">
+                </div>
             </div>
-            
-            <div class="aviso">
-              <span class="obligatorio"> * </span>los campos son obligatorios.
-            </div>          
+      
+          <div class="columnas">
+            <div>
+                <label for="tipo_persona" >Tipo de persona 
+                  <span class="obligatorio">*</span>
+                </label>
+                <select  class="seleccion" id="tipo_persona" name="tipo_persona" >
+                    {% if cliente.tipo_persona == 'Persona Natural'%}
+                    <option value="Persona Natural" selected>Persona natural</option>
+                    <option value="Persona Juridica">Persona juridica</option>
+                    {% else %}
+                    <option value="Persona Juridica" selected>Persona juridica</option>
+                    <option value="Persona Natural">Persona natural</option>
+                    {% endif %}
+                </select>
+            </div> 
+            <div>
+              <label for="telefono" >Teléfono o celular
+                <span class="obligatorio">*</span>
+              </label>
+                <input type="tel" name="telefono" id="telefono" placeholder="Escribe tu teléfono" value="{{cliente.telefono}}">
+            </div> 
+            <div>
+              <label for="correo">Email
+                <span class="obligatorio">*</span>
+              </label>
+                <input type="email" name="correo" id="correo" required="obligatorio" placeholder="Escribe tu correo " value="{{cliente.correo}}">
+            </div>
+  
+                <div>
+                  <label for="ciudad" >Ciudad de residencia
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="text" name="ciudad" id="ciudad" required="obligatorio" value="{{cliente.ciudad}}">
+                </div>
+                <div>
+                  <label for="direccion" >Direccion
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="text" name="direccion" id="direccion" required="obligatorio" value="{{cliente.direccion}}">
+                </div>  
+          </div> 
+                <div class="guardar">
+                    <button  class="guardar__button" type="submit" name="enviar_formulario" id="enviar"><a class="enviar">Guardar</a></button>
+                </div>
+                <div class="aviso">
+                  <span class="obligatorio"> * </span>los campos son obligatorios.
+                </div>          
           </form>
         </div>  
       </div>
