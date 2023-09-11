@@ -42,7 +42,9 @@ def registro_cliente():
     # Confirma los cambios en la base de datos
     db.session.commit()
 
-    flash("Contacto guardado satisfactoriamente", 'success')    
+
+    categoria = obtener_categoria_mensaje("guardado")
+    flash("Cliente guardado satisfactoriamente", categoria)    
 
     # Redirige a la página de lista de clientes después de registrar uno nuevo
     return redirect(url_for('cliente.clientes'))
@@ -66,6 +68,9 @@ def actualizar_cliente(id_cliente):
 
         # Confirma los cambios en la base de datos
         db.session.commit()
+
+        categoria = obtener_categoria_mensaje("Cliente actualizado satisfactoriamente")
+        flash("Cliente actualizado satisfactoriamente", categoria) 
         # Redirige a la página de lista de clientes después de actualizar
         return redirect(url_for('cliente.clientes'))
     
@@ -83,4 +88,19 @@ def eliminar_cliente(id_cliente):
     # Confirma los cambios en la base de datos
     db.session.commit()
     # Redirige a la página de lista de clientes después de eliminar
+    categoria = obtener_categoria_mensaje("Cliente eliminado satisfactoriamente")
+    flash("Cliente eliminado satisfactoriamente", categoria)
+
     return redirect(url_for('cliente.clientes'))
+
+
+def obtener_categoria_mensaje(mensaje):
+    # Determina la categoría basada en el contenido del mensaje
+    if "guardado" in mensaje:
+        return "success"
+    elif "actualizado" in mensaje:
+        return "warning"
+    elif "eliminado" in mensaje:
+        return "danger"
+    else:
+        return "info"

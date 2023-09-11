@@ -683,10 +683,16 @@ fieldset label {
   height: 40px;
 }
 
+.alert-success{
+  background-color: green;
+}
 
+.alert-danger{
+  background-color: red ;
+}
 
-
-
-
+.alert-warning{
+  background-color: yellow;
+}
 
 
