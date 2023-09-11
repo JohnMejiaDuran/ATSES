@@ -39,3 +39,4 @@ class Proveedores(db.Model):
         self.direccion = direccion
         self.ciudad = ciudad
         self.correo = correo
+
