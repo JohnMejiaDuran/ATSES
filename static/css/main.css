@@ -36,7 +36,7 @@ a{
 
 /* HEADER */
 .container .header {
-    background: #26004b;
+    background: #00ddff;
     grid-area: header;
     height: 60px;
 }
@@ -126,7 +126,7 @@ a{
 
 }
 .aside {
-    background:#9ef3f3;
+    background:rgba(0,221,255,255);
     grid-area: aside;
     font-size: 13px;
     
@@ -190,7 +190,7 @@ a{
 }
 /* FOOTER */
 .footer {
-    background: #26004b;
+    background: #00ddff;
     grid-area: footer;
     height: 30px;
     color: #fff;
@@ -474,113 +474,40 @@ tbody tr:hover{
 .misec{
   overflow: hidden;
 }
-.registro-material{
-  width: 90% ;
-  background-color: #fff;
-  display: grid;
-  margin: auto;
-  grid-gap: 30px;
-  padding: 0 30px;
-  height: 100%;
+
+/* Estilo para el contenedor del formulario */
+.formulario__rm {
+  max-width: 400px; /* Ajusta el ancho máximo según tus necesidades */
+  margin: 0 auto; /* Centra el formulario horizontalmente */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
-.formulario__material{
-  width: 100%;
-  background-color:  rgb(81, 22, 135);
-  display: flex;
-  justify-content: center;
-  color: white;
-}
-.titulo__materiales{
-  text-align:center;
-  font-size: 35px;
-  margin-right: 400px;
-  width: 400px;
-  }
-/* BLOQUE 1 */
-.bloque1 {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-column-gap: 530px; /* Espacio entre las columnas */
-  padding: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.404);
-  line-height: 40px;
+/* Estilo para las etiquetas (labels) */
+.remateriales {
+  font-weight: bold;
+  display: inline-block; /* Hace que las etiquetas se muestren en línea */
+  width: 30%; /* Ajusta el ancho de las etiquetas según tus necesidades */
+  text-align: right; /* Alinea el texto de las etiquetas a la derecha */
+  padding-right: 10px; /* Espacio entre etiquetas e inputs */
 }
 
-.bloque1 .material-select,
-.bloque1 .diseno-select {
-  display: flex;
-  align-items: center;
-}
-
-.bloque1 .selec2{
-  width: auto;
-  height: 45px;
-}
-
-.bloque1 label {
-  font-weight: 600;
-  padding-right: 10px;
-}
-
-/* BLOQUE 2 */
-.bloque2 {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 10px; /* Espacio entre las columnas */
-  padding: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.404);
-  line-height: 20px;
-}
-
-.bloque2 .caja__input{
-  width: 40px;
-  height: 25px;
-}
-
-.bloque2 .b2caja {
-  display: flex;
-  align-items: center;
-}
-
-.bloque2 label {
-  font-weight: 600;
-  padding-right: 10px;
-}
-
-.bloque2 .seleccionar{
-  height: 45px;
-  width: 78px;
+/* Estilo para los campos de entrada (inputs) */
+.input_rmateriales {
+  display: inline-block; /* Hace que los inputs se muestren en línea */
+  width: 60%; /* Ajusta el ancho de los inputs según tus necesidades */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px; /* Espacio entre campos */
 }
 
 
-/* BLOQUE 3 */
-.bloque3 {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-column-gap: 350px; /* Espacio entre las columnas */
-  padding: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.404);
-  line-height: 40px;
-}
 
-.bloque3 .b3caja {
-  display: flex;
-  align-items: center;
-}
 
-.bloque3 label {
-  font-weight: 600;
-  padding-right: 10px;
-}
-
-.bloque3 .cajainput3{
-  height: 45px;
-}
-
+/*-------------------*/
 /*COTIZACION*/
 .section__cotizacion {
   height: auto;
