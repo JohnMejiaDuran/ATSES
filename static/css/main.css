@@ -38,7 +38,7 @@ a{
 .container .header {
     background: #00ddff;
     grid-area: header;
-    height: 60px;
+    height: 40px;
 }
 /* menu usuario*/
 
@@ -111,6 +111,7 @@ a{
     border-radius: 50px;
     border: solid 2px black;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 /* ASIDE */
@@ -126,7 +127,8 @@ a{
 
 }
 .aside {
-    background:rgba(0,221,255,255);
+    /* background:#9ef3f3; */
+    background: #26004b;
     grid-area: aside;
     font-size: 13px;
     
@@ -315,7 +317,9 @@ button a:hover{
 
 }
 table th, table td{
-    border: 1px solid rgb(81, 22, 135);
+    border: 0px solid rgb(81, 22, 135);
+    border-bottom: 1px solid;
+    border-top: 1px solid;
     padding: 5px 10px;
 }
 table th{
@@ -336,7 +340,7 @@ table td span:nth-child(2){
 
 
 tbody tr:nth-child(odd)/*para dar estilo a las pares e impares*/
-  { background-color:rgba(248, 248, 248, 0.23) 
+  { background-color:rgba(128, 110, 110, 0.23) 
 }
 tbody tr:hover{ 
     background-color: rgba(78, 14, 188, 0.1);

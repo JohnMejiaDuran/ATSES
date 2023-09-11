@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-
+{% block title %}Clientes{% endblock %}
 {% block content %}
     <section class="container__clientes">
         <div class="clientes">
@@ -16,57 +16,54 @@
 
                         <a  href=""><i  class=" fa-solid fa-magnifying-glass"></i></a>
                     </div>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages%}
+                                <div class="alert alert-{{ messages[0]['category'] }}" role="alert">
+                                    {{ messages[0] }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
                 </div>
             
                 <div class="tabla__button-nav">
                     <button class="button__add">
-                        <a href="/registrocliente"><i class="fa-solid fa-plus" style="color: #ffffff;">&nbsp;</i>Añadir</a>
+                        <a href="{{url_for('cliente.registro_cliente')}}"><i class="fa-solid fa-plus" style="color: #ffffff;">&nbsp;</i>Añadir</a>
                     </button>
                 </div>
             </div>
         <table class="tablaclientes">
             <thead>
                 <tr>
+                    <th>N° de Documento</th>
+                    <th>T. Documento</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
-                    <th>T. Documento</th>
-                    <th>N° de Documento</th>
                     <th>T. de Persona</th>
-                    <th>N° de Contacto</th>
-                    <th>Email</th>
-                    <th>Ciudad</th>
+                    <th>Telefono</th>
                     <th>Dirección</th>
+                    <th>Ciudad</th>
+                    <th>Email</th>
                     <th>Opciones</th>  
                 </tr>
           </thead>
           <tbody>
+                {% for cliente in clientes %}
                 <tr>
-                    <td>Arturo Jose </td>
-                    <td>prieto</td>
-                    <td>cedula de ciudadania</td>
-                    <td>23976327</td>
-                    <td>Juridica</td>
-                    <td>3145903867</td>
-                    <td>arturo_prieto@hmail.com</td>
-                    <td>Bucaramanga</td>
-                    <td>crr. 20 # 23-45</td>
-                    <td><a href="/actualizarcliente"><span class="fas fa-edit"></span></a></td>
+                    <td>{{cliente.id_cliente}}</td>
+                    <td>{{cliente.tipo_doc}}</td>
+                    <td>{{cliente.nombre}}</td>
+                    <td>{{cliente.apellido}}</td>
+                    <td>{{cliente.tipo_persona}}</td>
+                    <td>{{cliente.telefono}}</td>
+                    <td>{{cliente.direccion}}</td>
+                    <td>{{cliente.ciudad}}</td>
+                    <td>{{cliente.correo}}</td>
+                    <td><a href="{{ url_for('cliente.actualizar_cliente', id_cliente=cliente.id_cliente)}}"><span class="fas fa-edit"></span></a><a href="{{url_for('cliente.eliminar_cliente',id_cliente=cliente.id_cliente)}}"><i class="fa-solid fa-trash" style="color: #190c4b;"></i></a></td>
                 </tr>
+                {% endfor %}
           </tbody>
-            <tbody>
-                <tr>
-                    <td>Maria Roberta </td>
-                    <td>Acuña</td>
-                    <td>cedula de ciudadania</td>
-                    <td>23976327</td>
-                    <td>Juridica</td>
-                    <td>3145903867</td>
-                    <td>arturo_prieto@hmail.com</td>
-                    <td>Bucaramanga</td>
-                    <td>crr. 20 # 23-45</td>
-                    <td><a href="/actualizarcliente"><span class="fas fa-edit"></span></a></td>
-                </tr>
-            </tbody>
        </table>
        
       </div>
