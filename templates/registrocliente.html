@@ -11,6 +11,25 @@
           
           <form action="/registrocliente", method="POST">      
               <div class="columnas" >
+                <div>
+                  <label for="tipo_doc" class="seleccionar">Tipo de documento
+                  <span class="obligatorio">*</span>
+                </label>
+                <select  class="seleccion" id="tipo_doc" name="tipo_doc">
+                    <option selected></option>
+                    <option value="CC">Cedula de ciudadania</option>
+                    <option value="NIT">Nit</option>
+                    <option value="CE">Cedula de Extrangeria</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                </select>
+            </div>
+            
+                <div>
+                  <label for="id_cliente" class="colocar_documento">Número de documento
+                    <span class="obligatorio">*</span>
+                  </label>
+                  <input type="text" name="id_cliente" id="id_cliente" required="obligatorio" placeholder="Cedula o Nit">
+                </div>
                   <div>
                       <label for="nombre" class="colocar_nombre">Nombres
                         <span class="obligatorio">*</span>
@@ -24,37 +43,11 @@
                         </label>
                         <input type="text" name="apellido" id="apellido" required="obligatorio" placeholder="Escribe tu apellido">
                   </div>
-                  <div>
-                        <label for="tipo_doc" class="seleccionar">Tipo de documento
-                        <span class="obligatorio">*</span>
-                      </label>
-                      <select  class="seleccion" id="tipo_doc" name="tipo_doc">
-                          <option selected></option>
-                          <option value="CC">Cedula de ciudadania</option>
-                          <option value="NIT">Nit</option>
-                          <option value="CE">Cedula de Extrangeria</option>
-                          <option value="Pasaporte">Pasaporte</option>
-                      </select>
-                  </div>
-                  <div>
-                      <label for="id_cliente" class="colocar_documento">Número de documento
-                        <span class="obligatorio">*</span>
-                      </label>
-                        <input type="text" name="id_cliente" id="id_cliente" required="obligatorio" placeholder="Cedula o Nit">
-                  </div>
+                 
               </div>
         
             <div class="columnas">
-              <div>
-                  <label for="tipo_persona" class="colocar_tipo_persona">Tipo de persona 
-                    <span class="obligatorio">*</span>
-                  </label>
-                  <select  class="seleccion" id="tipo_persona" name="tipo_persona">
-                    <option value=""></option>
-                      <option value="Persona Natural">Persona natural</option>
-                      <option value="Persona Juridica">Persona juridica</option>
-                  </select>
-              </div> 
+            
               <div>
                 <label for="telefono" class="colocar_telefono">Teléfono o celular
                   <span class="obligatorio">*</span>
