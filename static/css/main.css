@@ -10,10 +10,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-y: hidden;
 }
 section {
     flex: 1;
-    height: 100vh;
+    height: 92.5vh;
     background-color: #dedede;
 }
 
@@ -348,97 +349,78 @@ tbody tr:hover{
 
 /*  REGISTRO CLIENTE */
 
-/*h1*/
-.titulo__formulario_a{
-  text-align:center;
-  color: white;
-  font-size: 35px;
-  margin-right: 400px ;
-  width: 465px;
-  }
+.contact_form{
+  overflow-x: hidden;
+}
+.contact_form label, .contact_form input, .contact_form select {
+  font-size: 16px; /* Ajusta el tamaño de la letra según tus preferencias */
+}
 
-.flecha{
-  width:28px;
+/*h1*/
+.titulo__formulario_modal {
+  text-align: center;
+  color: #26004b;
+  font-size: 32px;
+}
+
+.flecha {
+  width: 28px;
   margin-right: 250px;
   margin-top: 8px;
 }
 
-
-  .container__registrocliente {
-    display: flex;
-    justify-content: center;
-    
-  }
-  .contact_form{  
-    height: 100%;
-    background-color: #ffffff; 
-    box-shadow: 0 0 20px;
-  }
-  
-
-  textarea{
-    background-color: #fbfbfb; 
-    width: 400px; 
-    height: 150px; 
-    border-radius: 5px;  
-    border-style: solid; 
-    border-width: 1px; 
-    border-color: rgb(81, 22, 135); 
-    margin-top: 5px;  
-    padding-left: 5px;
-    margin-bottom: 5px; 
-    padding-top: 5px; 
-   
-  }
-  .columnas{
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    
+.container__registrocliente {
+  display: flex;
+  justify-content: center;
 }
-  .columnas  div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px;
-  }
 
+.contact_form {
+  background-color: #ffffff;
+  box-shadow: 0 0 20px;
+  padding: 20px; /* Añadido para espaciado interior */
+}
 
-  .columnas label {
-    width: 200px;
-    font-weight: 600;
+/* Añadido para una sola columna */
+.contact_form label, .contact_form input, .contact_form select {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
 
-  
-  }
-  .columnas input {
-    margin: 0;
-    padding: 0; 
-    
-    height: 40px;
-  }
-  .seleccion{
-    background-color: #fbfbfb; 
-    height: 40px;  
-    border-style: solid; 
-    border-width: 1px; 
-    border-color: rgb(81, 22, 135);
+.seleccion {
+  background-color: #fbfbfb;
+  height: 40px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(81, 22, 135);
+  width: 100%; /* Añadido para que ocupe el ancho completo */
+}
 
-  }
-  .guardar__button{
-    color: white;
-    height: 45px;  
-    background-color:  rgb(81, 22, 135);
-    border-style: solid; 
-    border-radius: 5px;  
-    width: 200px;   
-    cursor: pointer;
-    margin-top: 50px;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
+.guardar__button {
+  color: white;
+  height: 45px;
+  background-color: rgb(81, 22, 135);
+  border-style: solid;
+  border-radius: 5px;
+  width: 100%; /* Añadido para que ocupe el ancho completo */
+  cursor: pointer;
+  margin-top: 20px; /* Ajustado para mejor espaciado */
+  text-transform: uppercase;
+  font-weight: 600;
+}
 
-  .guardar{
-    display: flex;
-    justify-content: center;
-  }
+.aviso {
+  text-align: center; /* Centra el texto */
+  margin-top: 10px; /* Ajustado para mejor espaciado */
+}
+
+/* Añadido para estilizar el botón de cerrar */
+#btn-cerrar-modal {
+  background-color: #ccc;
+  color: #333;
+  margin-top: 10px; /* Ajustado para mejor espaciado */
+}
+
   
   
   
@@ -695,4 +677,31 @@ fieldset label {
   background-color: yellow;
 }
 
+/* MODAL*/
 
+#modal {
+  overflow-y: hidden;
+  /* Establece el modal como un elemento de posición fija */
+  position: fixed;
+  height: 725px;
+  /* Establece un ancho fijo para el modal */
+  width: 400px; /* Ajusta el ancho según tus necesidades */
+  /* Centra vertical y horizontalmente en la pantalla */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Otros estilos para el modal, como fondo y bordes */
+  
+ 
+
+  /* Añade el efecto de sombra si lo deseas */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+
+
+#modal::backdrop {
+  /* Usa el filtro backdrop-filter para difuminar el fondo */
+  backdrop-filter: blur(5px); /* Ajusta la cantidad de desenfoque según tus preferencias */
+  background-color: inherit; /* Hereda el color de fondo de la página */
+}

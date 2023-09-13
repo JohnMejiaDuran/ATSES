@@ -14,12 +14,6 @@ def clientes():
     # Renderiza la plantilla "clientes.html" y pasa la lista de clientes como contexto
     return render_template("clientes.html", clientes=clientes)
 
-# Ruta para mostrar el formulario de registro de clientes
-@cliente.route("/registrocliente")
-def registrarcliente():
-    # Renderiza la plantilla "registrocliente.html" para registrar nuevos clientes
-    return render_template("registrocliente.html")
-
 # Ruta para procesar el formulario de registro de clientes
 @cliente.route("/registrocliente", methods=['POST'])
 def registro_cliente():
@@ -28,14 +22,13 @@ def registro_cliente():
     tipo_doc = request.form['tipo_doc']
     nombre = request.form['nombre']
     apellido = request.form['apellido']
-    tipo_persona = request.form['tipo_persona']
     telefono = request.form['telefono']
     direccion = request.form['direccion']
     ciudad = request.form['ciudad']
     correo = request.form['correo']
 
     # Crea un nuevo objeto Clientes con los datos del formulario
-    nuevo_cliente = Clientes(id_cliente, tipo_doc, nombre, apellido, tipo_persona, telefono, direccion, ciudad, correo)
+    nuevo_cliente = Clientes(id_cliente, tipo_doc, nombre, apellido, telefono, direccion, ciudad, correo)
     
     # Agrega el nuevo cliente a la sesión de la base de datos
     db.session.add(nuevo_cliente)
