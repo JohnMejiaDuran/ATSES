@@ -3,19 +3,29 @@
 {% block content %}
     <section class="container__clientes">
         <div class="clientes">
-            <div class="formulario_a">
-                <a href="/"><img for="perfil" src="{{ url_for('static', filename='icons/flecha.png')}}" alt="imagen de regreso" class="flecha"></a>
-                <h1 class="titulo__formulario_a">Base de datos Clientes</h1>
+
+            <div class="encabezado__basedatos">
+                <div class="encabezado__basedatos_flecha">
+                    <a href="/"><img for="perfil" src="{{ url_for('static', filename='icons/flecha.png')}}" alt="imagen de regreso" class="flecha"></a>
+                </div>
+                <div class="encabezado__basedatos_titulo">
+                    <h1 class="titulo__basedatos">Base de datos clientes</h1>
+                </div>
             </div>
-            <div class="tabla__nav">
 
-                <div class="tabla">
-                    <label for="#documento" class="tabla__documento">Número de Documento<span class="span">*</span></label>
-                    <input class="tabla__input"type="text" name="introducir_Cedula o Nit" id="Cedula o Nit" required="obligatorio" placeholder="Cedula o Nit">
-                    <div class="icon__search">
-
-                        <a  href=""><i  class=" fa-solid fa-magnifying-glass"></i></a>
+            <div class="barra__nav">
+                <div class="filtro">
+                    <div class="tabla__filtro_documento">
+                        <label for="#documento">Número de documento</label>
                     </div>
+                    <div class="tabla__filtro_input">
+                        <input type="text" name="introducir_Cedula o Nit" id="Cedula o Nit" required="obligatorio" placeholder="Cedula o Nit">
+                        <div><a  href=""><i  class=" fa-solid fa-magnifying-glass"></i></a></div>
+                    </div>
+                   
+                </div>
+
+                <div class="message__alert">
                     {% with messages = get_flashed_messages(with_categories=True) %}
                         {% if messages %}
                             {% for category, message in messages%}
@@ -34,6 +44,7 @@
                     </button>
                 </div>
             </div>
+
         <table class="tablaclientes">
             <thead>
                 <tr>

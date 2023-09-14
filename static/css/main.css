@@ -209,47 +209,77 @@ a{
   height: 100%;
   background-color: #dedede; 
 }
-.tabla__nav {
+.barra__nav {
   display: flex;
   justify-content: space-between;
   margin: 0 50px;
 }
-  .container__clientes {
-    width: 100%;
-    display:flex;
-    justify-content: center;
-  }
-  .formulario_a {
-    width: 100%;
-    background-color:  rgb(81, 22, 135);
-    display: flex;
-    justify-content: center;
-    color: white;
-  }
-  .tabla__input {
-    width: 300px;
-    text-align: center;
-    height: 30px;
-  }
-  
-  
-  
-  .tabla{
-    display: flex;
-    margin: 20px 0;
-  }
-
-.icon__search {
-  width: 30px;
+.encabezado__basedatos{
   display: flex;
-  align-items: center;
+  width: 100%;
+  background-color:  rgb(81, 22, 135);
+  color: white;
+  height: 50px;
+} 
+.encabezado__basedatos_flecha{
+  display: flex;
   justify-content: center;
-  background-color: rgb(81, 22, 135);
+  align-items: center;
+  width: 40px;
+  background-color:rgb(88, 90, 204);
+
+}
+.flecha {
+  width: 28px;
 }
 
-.icon__search a{
-  color: #fefefe;
+.encabezado__basedatos_titulo{
+  display: flex;
+  flex-grow: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+.filtro{
+  display: block;
+  margin: 20px 0;
+  width: 200px;
+}
+.tabla__filtro_documento {
+  text-align: center;
+}
+.tabla__filtro_input input{
+  width: 170px;
+  height: 30px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border: none;
+  text-align: center;
+}
+.tabla__filtro_input {
+  display: flex;
+}
+.tabla__filtro_input div {
+  display: flex;
+  width: 30px;
+  background-color: #007bff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.tabla__filtro_input a{
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
   font-size: 20px;
+  margin: 0 auto;
+}
+
+.tabla__filtro_input input:focus {
+  border-color: #ff5733; /* Cambia el color del borde al hacer clic */
+  box-shadow: 0 0 5px rgba(255, 87, 51, 0.5); /* Agrega una sombra al hacer clic */
+  outline: none; /* Elimina el contorno predeterminado del input en algunos navegadores */
 }
 
 .tabla__documento {
@@ -257,6 +287,7 @@ a{
   font-weight: 600;
   align-items: center;
 }
+
  
 .button__buscar, .button__guardar {
     height: 25px; 
@@ -269,13 +300,15 @@ a{
   }
 
   .button__add {
+    display:block;
     height: 30px;
-    background-color:  rgb(52, 135, 22); 
-    border-style: solid 1px;   
+    background-color:  rgb(88, 90, 204); 
+    border: 2px solid white;
     width: 100px;   
     cursor: pointer;
     float: right;
     border-radius: 5px;
+    color: white;
     
   }
   .tabla__button-nav {
@@ -363,11 +396,6 @@ tbody tr:hover{
   font-size: 32px;
 }
 
-.flecha {
-  width: 28px;
-  margin-right: 250px;
-  margin-top: 8px;
-}
 
 .container__registrocliente {
   display: flex;
@@ -665,16 +693,32 @@ fieldset label {
   height: 40px;
 }
 
+.message__alert{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alert {
+  display: flex;
+  border: 2px solid rgb(255, 255, 255);
+  height: 50px;
+  width:500px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: white;
+  
+}
 .alert-success{
-  background-color: green;
+  background-color: rgb(138, 223, 138);
 }
 
 .alert-danger{
-  background-color: red ;
+  background-color: rgb(223, 84, 84) ;
 }
 
 .alert-warning{
-  background-color: yellow;
+  background-color: rgb(231, 231, 95);
 }
 
 /* MODAL*/
