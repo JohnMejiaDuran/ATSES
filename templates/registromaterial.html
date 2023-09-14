@@ -1,96 +1,63 @@
 {% extends "index.html" %}
 
 {% block content %}
-
+<form action="/registromaterial", method="POST">
     <section class="misec">
-    <h1 class="titulo__formulario">Registro de Material</h1> 
-            
-            <div class="registro-material">
-              
-                <div class="bloque1">
-                    <div class="material-select">
-                    <label class="label1" for="seleccionar-material">Material:</label>
-                    <select class="selec2"id="seleccionar" required>
-                    <option value="" selected disabled >Seleccione Material</option>
-                    <option value="Cedula de ciudadania"required>Carbon</option>
-                    <option value="Nit" required>Acero Inoxidable</option>
-                    <option value="Cedula de extranjera" required>Madera</option>
-                    <option value="Pasaporte" required>Hierro</option>
-                   </select>
-                   </div>
-
-                    <div class="diseno-select">
-                    <label for="Diseño-Material">Diseño:</label>
-                    <select class="selec2"id="seleccionar" required> 
-                    <option value="" selected disabled >Diseño de material</option>
-                    <option value="Cedula de ciudadania">Diseño 3D</option>
-                    <option value="Nit">Diseño 2D</option>
-                    </select>
-                    </div>
-                </div>
         
-    
-                <!-- Bloque 2 -->
-                <div class="bloque2">
-                    
-                    <div class="b2caja">
-                      <label for="Calibre">Calibre:</label>
-                      <input class="caja__input" type="number" required>
-                    </div>   
-               
-                    <div class="b2caja">
-                        <label for="Medidas">Medidas:</label>
-                        <input class="caja__input" type="number" required>
-                    </div>
-    
-                    <div class="b2caja__unidad caja">
-                        <label for="mt-cm">Unidad:</label>
-                        <select class="seleccionar " required> 
-                           <option value="" selected disabled >MT</option>
-                           <option value="Cedula de ciudadania">MT</option>
-                           <option value="Nit">CM</option>
-                        </select>
-                    </div>
-                    
-                    <div class="b2caja">
-                        <label for="Pulgada">Pulgadas:</label>
-                        <input class="caja__input" type="number" required>
-                    </div>
-    
-    
-                </div>
-                <!-- ------------------- -->
-    
-                <!-- Bloque 3 -->
-                
-                <div class="bloque3">
-                    
-                   <div class="b3caja">
-                       <label for="Compra">Valor de Compra:</label>
-                       <input id="compra" class="cajainput3" name="numeros" pattern="[0-9]+" required>
-                   </div>
-               
-                   <div class="b3caja">
-                       <label for="Venta">Valor de Venta:</label>
-                       <input id="Venta" class="cajainput3" name="numeros" pattern="[0-9]+" required>
-                   </div>
-               </div>
-               <!-- -------------------------------------- -->
-               
-               <!-- COMENTARIOS -->
-                <div class="comentarios">
-                    <textarea name="mensaje" placeholder="comentarios"></textarea>
-                </div>
-               
-                
+        <div class="formulario_a">
+            <a href="/materiales"><img for="perfil" src="{{ url_for('static', filename='icons/flecha.png')}}" alt="imagen de regreso" class="flecha"></a>     
+            <h1 class="titulo__formulario_a">Registro de Material</h1>
+          </div>
+          
+        <div class="formulario__rm">
+
+            <label for="id_material" class="remateriales">Codigo
+              </label>
+                <input type="num" name="id_material"  class="input_rmateriales" required="obligatorio">
+
+            <label for="nombre" class="remateriales">Nombre
+              </label>
+                <input type="text" name="nombre" class="input_rmateriales" required="obligatorio">
+
+            <label for="tipo" class="remateriales">Tipo
+              </label>
+                <input type="text" name="tipo" class="input_rmateriales" required="obligatorio">
+
+                <label for="forma" class="remateriales">Forma
+              </label>
+                <input type="text" name="forma" class="input_rmateriales" required="obligatorio">
+
+            <label for="calibre" class="remateriales">Calibre
+              </label>
+                <input type="number" name="calibre" class="input_rmateriales" required="obligatorio">
+
+            <label for="pulgada" class="remateriales">Pulgada
+              </label>
+                <input type="number" name="pulgada" class="input_rmateriales" required="obligatorio">
+
+            <label for="medida" class="remateriales">Medida
+              </label>
+                <input type="number" name="medida" class="input_rmateriales" required="obligatorio">
+
+            <label for="id_proveedor" class="remateriales">Proveedor
+              </label>
+                <input type="number" name="id_proveedor" class="input_rmateriales" required="obligatorio">
+
+            <label for="valor" class="remateriales">Valor
+              </label>
+                <input type="number" name="valor" class="input_rmateriales" required="obligatorio">
+
+            
                 <div class="guardar">
-                    <button class="guardar__button" type="submit" name="enviar_formulario" id="Guardar"><a class="Guardar">Guardar</a></button>
-                </div>
-                
-               <!-- --------- -->
-    
-            </div>   
+                  <button  class="guardar__button" type="submit" name="enviar_formulario" id="enviar"><a class="enviar">Guardar</a></button>
+              </div>
+              <div class="aviso">
+                <span class="obligatorio"> * </span>los campos son obligatorios.
+              </div>   
+        </div>
+        
     </section>
+</form>
 
     
 {% endblock %}

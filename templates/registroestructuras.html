@@ -3,80 +3,8 @@
 {% block content %}
 
     <section >
-        
-          <h1 class="titulo__formulario">Registro de Estructuras</h1> 
-          
-        <form action="{{ url_for('registroestructuras') }}" method="POST">   
-            <div class="registro-material">
-              
-                <div class="bloque1">
-                    <label for="nombre_est">Nombre de estructura</label>
-                        <input class="caja__input"type="text" name="nombre_est" id="nombre_est">
-                        
-                
-                    <label for="diseño">Diseño de estructura</label>
-                    <input class="caja__input"type="text" name="diseño" id="diseño">
-                        
-                </div>
-        
-    
-                <!-- Bloque 2 -->
-                <div class="bloque2">
-                    
-                    <div class="caja">
-                      <label for="calibre">Calibre:</label>
-                      <input class="caja__input" type="number" required name="calibre" id="Calibre">
-                    </div>   
-               
-                    <div class="caja">
-                        <label for="medida">Medidas:</label>
-                        <input class="caja__input" type="number" required>
-                    </div>
-    
-                    <div class="caja">
-                        <label for="medida">Seleccione:</label>
-                        <select id="seleccionar1" required name="medida" id="medida"> 
-                           <option value="" selected disabled ></option>
-                           <option value="Cedula de ciudadania">MT</option>
-                           <option value="Nit">CM</option>
-                        </select>
-                    </div>
-                    
-                    <div class="caja">
-                        <label for="pulgada">Pulgadas:</label>
-                        <input class="caja__input" type="number" required name="pulgada" id="pulgada">
-                    </div>
-    
-    
-                </div>
-                <!-- ------------------- -->
-    
-                <!-- Bloque 3 -->
-                <div class="bloque3">
-                    
-        
-               
-                   <div class="left">
-                       <label for="valor_venta">Valor de Venta:</label>
-                       <input class="caja__input"id="valor_venta" class="control6" name="valor_venta" pattern="[0-9]+" required>
-                   </div>
-               </div>
-               <!-- -------------------------------------- -->
-               
-               <!-- COMENTARIOS -->
-                <div class="comentario">
-                    <textarea name="mensaje" placeholder="comentarios"></textarea>
-                </div>
-               
-                
-                <div class="guardar">
-                    <button class="guardar__button" type="submit" name="comentario" id="comentario"><a class="Guardar">Guardar</a></button>
-                </div>
-                
-               <!-- --------- -->
-    
-            </div> 
-        </form> 
+        <h1 class="titulo__formulario_a">Registro de Estructuras</h1> 
+
     </section>
 
 

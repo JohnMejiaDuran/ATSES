@@ -1,94 +1,63 @@
 {% extends "index.html" %}
 
 {% block content %}
-
-    <section >
-    <h1 class="titulo__formulario">Actualizar de Material</h1> 
-            
-            <div class="registro-material">
-              
-                <div class="bloque1">
-                    <label for="seleccionar-material">Material:</label>
-                    <select class="seleccionar"id="seleccionar" required>
-                    <option value="" selected disabled >Seleccione Material</option>
-                    <option value="Cedula de ciudadania"required>Carbon</option>
-                    <option value="Nit" required>Acero Inoxidable</option>
-                    <option value="Cedula de extranjera" required>Madera</option>
-                    <option value="Pasaporte" required>Hierro</option>
-                   </select>
-                
-                    <label for="Diseño-Material">Diseño:</label>
-                   <select class="seleccionar"id="seleccionar" required> 
-                    <option value="" selected disabled >Diseño de material</option>
-                    <option value="Cedula de ciudadania">Diseño 1</option>
-                    <option value="Nit">Diseño 2</option>
-                    <option value="Cedula de extranjera">Diseño 3</option>
-                    <option value="Pasaporte">Diseño 4</option>
-                    </select>
-                </div>
+<form action="/actualizarmaterial/{{material.id_material}}", method="POST">
+    <section class="misec">
         
-    
-                <!-- Bloque 2 -->
-                <div class="bloque2">
-                    
-                    <div class="caja">
-                      <label for="Calibre">Calibre:</label>
-                      <input class="caja__input" type="number" required>
-                    </div>   
-               
-                    <div class="caja">
-                        <label for="Medidas">Medidas:</label>
-                        <input class="caja__input" type="number" required>
-                    </div>
-    
-                    <div class="caja__unidad">
-                        <label for="mt-cm">Unidad:</label>
-                        <select id="seleccionar" required> 
-                           <option value="" selected disabled >MT</option>
-                           <option value="Cedula de ciudadania">MT</option>
-                           <option value="Nit">CM</option>
-                        </select>
-                    </div>
-                    
-                    <div class="caja">
-                        <label for="Pulgada">Pulgadas:</label>
-                        <input class="caja__input" type="number" required>
-                    </div>
-    
-    
-                </div>
-                <!-- ------------------- -->
-    
-                <!-- Bloque 3 -->
-                <div class="bloque3">
-                    
-                   <div class="left">
-                       <label for="Compra">Valor de Compra:</label>
-                       <input id="compra" class="caja__input" name="numeros" pattern="[0-9]+" required>
-                   </div>
-               
-                   <div class="right">
-                       <label for="Venta">Valor de Venta:</label>
-                       <input id="Venta" class="caja__input" name="numeros" pattern="[0-9]+" required>
-                   </div>
-               </div>
-               <!-- -------------------------------------- -->
-               
-               <!-- COMENTARIOS -->
-                <div class="comentarios">
-                    <textarea name="mensaje" placeholder="comentarios"></textarea>
-                </div>
-               
-                
-                <div class="guardar">
-                    <button class="guardar__button" type="submit" name="enviar_formulario" id="Guardar"><a class="Guardar">Actualizar</a></button>
-                </div>
-                
-               <!-- --------- -->
-    
-            </div>   
-    </section>
+        <div class="formulario_a">
+            <a href="/materiales"><img for="perfil" src="{{ url_for('static', filename='icons/flecha.png')}}" alt="imagen de regreso" class="flecha"></a>     
+            <h1 class="titulo__formulario_a">Registro de Material</h1>
+          </div>
+          
+        <div class="formulario__rm">
 
+            <label for="id_material" class="remateriales">Codigo
+              </label>
+                <input type="num" name="id_material"  class="input_rmateriales" required="obligatorio" value="{{material.id_material}}">
+
+            <label for="nombre" class="remateriales">Nombre
+              </label>
+                <input type="text" name="nombre" class="input_rmateriales" required="obligatorio" value="{{material.nombre}}">
+
+            <label for="tipo" class="remateriales">Tipo
+              </label>
+                <input type="text" name="tipo" class="input_rmateriales" required="obligatorio" value="{{material.tipo}}">
+
+                <label for="forma" class="remateriales">Forma
+              </label>
+                <input type="text" name="forma" class="input_rmateriales" required="obligatorio" value="{{material.forma}}">
+
+            <label for="calibre" class="remateriales">Calibre
+              </label>
+                <input type="number" name="calibre" class="input_rmateriales" required="obligatorio" value="{{material.calibre}}">
+
+            <label for="pulgada" class="remateriales">Pulgada
+              </label>
+                <input type="number" name="pulgada" class="input_rmateriales" required="obligatorio" value="{{material.pulgada}}">
+
+            <label for="medida" class="remateriales">Medida
+              </label>
+                <input type="number" name="medida" class="input_rmateriales" required="obligatorio" value="{{material.medida}}">
+
+            <label for="id_proveedor" class="remateriales">Proveedor
+              </label>
+                <input type="number" name="id_proveedor" class="input_rmateriales" required="obligatorio" value="{{material.id_proveedor}}">
+
+            <label for="valor" class="remateriales">Valor
+              </label>
+                <input type="number" name="valor" class="input_rmateriales" required="obligatorio" value="{{material.valor}}">
+
+            
+                <div class="guardar">
+                  <button  class="guardar__button" type="submit" name="enviar_formulario" id="enviar"><a class="enviar">Guardar</a></button>
+              </div>
+              <div class="aviso">
+                <span class="obligatorio"> * </span>los campos son obligatorios.
+              </div>   
+        </div>
+        
+    </section>
+</form>
 
     
 {% endblock %}
