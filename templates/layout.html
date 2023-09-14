@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/ad3f926aa1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
-        
+    
 </head>
 <body >
     <div class="container">
@@ -21,7 +21,7 @@
             <div class="menu-container">                
                 <div class="user-profile">                 
                   <ul class="menu" id="userMenu">
-                    <li><a href="#">Configuración</a></li>
+                    <li><a href="#">Editar perfil</a></li>
                     <li><a href="#">Cerrar sesión</a></li>
                   </ul>
                 </div>
@@ -56,7 +56,11 @@
                                 Proveedor
                             </a> <!--hijo-->
                         </li>
-                        
+                        <li class="aside__son">
+                            <a class="aside__son-link" href="/usuarios">
+                                Usuarios
+                            </a> <!--hijo-->
+                        </li>
                     </ul>
                 </div>
             </li>   
@@ -101,11 +105,13 @@
             {% block content %}{% endblock %}
         </main>
         
+
         <footer class="footer">
             <div class="footer__container">
                 <p class="footer__text">ATSES soluciones estructurales</p>
             </div>
         </footer>
     </div>
+    <script src="/static/main.js"></script>
 </body>
 </html>
