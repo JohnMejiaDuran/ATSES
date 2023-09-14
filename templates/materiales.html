@@ -17,6 +17,15 @@
                         <a  href=""><i  class=" fa-solid fa-magnifying-glass"></i></a>
                     </div>
                 </div>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages%}
+                        <div class="alert alert-{{ messages[0]['category'] }}" role="alert">
+                            {{ messages[0] }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
             
                 <div class="tabla__button-nav">
                     <button class="button__add">
@@ -24,77 +33,42 @@
                     </button>
                 </div>
             </div>
-        <table class="tablaclientes">
+        <table class="tablamateriales">
             <thead>
                 <tr>
                     
-                    <th>Código</th>
-                    <th>Material</th>
-                    <th>Clasificacion</th>
-                    <th>Diseño</th>
+                    <th>id_material</th>
+                    <th>id_proveedor</th>
+                    <th>Nombre</th>
+                    <th>tipo</th>
+                    <th>forma</th>
                     <th>Calibre</th>
                     <th>Pulgada</th>
-                    <th>Medidas</th>  
-                    <th>Valor compra</th>
-                    <th>Valor venta</th>
-                    <th>opciones</th>
+                    <th>Medidas</th>
+                    <th>valor</th>
+                    <th>opciones</th> 
+                    
                 </tr>
           </thead>
           <tbody>
+                {% for material in materiales %}
                 <tr>
-                <td>15151</td>
-                    <td>Acero</td>
-                    <td>Inoxidable</td>
-                    <td>Redondo</td>
-                    <td>18</td>
-                    <td>3</td>
-                    <td>6 metros</td>
-                    <td>35.000</td>
-                    <td>40.000</td>
-                    <td><a href=/actualizarmaterial><span class="fas fa-edit"></span></a></td>
+                    <td>{{material.id_material}}</td>
+                    <td>{{material.id_proveedor}}</td>
+                    <td>{{material.nombre}}</td>
+                    <td>{{material.tipo}}</td>
+                    <td>{{material.forma}}</td>
+                    <td>{{material.calibre}}</td>
+                    <td>{{material.pulgada}}</td>
+                    <td>{{material.medida}}</td>
+                    <td>{{material.valor}}</td>
+                    <td><a href="{{ url_for('material.actualizar_material', id_material=material.id_material) }}"><span
+                    class="fas fa-edit"></span></a> <a href="{{url_for('material.eliminar_material',id_material=material.id_material)}}"><i class="fa-solid fa-trash" style="color: #190c4b;"></i></a>
+                    </td>
+
+
                 </tr>
-          </tbody>
-          <tbody>
-          <tr>
-          <td>15151</td>
-                    <td>Acero</td>
-                    <td>Inoxidable</td>
-                    <td>Redondo</td>
-                    <td>18</td>
-                    <td>3</td>
-                    <td>6 metros</td>
-                    <td>35.000</td>
-                    <td>40.000</td>
-                    <td><a href=/actualizarmaterial><span class="fas fa-edit"></span></a></td>
-                </tr>
-          </tbody>
-          <tbody>
-          <tr>
-          <td>15151</td>
-                    <td>Acero</td>
-                    <td>Inoxidable</td>
-                    <td>Redondo</td>
-                    <td>18</td>
-                    <td>3</td>
-                    <td>6 metros</td>
-                    <td>35.000</td>
-                    <td>40.000</td>
-                    <td><a href=/actualizarmaterial><span class="fas fa-edit"></span></a></td>
-                </tr>
-          </tbody>
-          <tbody>
-          <tr>
-          <td>15151</td>
-                    <td>Acero</td>
-                    <td>Inoxidable</td>
-                    <td>Redondo</td>
-                    <td>18</td>
-                    <td>3</td>
-                    <td>6 metros</td>
-                    <td>35.000</td>
-                    <td>40.000</td>
-                    <td><a href="/actualizarmaterial"><span class="fas fa-edit"></span></a></td>
-                </tr>
+                {% endfor %}
           </tbody>
     
        </table>
