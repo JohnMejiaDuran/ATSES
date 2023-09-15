@@ -229,8 +229,17 @@ a{
   background-color:rgb(88, 90, 204);
 
 }
+.encabezado__basedatos_flecha:hover a{
+ transform: translate(-3px) scale(1.05);
+ box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.4);
+ filter: none; 
+}
+.flecha:hover a{
+  filter: blur(2px);
+}
 .flecha {
-  width: 28px;
+  font-size: 34px;
+  color: white;
 }
 
 .encabezado__basedatos_titulo{
@@ -299,18 +308,31 @@ a{
     
   }
 
+  
+  button{
+    border: none;
+  }
+
+
   .button__add {
-    display:block;
-    height: 30px;
+    height: 100px;
     background-color:  rgb(88, 90, 204); 
-    border: 2px solid white;
+    border:solid rgb(88, 90, 204);;
     width: 100px;   
     cursor: pointer;
-    float: right;
     border-radius: 5px;
     color: white;
-    
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
   }
+
+  .button__add:hover{
+    transform: translate(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.4);
+    filter: none; 
+   }
+
   .tabla__button-nav {
     display: flex;
     align-items: center;
@@ -443,11 +465,7 @@ tbody tr:hover{
 }
 
 /* Añadido para estilizar el botón de cerrar */
-#btn-cerrar-modal {
-  background-color: #ccc;
-  color: #333;
-  margin-top: 10px; /* Ajustado para mejor espaciado */
-}
+
 
   
   
