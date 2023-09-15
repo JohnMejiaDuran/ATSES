@@ -14,12 +14,6 @@ def clientes():
     # Renderiza la plantilla "clientes.html" y pasa la lista de clientes como contexto
     return render_template("clientes.html", clientes=clientes)
 
-# Ruta para mostrar el formulario de registro de clientes
-@cliente.route("/registrocliente")
-def registrarcliente():
-    # Renderiza la plantilla "registrocliente.html" para registrar nuevos clientes
-    return render_template("registrocliente.html")
-
 # Ruta para procesar el formulario de registro de clientes
 @cliente.route("/registrocliente", methods=['POST'])
 def registro_cliente():
@@ -28,21 +22,22 @@ def registro_cliente():
     tipo_doc = request.form['tipo_doc']
     nombre = request.form['nombre']
     apellido = request.form['apellido']
-    tipo_persona = request.form['tipo_persona']
     telefono = request.form['telefono']
     direccion = request.form['direccion']
     ciudad = request.form['ciudad']
     correo = request.form['correo']
 
     # Crea un nuevo objeto Clientes con los datos del formulario
-    nuevo_cliente = Clientes(id_cliente, tipo_doc, nombre, apellido, tipo_persona, telefono, direccion, ciudad, correo)
+    nuevo_cliente = Clientes(id_cliente, tipo_doc, nombre, apellido, telefono, direccion, ciudad, correo)
     
     # Agrega el nuevo cliente a la sesión de la base de datos
     db.session.add(nuevo_cliente)
     # Confirma los cambios en la base de datos
     db.session.commit()
 
-    flash("Contacto guardado satisfactoriamente", 'success')    
+
+    categoria = obtener_categoria_mensaje("guardado")
+    flash("Cliente guardado satisfactoriamente", categoria)    
 
     # Redirige a la página de lista de clientes después de registrar uno nuevo
     return redirect(url_for('cliente.clientes'))
@@ -66,6 +61,9 @@ def actualizar_cliente(id_cliente):
 
         # Confirma los cambios en la base de datos
         db.session.commit()
+
+        categoria = obtener_categoria_mensaje("Cliente actualizado satisfactoriamente")
+        flash("Cliente actualizado satisfactoriamente", categoria) 
         # Redirige a la página de lista de clientes después de actualizar
         return redirect(url_for('cliente.clientes'))
     
@@ -83,4 +81,19 @@ def eliminar_cliente(id_cliente):
     # Confirma los cambios en la base de datos
     db.session.commit()
     # Redirige a la página de lista de clientes después de eliminar
+    categoria = obtener_categoria_mensaje("Cliente eliminado satisfactoriamente")
+    flash("Cliente eliminado satisfactoriamente", categoria)
+
     return redirect(url_for('cliente.clientes'))
+
+
+def obtener_categoria_mensaje(mensaje):
+    # Determina la categoría basada en el contenido del mensaje
+    if "guardado" in mensaje:
+        return "success"
+    elif "actualizado" in mensaje:
+        return "warning"
+    elif "eliminado" in mensaje:
+        return "danger"
+    else:
+        return "info"
