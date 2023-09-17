@@ -5,9 +5,11 @@
         <div class="clientes">
 
             <div class="encabezado__basedatos">
+
                 <div class="encabezado__basedatos_flecha">
-                    <a href="/"><img for="perfil" src="{{ url_for('static', filename='icons/flecha.png')}}" alt="imagen de regreso" class="flecha"></a>
+                    <a href="/" class="flecha"><i class="fa-solid fa-arrow-left"></i></a>
                 </div>
+
                 <div class="encabezado__basedatos_titulo">
                     <h1 class="titulo__basedatos">Base de datos clientes</h1>
                 </div>
@@ -38,11 +40,11 @@
                 </div>
             
                 <div class="tabla__button-nav">
-                    <button class="button__add" id="btn-abrir-modal">
-                        <i class="fa-solid fa-plus" style="color: #ffffff;" >&nbsp;</i>Añadir
-                        <!-- "{{url_for('cliente.registro_cliente')}}" -->
+                    <button>
+                        <a class="button__add" id="btn-abrir-modal"><i class="fa-solid fa-plus" style="color: #ffffff;">&nbsp;</i>Añadir</a>
                     </button>
                 </div>
+                
             </div>
 
         <table class="tablaclientes">

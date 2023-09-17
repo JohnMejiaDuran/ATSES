@@ -3,12 +3,18 @@
 {% block content %}
 <form action="/registromaterial", method="POST">
     <section class="misec">
-        
-        <div class="formulario_a">
-            <a href="/materiales"><img for="perfil" src="{{ url_for('static', filename='icons/flecha.png')}}" alt="imagen de regreso" class="flecha"></a>     
-            <h1 class="titulo__formulario_a">Registro de Material</h1>
-          </div>
-          
+      
+      <div class="encabezado__basedatos">
+                
+        <div class="encabezado__basedatos_flecha">
+            <a href="/materiales" class="flecha"><i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+
+        <div class="encabezado__basedatos_titulo">
+            <h1 class="titulo__basedatos">Materiales</h1>
+        </div>
+    </div>
+    
         <div class="formulario__rm">
 
             <label for="id_material" class="remateriales">Codigo
