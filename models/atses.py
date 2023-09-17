@@ -38,3 +38,26 @@ class Proveedores(db.Model):
         self.ciudad = ciudad
         self.correo = correo
 
+class Materiales(db.Model):
+    id_material = db.Column(db.Integer, primary_key=True)
+    id_proveedor = db.Column(db.String(150))
+    nombre = db.Column(db.String(150))
+    tipo = db.Column(db.String(150))
+    forma = db.Column(db.String(150))
+    calibre = db.Column(db.String(20))
+    pulgada = db.Column(db.String(20))
+    medida = db.Column(db.String(20))
+    valor = db.Column(db.String(1000))
+    
+
+    def __init__(self,id_material,id_proveedor, nombre, tipo, forma, calibre, pulgada, medida,valor):
+        self.id_material = id_material
+        self.id_proveedor = id_proveedor
+        self.nombre = nombre
+        self.tipo = tipo
+        self.forma = forma
+        self.calibre = calibre
+        self.pulgada = pulgada
+        self.medida =medida
+        self.valor =valor
+       

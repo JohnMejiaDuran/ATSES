@@ -37,7 +37,7 @@ a{
 
 /* HEADER */
 .container .header {
-    background: #26004b;
+    background: #00ddff;
     grid-area: header;
     height: 40px;
 }
@@ -193,7 +193,7 @@ a{
 }
 /* FOOTER */
 .footer {
-    background: #26004b;
+    background: #00ddff;
     grid-area: footer;
     height: 30px;
     color: #fff;
@@ -209,47 +209,77 @@ a{
   height: 100%;
   background-color: #dedede; 
 }
-.tabla__nav {
+.barra__nav {
   display: flex;
   justify-content: space-between;
   margin: 0 50px;
 }
-  .container__clientes {
-    width: 100%;
-    display:flex;
-    justify-content: center;
-  }
-  .formulario_a {
-    width: 100%;
-    background-color:  rgb(81, 22, 135);
-    display: flex;
-    justify-content: center;
-    color: white;
-  }
-  .tabla__input {
-    width: 300px;
-    text-align: center;
-    height: 30px;
-  }
-  
-  
-  
-  .tabla{
-    display: flex;
-    margin: 20px 0;
-  }
-
-.icon__search {
-  width: 30px;
+.encabezado__basedatos{
   display: flex;
-  align-items: center;
+  width: 100%;
+  background-color:  rgb(81, 22, 135);
+  color: white;
+  height: 50px;
+} 
+.encabezado__basedatos_flecha{
+  display: flex;
   justify-content: center;
-  background-color: rgb(81, 22, 135);
+  align-items: center;
+  width: 40px;
+  background-color:rgb(88, 90, 204);
+
+}
+.flecha {
+  width: 28px;
 }
 
-.icon__search a{
-  color: #fefefe;
+.encabezado__basedatos_titulo{
+  display: flex;
+  flex-grow: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+.filtro{
+  display: block;
+  margin: 20px 0;
+  width: 200px;
+}
+.tabla__filtro_documento {
+  text-align: center;
+}
+.tabla__filtro_input input{
+  width: 170px;
+  height: 30px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border: none;
+  text-align: center;
+}
+.tabla__filtro_input {
+  display: flex;
+}
+.tabla__filtro_input div {
+  display: flex;
+  width: 30px;
+  background-color: #007bff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.tabla__filtro_input a{
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
   font-size: 20px;
+  margin: 0 auto;
+}
+
+.tabla__filtro_input input:focus {
+  border-color: #ff5733; /* Cambia el color del borde al hacer clic */
+  box-shadow: 0 0 5px rgba(255, 87, 51, 0.5); /* Agrega una sombra al hacer clic */
+  outline: none; /* Elimina el contorno predeterminado del input en algunos navegadores */
 }
 
 .tabla__documento {
@@ -257,6 +287,7 @@ a{
   font-weight: 600;
   align-items: center;
 }
+
  
 .button__buscar, .button__guardar {
     height: 25px; 
@@ -269,13 +300,15 @@ a{
   }
 
   .button__add {
+    display:block;
     height: 30px;
-    background-color:  rgb(52, 135, 22); 
-    border-style: solid 1px;   
+    background-color:  rgb(88, 90, 204); 
+    border: 2px solid white;
     width: 100px;   
     cursor: pointer;
     float: right;
     border-radius: 5px;
+    color: white;
     
   }
   .tabla__button-nav {
@@ -363,11 +396,6 @@ tbody tr:hover{
   font-size: 32px;
 }
 
-.flecha {
-  width: 28px;
-  margin-right: 250px;
-  margin-top: 8px;
-}
 
 .container__registrocliente {
   display: flex;
@@ -460,113 +488,40 @@ tbody tr:hover{
 .misec{
   overflow: hidden;
 }
-.registro-material{
-  width: 90% ;
-  background-color: #fff;
-  display: grid;
-  margin: auto;
-  grid-gap: 30px;
-  padding: 0 30px;
-  height: 100%;
+
+/* Estilo para el contenedor del formulario */
+.formulario__rm {
+  max-width: 400px; /* Ajusta el ancho máximo según tus necesidades */
+  margin: 0 auto; /* Centra el formulario horizontalmente */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
-.formulario__material{
-  width: 100%;
-  background-color:  rgb(81, 22, 135);
-  display: flex;
-  justify-content: center;
-  color: white;
-}
-.titulo__materiales{
-  text-align:center;
-  font-size: 35px;
-  margin-right: 400px;
-  width: 400px;
-  }
-/* BLOQUE 1 */
-.bloque1 {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-column-gap: 530px; /* Espacio entre las columnas */
-  padding: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.404);
-  line-height: 40px;
+/* Estilo para las etiquetas (labels) */
+.remateriales {
+  font-weight: bold;
+  display: inline-block; /* Hace que las etiquetas se muestren en línea */
+  width: 30%; /* Ajusta el ancho de las etiquetas según tus necesidades */
+  text-align: right; /* Alinea el texto de las etiquetas a la derecha */
+  padding-right: 10px; /* Espacio entre etiquetas e inputs */
 }
 
-.bloque1 .material-select,
-.bloque1 .diseno-select {
-  display: flex;
-  align-items: center;
-}
-
-.bloque1 .selec2{
-  width: auto;
-  height: 45px;
-}
-
-.bloque1 label {
-  font-weight: 600;
-  padding-right: 10px;
-}
-
-/* BLOQUE 2 */
-.bloque2 {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 10px; /* Espacio entre las columnas */
-  padding: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.404);
-  line-height: 20px;
-}
-
-.bloque2 .caja__input{
-  width: 40px;
-  height: 25px;
-}
-
-.bloque2 .b2caja {
-  display: flex;
-  align-items: center;
-}
-
-.bloque2 label {
-  font-weight: 600;
-  padding-right: 10px;
-}
-
-.bloque2 .seleccionar{
-  height: 45px;
-  width: 78px;
+/* Estilo para los campos de entrada (inputs) */
+.input_rmateriales {
+  display: inline-block; /* Hace que los inputs se muestren en línea */
+  width: 60%; /* Ajusta el ancho de los inputs según tus necesidades */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px; /* Espacio entre campos */
 }
 
 
-/* BLOQUE 3 */
-.bloque3 {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-column-gap: 350px; /* Espacio entre las columnas */
-  padding: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.404);
-  line-height: 40px;
-}
 
-.bloque3 .b3caja {
-  display: flex;
-  align-items: center;
-}
 
-.bloque3 label {
-  font-weight: 600;
-  padding-right: 10px;
-}
-
-.bloque3 .cajainput3{
-  height: 45px;
-}
-
+/*-------------------*/
 /*COTIZACION*/
 .section__cotizacion {
   height: auto;
@@ -665,16 +620,32 @@ fieldset label {
   height: 40px;
 }
 
+.message__alert{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alert {
+  display: flex;
+  border: 2px solid rgb(255, 255, 255);
+  height: 50px;
+  width:500px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: white;
+  
+}
 .alert-success{
-  background-color: green;
+  background-color: rgb(138, 223, 138);
 }
 
 .alert-danger{
-  background-color: red ;
+  background-color: rgb(223, 84, 84) ;
 }
 
 .alert-warning{
-  background-color: yellow;
+  background-color: rgb(231, 231, 95);
 }
 
 /* MODAL*/
