@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-{% block title %}Clientes{% endblock %}
+{% block title %}Usuarios{% endblock %}
 {% block content %}
     <section class="container__clientes">
         <div class="clientes">
@@ -11,7 +11,7 @@
                 </div>
 
                 <div class="encabezado__basedatos_titulo">
-                    <h1 class="titulo__basedatos">Base de datos clientes</h1>
+                    <h1 class="titulo__basedatos">Base de datos Usuarios</h1>
                 </div>
             </div>
 
@@ -51,80 +51,63 @@
             <thead>
                 <tr>
                     <th>N° de Documento</th>
-                    <th>T. Documento</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Telefono</th>
-                    <th>Dirección</th>
-                    <th>Ciudad</th>
+                    <th>Nombre Completo</th>
                     <th>Email</th>
+                    <th>Contacto</th>
+                    <th>Usuario</th>
+                    <th>Contraseña</th>
                     <th>Opciones</th>  
                 </tr>
           </thead>
           <tbody>
-                {% for cliente in clientes %}
+                {% for usuario in usuarios %}
                 <tr>
-                    <td>{{cliente.id_cliente}}</td>
-                    <td>{{cliente.tipo_doc}}</td>
-                    <td>{{cliente.nombre}}</td>
-                    <td>{{cliente.apellido}}</td>
-                    <td>{{cliente.telefono}}</td>
-                    <td>{{cliente.direccion}}</td>
-                    <td>{{cliente.ciudad}}</td>
-                    <td>{{cliente.correo}}</td>
-                    <td><a href="{{ url_for('cliente.actualizar_cliente', id_cliente=cliente.id_cliente)}}"><span class="fas fa-edit"></span></a><a href="{{url_for('cliente.eliminar_cliente',id_cliente=cliente.id_cliente)}}"><i class="fa-solid fa-trash" style="color: #190c4b;"></i></a></td>
+                    <td>{{usuario.id_vendedor}}</td>
+                    <td>{{usuario.nombre}}</td>
+                    <td>{{usuario.email}}</td>
+                    <td>{{usuario.contacto}}</td>
+                    <td>{{usuario.usuario}}</td>
+                    <td>{{usuario.contrasena}}</td>
+                   
+                    <td><a href="{{ url_for('usuario.actualizar_vendedor', id_vendedor=usuario.id_vendedor)}}"><span class="fas fa-edit"></span></a><a href="{{url_for('usuario.eliminar_usuario',id_vendedor=usuario.id_vendedor)}}"><i class="fa-solid fa-trash" style="color: #190c4b;"></i></a></td>
                 </tr>
                 {% endfor %}
           </tbody>
        </table>
        <dialog id="modal">
-        <form class="contact_form" action="/registrocliente" method="POST">
-          <h1 class="titulo__formulario_modal">Registro clientes</h1>
-          <label for="tipo_doc" class="seleccionar">Tipo de documento
-              <span class="obligatorio">*</span>
-          </label>
-          <select class="seleccion" id="tipo_doc" name="tipo_doc">
-              <option selected></option>
-              <option value="CC">Cedula de ciudadania</option>
-              <option value="NIT">Nit</option>
-              <option value="CE">Cedula de Extrangeria</option>
-              <option value="Pasaporte">Pasaporte</option>
-          </select>
+        <form class="contact_form" action="/registrovendedor" method="POST">
+          <h1 class="titulo__formulario_modal">Registro Vendedores</h1>
       
-          <label for="id_cliente" class="colocar_documento">Número de documento
+          <label for="id_vendedor" class="colocar_documento">Número de documento
               <span class="obligatorio">*</span>
           </label>
-          <input type="text" name="id_cliente" id="id_cliente" required="obligatorio" placeholder="Cedula o Nit">
+          <input type="text" name="id_vendedor" id="id_vendedor" required="obligatorio" placeholder="Cedula">
       
           <label for="nombre" class="colocar_nombre">Nombres
               <span class="obligatorio">*</span>
           </label>
-          <input type="text" name="nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
-      
-          <label for="apellido" class="colocar_nombre">Apellidos
+          <input type="text" name="nombre" id="nombre" required="obligatorio" placeholder="nombre completo">
+
+          <label for="email" class="colocar_email">Email
+            <span class="obligatorio">*</span>
+        </label>
+        <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu correo ">
+            
+          <label for="contacto" class="colocar_telefono">Teléfono o celular
               <span class="obligatorio">*</span>
           </label>
-          <input type="text" name="apellido" id="apellido" required="obligatorio" placeholder="Escribe tu apellido">
+          <input type="tel" name="contacto" id="contacto" placeholder="Escribe tu teléfono">
       
-          <label for="telefono" class="colocar_telefono">Teléfono o celular
+                
+          <label for="usuario" class="colocar_Usuario">Usuario
               <span class="obligatorio">*</span>
           </label>
-          <input type="tel" name="telefono" id="telefono" placeholder="Escribe tu teléfono">
+          <input type="text" name="usuario" id="usuario" required="obligatorio" placeholder="usuario ">
       
-          <label for="correo" class="colocar_email">Email
+          <label for="contrasena" class="colocar_contraseña">Contraseña
               <span class="obligatorio">*</span>
           </label>
-          <input type="email" name="correo" id="correo" required="obligatorio" placeholder="Escribe tu correo ">
-      
-          <label for="ciudad" class="colocar_Ciudad">Ciudad de residencia
-              <span class="obligatorio">*</span>
-          </label>
-          <input type="text" name="ciudad" id="ciudad" required="obligatorio" placeholder="Ciudad ">
-      
-          <label for="direccion" class="colocar_Dirección">Dirección
-              <span class="obligatorio">*</span>
-          </label>
-          <input type="text" name="direccion" id="direccion" required="obligatorio" placeholder="Escribe tu dirección.">
+          <input type="text" name="contrasena" id="contrasena" required="obligatorio" placeholder="**********">
       
           <div class="guardar">
               <button class="guardar__button" type="submit" name="enviar_formulario" id="enviar">Guardar</button>
