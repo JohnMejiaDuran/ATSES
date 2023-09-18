@@ -18,10 +18,10 @@
             <div class="barra__nav">
                 <div class="filtro">
                     <div class="tabla__filtro_documento">
-                        <label for="#documento">Número de documento</label>
+                        <label for="#id_material">Id De Material</label>
                     </div>
                     <div class="tabla__filtro_input">
-                        <input type="text" name="introducir_Cedula o Nit" id="Cedula o Nit" required="obligatorio" placeholder="Cedula o Nit">
+                        <input type="text"  required="obligatorio" placeholder="ID">
                         <div><a  href=""><i  class=" fa-solid fa-magnifying-glass"></i></a></div>
                     </div>
                    
@@ -38,7 +38,7 @@
             
                 <div class="tabla__button-nav">
                     <button>
-                        <a class="button__add" href="/registromaterial"><i class="fa-solid fa-plus" style="color: #ffffff;">&nbsp;</i>Añadir</a>
+                        <a class="button__add" id="btn-abrir-modal"><i class="fa-solid fa-plus" style="color: #ffffff;">&nbsp;</i>Añadir</a>
                     </button>
                 </div>
                 
@@ -82,6 +82,68 @@
           </tbody>
     
        </table>
+       <dialog id="modal">
+        <form action="/registromaterial", method="POST">
+            <section class="misec">
+              
+              <div class="encabezado__basedatos">
+                        
+                <div class="encabezado__basedatos_flecha">
+                    <a href="/materiales" class="equis"><i class="fa-solid fa-x"></i></i></a>
+                </div>
+        
+                <div class="encabezado__basedatos_titulo">
+                    <h1 class="titulo__basedatos">Registro de Materiales</h1>
+                </div>
+            </div>
+            
+                <div class="formulario__rm">
+        
+                    <label for="id_material" class="remateriales">Codigo
+                      </label>
+                        <input type="num" name="id_material"  class="input_rmateriales" required="obligatorio">
+        
+                    <label for="nombre" class="remateriales">Nombre
+                      </label>
+                        <input type="text" name="nombre" class="input_rmateriales" required="obligatorio">
+        
+                    <label for="tipo" class="remateriales">Tipo
+                      </label>
+                        <input type="text" name="tipo" class="input_rmateriales" required="obligatorio">
+        
+                        <label for="forma" class="remateriales">Forma
+                      </label>
+                        <input type="text" name="forma" class="input_rmateriales" required="obligatorio">
+        
+                    <label for="calibre" class="remateriales">Calibre
+                      </label>
+                        <input type="number" name="calibre" class="input_rmateriales" required="obligatorio">
+        
+                    <label for="pulgada" class="remateriales">Pulgada
+                      </label>
+                        <input type="number" name="pulgada" class="input_rmateriales" required="obligatorio">
+        
+                    <label for="medida" class="remateriales">Medida
+                      </label>
+                        <input type="number" name="medida" class="input_rmateriales" required="obligatorio">
+        
+                    <label for="id_proveedor" class="remateriales">Proveedor
+                      </label>
+                        <input type="number" name="id_proveedor" class="input_rmateriales" required="obligatorio">
+        
+                    <label for="valor" class="remateriales">Valor
+                      </label>
+                        <input type="number" name="valor" class="input_rmateriales" required="obligatorio">
+        
+                    
+                        <div class="guardar">
+                          <button  class="guardar__button" type="submit" name="enviar_formulario" id="enviar"><a class="enviar">Guardar</a></button>
+                      </div>
+                </div>
+                
+            </section>
+        </form>
+       </dialog>
     
       </div>
   </div>

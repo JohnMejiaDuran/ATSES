@@ -6,6 +6,8 @@ from routes.usuarios import usuario
 from routes.materiales import material
 from routes.login import login
 from utils.db import bcrypt
+from routes.estructuras import estructura
+
 
 app = Flask(__name__)
 
@@ -24,3 +26,4 @@ app.register_blueprint(proveedor)
 app.register_blueprint(usuario)
 app.register_blueprint(material)
 app.register_blueprint(login)
+app.register_blueprint(estructura)

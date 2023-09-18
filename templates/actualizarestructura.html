@@ -2,78 +2,100 @@
 
 {% block content %}
 
-    <section >
-        <h1 class="titulo__formulario">Actualizar Estructuras</h1> 
+<form action="/registroestructura", method="POST">
+    <section class="misec">
+      
+      <div class="encabezado__basedatos">
+                
+        <div class="encabezado__basedatos_flecha">
+            <a href="/estructuras" class="equis"><i class="fa-solid fa-x"></i></i></a>
+        </div>
+
+        <div class="encabezado__basedatos_titulo">
+            <h1 class="titulo__basedatos">Actualizar Estructura</h1>
+        </div>
+    </div>
+    
+        <div class="formulario__re">
+
+            <label for="id_fabricacion" class="remateriales">Codigo Fabricacion
+            </label>
+              <input type="number" name="id_fabricacion" class="input_rmateriales" required="obligatorio" value="{{estructura.id_fabricacion}}">
+
+            <label for="diseño" class="remateriales">Diseño
+              </label>
+              <select class="input_rmateriales" id="diseño"  name="diseño">
+                <{% if estructura.diseño == '3D' %}
+                <option value="3D">3D</option>
+                <option value="2D">2D</option>
+                {% endif %}
+
+                <{% if estructura.diseño == '2D' %}
+                <option value="3D">3D</option>
+                <option value="2D">2D</option>
+                {% endif %}
+            </select>
+
+            <label for="nombre" class="remateriales">Nombre
+              </label>
+                <input type="text" name="nombre" class="input_rmateriales" required="obligatorio" value="{{estructura.nombre}}">
+
+            <label for="id_material" class="remateriales">Material
+              </label>
+              <select class="input_rmateriales" id="id_material" name="id_material">
+                <{% if estructura.id_material == 'Barilla' %}
+                <option value="Barilla">Barilla</option>
+                <option value="Acero">Acero</option>
+                {% endif %}
+                
+                <{% if estructura.id_material == 'Acero' %}
+                <option value="Barilla">Barilla</option>
+                <option value="Acero">Acero</option>
+                {% endif %}
+            </select>
+
+                <label for="altura" class="remateriales">Altura
+              </label>
+                <input type="number" name="altura" class="input_rmateriales" required="obligatorio" value="{{estructura.altura}}">
+
+            <label for="ancho" class="remateriales">Ancho
+              </label>
+                <input type="number" name="ancho" class="input_rmateriales" required="obligatorio" value="{{estructura.ancho}}">
+
+            <label for="margen_perdidamaterial" class="remateriales">Margen de perdida de material
+              </label>
+                <input type="number" name="margen_perdidamaterial" class="input_rmateriales" required="obligatorio" value="{{estructura.margen_perdidamaterial}}">
+
+                <label for="costoenmaterial" class="remateriales">Costo en material
+                </label>
+                  <input type="number" name="costoenmaterial" class="input_rmateriales" required="obligatorio" value="{{estructura.costoenmaterial}}">
+
+            <label for="valor_insumos" class="remateriales">Valor-insumos
+              </label>
+                <input type="number" name="valor_insumos" class="input_rmateriales" required="obligatorio" value="{{estructura.valor_insumos}}">
+
+            <label for="valor_6manodeobra" class="remateriales">Mano de obra
+              </label>
+                <input type="number" name="valor_6manodeobra" class="input_rmateriales" required="obligatorio" value="{{estructura.valor_6manodeobra}}">
+
+            <label for="descripciondeaccesorios" class="remateriales">Descripcion Accesorios
+              </label>
+                <input type="text" name="descripciondeaccesorios" class="input_rmateriales" required="obligatorio" value="{{estructura.descripciondeaccesorios}}">
+
+                <label for="valor_5deaccesorios" class="remateriales">Valor Accesorios
+                </label>
+                  <input type="number" name="valor_5deaccesorios"class="input_rmateriales" required="obligatorio" value="{{estructura.valor_5deaccesorios}}">
+
+                  <label for="precio_venta" class="remateriales">Precio venta 
+                </label>
+                  <input type="number" name="precio_venta" class="input_rmateriales" required="obligatorio" value="{{estructura.precio_venta}}">
             
-            <div class="registro-material">
-              
-                <div class="bloque1">
-                    <label for="seleccionar-material">Nombre de estructura</label>
-                        <input class="caja__input"type="text" name="" id="">
-                        
-                
-                    <label for="Diseño-Material">Diseño de estructura</label>
-                    <input class="caja__input"type="text" name="" id="">
-                        
-                </div>
-        
-    
-                <!-- Bloque 2 -->
-                <div class="bloque2">
-                    
-                    <div class="caja">
-                      <label for="Calibre">Calibre:</label>
-                      <input class="caja__input" type="number" required>
-                    </div>   
-               
-                    <div class="caja">
-                        <label for="Medidas">Medidas:</label>
-                        <input class="caja__input" type="number" required>
-                    </div>
-    
-                    <div class="caja">
-                        <label for="mt-cm">Seleccione:</label>
-                        <select id="seleccionar1" required> 
-                           <option value="" selected disabled >MT</option>
-                           <option value="Cedula de ciudadania">MT</option>
-                           <option value="Nit">CM</option>
-                        </select>
-                    </div>
-                    
-                    <div class="caja">
-                        <label for="Pulgada">Pulgadas:</label>
-                        <input class="caja__input" type="number" required>
-                    </div>
-    
-    
-                </div>
-                <!-- ------------------- -->
-    
-                <!-- Bloque 3 -->
-                <div class="bloque3">
-                    
-        
-               
-                   <div class="left">
-                       <label for="Venta">Valor de Venta:</label>
-                       <input class="caja__input"id="Venta" class="control6" name="numeros" pattern="[0-9]+" required>
-                   </div>
-               </div>
-               <!-- -------------------------------------- -->
-               
-               <!-- COMENTARIOS -->
-                <div class="comentarios">
-                    <textarea name="mensaje" placeholder="comentarios"></textarea>
-                </div>
-               
-                
                 <div class="guardar">
-                    <button class="guardar__button" type="submit" name="enviar_formulario" id="Guardar"><a class="Guardar">Actualizar</a></button>
-                </div>
-                
-               <!-- --------- -->
-    
-            </div>   
+                  <button  class="guardar__button" type="submit" name="enviar_formulario" id="enviar"><a class="enviar">Guardar</a></button>
+              </div>
+        </div>
+        
     </section>
+</form>
 
 {% endblock %}
