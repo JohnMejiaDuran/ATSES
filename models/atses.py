@@ -60,4 +60,35 @@ class Materiales(db.Model):
         self.pulgada = pulgada
         self.medida =medida
         self.valor =valor
+        
+class Estructuras(db.Model):
+    id_material = db.Column(db.String(150))
+    id_fabricacion = db.Column(db.Integer, primary_key=True)
+    diseño = db.Column(db.String(150))
+    nombre = db.Column(db.String(150))
+    precio_venta = db.Column(db.String(150))
+    valor_5deaccesorios = db.Column(db.String(150))
+    descripciondeaccesorios = db.Column(db.String(20))
+    valor_6manodeobra = db.Column(db.String(150))
+    altura = db.Column(db.String(150))
+    ancho = db.Column(db.String(150))
+    margen_perdidamaterial = db.Column(db.String(150))
+    costoenmaterial = db.Column(db.String(150))
+    valor_insumos = db.Column(db.String(150))
+    
+
+    def __init__(self,id_fabricacion,id_material,diseño, nombre, precio_venta , valor_5deaccesorios,descripcciondeaccserios,valro_6demanodeobra,altura,ancho,margen_perdidamaterial,costoenmaterial,valor_insumos):
+        self.id_material = id_material
+        self.id_fabricacion = id_fabricacion
+        self.diseño = diseño 
+        self.nombre = nombre
+        self.precio_venta = precio_venta 
+        self.valor_5deaccesorios = valor_5deaccesorios
+        self.descripciondeaccesorios=descripcciondeaccserios
+        self.valor_6manodeobra = valro_6demanodeobra
+        self.altura = altura
+        self.ancho = ancho
+        self.margen_perdidamaterial = margen_perdidamaterial
+        self.costoenmaterial = costoenmaterial
+        self.valor_insumos = valor_insumos
        

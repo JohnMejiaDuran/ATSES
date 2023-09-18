@@ -234,12 +234,23 @@ a{
  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.4);
  filter: none; 
 }
+
 .flecha:hover a{
   filter: blur(2px);
 }
+
 .flecha {
   font-size: 34px;
   color: white;
+}
+
+.equis{
+  font-size: 34px;
+  color: red;
+}
+
+.equis:hover a{
+  filter: blur(2px);
 }
 
 .encabezado__basedatos_titulo{
@@ -504,7 +515,7 @@ tbody tr:hover{
 /* REGISTRO MATERIAL */
 
 .misec{
-  overflow: hidden;
+  overflow: auto;
 }
 
 /* Estilo para el contenedor del formulario */
@@ -536,8 +547,20 @@ tbody tr:hover{
   margin-bottom: 10px; /* Espacio entre campos */
 }
 
+/*-----------------*/
+/*Regitro estructuras*/
 
+.formulario__re {
+  height: 600px;
+  width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+  margin: 0 auto; /* Centra el formulario horizontalmente */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
 
+/*-----------------*/
 
 /*-------------------*/
 /*COTIZACION*/
@@ -669,13 +692,13 @@ fieldset label {
 /* MODAL*/
 
 #modal {
-  overflow-y: hidden;
+
   /* Establece el modal como un elemento de posición fija */
-  position: fixed;
-  height: 725px;
+  height: 1025px;
   /* Establece un ancho fijo para el modal */
-  width: 400px; /* Ajusta el ancho según tus necesidades */
+  width: 800px; /* Ajusta el ancho según tus necesidades */
   /* Centra vertical y horizontalmente en la pantalla */
+  overflow: auto; /* Agrega desplazamiento vertical si es necesario */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -694,3 +717,4 @@ fieldset label {
   backdrop-filter: blur(5px); /* Ajusta la cantidad de desenfoque según tus preferencias */
   background-color: inherit; /* Hereda el color de fondo de la página */
 }
+
