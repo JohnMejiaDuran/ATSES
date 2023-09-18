@@ -1,7 +1,10 @@
 from utils.db import db
-
-
+from flask_login import UserMixin
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, SubmitField
+from wtforms.validators import InputRequired, Length, ValidationError
 class Clientes(db.Model):
+
     id_cliente = db.Column(db.Integer, primary_key=True)
     tipo_doc = db.Column(db.String(10))
     nombre = db.Column(db.String(150))
@@ -80,4 +83,36 @@ class Materiales(db.Model):
         self.pulgada = pulgada
         self.medida =medida
         self.valor =valor
-       
+
+class User(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(20), nullable=False, unique=True)
+    password = db.Column(db.String(20), nullable=False)
+
+
+class RegisterForm(FlaskForm):
+    username = StringField(validators=[InputRequired(), Length(
+        min=4, max=20)], render_kw={"placeholder": "Usario"})
+    
+
+    password = PasswordField(validators=[InputRequired(), Length(
+        min=4, max=20)], render_kw={"placeholder": "Contraseña"})
+    submit = SubmitField("Registro")    
+
+    def validar_usuario(self, username):
+        existe_usuario = User.query.filter_by(
+            username=username.data).first()
+        
+        if existe_usuario:
+            raise ValidationError(
+                "Ya existe este usuario. Por favor selecciona otro."
+            )
+
+class LoginForm(FlaskForm):
+    username = StringField(validators=[InputRequired(), Length(
+        min=4, max=20)], render_kw={"placeholder": "Username"})
+    
+
+    password = PasswordField(validators=[InputRequired(), Length(
+        min=4, max=20)], render_kw={"placeholder": "Password"})
+    submit = SubmitField("Login")    
