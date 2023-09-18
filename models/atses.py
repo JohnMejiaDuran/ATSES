@@ -37,6 +37,26 @@ class Proveedores(db.Model):
         self.direccion = direccion
         self.ciudad = ciudad
         self.correo = correo
+        
+        
+class Usuarios(db.Model):
+    id_vendedor = db.Column(db.Integer, primary_key=True)
+    nombre = db.Column(db.String(150))
+    email = db.Column(db.String(50))
+    contacto = db.Column(db.String(20))
+    usuario = db.Column(db.String(100))
+    contrasena = db.Column(db.String(50))
+    
+
+    def __init__(self,id_vendedor,nombre,email,contacto,usuario,contrasena):
+        self.id_vendedor = id_vendedor
+        self.nombre = nombre
+        self.email = email     
+        self.contacto = contacto
+        self.usuario = usuario
+        self.contrasena = contrasena
+       
+
 
 class Materiales(db.Model):
     id_material = db.Column(db.Integer, primary_key=True)
