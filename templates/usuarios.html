@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+{% block title %}Usuarios{% endblock %}
+{% block content %}
+    <section class="container__clientes">
+        <div class="clientes">
+
+            <div class="encabezado__basedatos">
+
+                <div class="encabezado__basedatos_flecha">
+                    <a href="/" class="flecha"><i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+
+                <div class="encabezado__basedatos_titulo">
+                    <h1 class="titulo__basedatos">Base de datos Usuarios</h1>
+                </div>
+            </div>
+
+            <div class="barra__nav">
+                <div class="filtro">
+                    <div class="tabla__filtro_documento">
+                        <label for="#documento">Número de documento</label>
+                    </div>
+                    <div class="tabla__filtro_input">
+                        <input type="text" name="introducir_Cedula o Nit" id="Cedula o Nit" required="obligatorio" placeholder="Cedula o Nit">
+                        <div><a  href=""><i  class=" fa-solid fa-magnifying-glass"></i></a></div>
+                    </div>
+                   
+                </div>
+
+                <div class="message__alert">
+                    {% with messages = get_flashed_messages(with_categories=True) %}
+                        {% if messages %}
+                            {% for category, message in messages%}
+                                <div class="alert alert-{{category}}" role="alert">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                </div>
+            
+                <div class="tabla__button-nav">
+                    <button>
+                        <a class="button__add" id="btn-abrir-modal"><i class="fa-solid fa-plus" style="color: #ffffff;">&nbsp;</i>Añadir</a>
+                    </button>
+                </div>
+                
+            </div>
+
+        <table class="tablaclientes">
+            <thead>
+                <tr>
+                    <th>N° de Documento</th>
+                    <th>Nombre Completo</th>
+                    <th>Email</th>
+                    <th>Contacto</th>
+                    <th>Usuario</th>
+                    <th>Contraseña</th>
+                    <th>Opciones</th>  
+                </tr>
+          </thead>
+          <tbody>
+                {% for usuario in usuarios %}
+                <tr>
+                    <td>{{usuario.id_vendedor}}</td>
+                    <td>{{usuario.nombre}}</td>
+                    <td>{{usuario.email}}</td>
+                    <td>{{usuario.contacto}}</td>
+                    <td>{{usuario.usuario}}</td>
+                    <td>{{usuario.contrasena}}</td>
+                   
+                    <td><a href="{{ url_for('usuario.actualizar_vendedor', id_vendedor=usuario.id_vendedor)}}"><span class="fas fa-edit"></span></a><a href="{{url_for('usuario.eliminar_usuario',id_vendedor=usuario.id_vendedor)}}"><i class="fa-solid fa-trash" style="color: #190c4b;"></i></a></td>
+                </tr>
+                {% endfor %}
+          </tbody>
+       </table>
+       <dialog id="modal">
+        <form class="contact_form" action="/registrovendedor" method="POST">
+          <h1 class="titulo__formulario_modal">Registro Vendedores</h1>
+      
+          <label for="id_vendedor" class="colocar_documento">Número de documento
+              <span class="obligatorio">*</span>
+          </label>
+          <input type="text" name="id_vendedor" id="id_vendedor" required="obligatorio" placeholder="Cedula">
+      
+          <label for="nombre" class="colocar_nombre">Nombres
+              <span class="obligatorio">*</span>
+          </label>
+          <input type="text" name="nombre" id="nombre" required="obligatorio" placeholder="nombre completo">
+
+          <label for="email" class="colocar_email">Email
+            <span class="obligatorio">*</span>
+        </label>
+        <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu correo ">
+            
+          <label for="contacto" class="colocar_telefono">Teléfono o celular
+              <span class="obligatorio">*</span>
+          </label>
+          <input type="tel" name="contacto" id="contacto" placeholder="Escribe tu teléfono">
+      
+                
+          <label for="usuario" class="colocar_Usuario">Usuario
+              <span class="obligatorio">*</span>
+          </label>
+          <input type="text" name="usuario" id="usuario" required="obligatorio" placeholder="usuario ">
+      
+          <label for="contrasena" class="colocar_contraseña">Contraseña
+              <span class="obligatorio">*</span>
+          </label>
+          <input type="text" name="contrasena" id="contrasena" required="obligatorio" placeholder="**********">
+      
+          <div class="guardar">
+              <button class="guardar__button" type="submit" name="enviar_formulario" id="enviar">Guardar</button>
+          </div>
+          <div class="cerrar">
+              <button id="btn-cerrar-modal" class="guardar__button" >Cerrar</button>
+          </div>
+          <div class="aviso">
+              <span class="obligatorio"> * </span>los campos son obligatorios.
+          </div>
+      </form>
+      </dialog>
+        </section>
+        
+{% endblock %}

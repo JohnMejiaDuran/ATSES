@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% block title %}Actualizar vendedor{% endblock %}
+{% block content %}
+    <section class="container__registrovendedor">
+      <div class="contact_form">
+          <div class="formulario">
+            <a href="/usuarios"><img for="perfil" src="{{ url_for('static', filename='icons/flecha.png')}}" alt="imagen de regreso" class="flecha"></a>
+              <h1 class="titulo__formulario">Actualizar Vendedor</h1>
+          </div>
+          
+          <form action="/actualizarvendedor/{{usuario.id_vendedor}}", method="POST">      
+            <div class="columnas" >
+                <div>
+                    <label for="id_vendedor">Número de documento
+                      <span class="obligatorio">*</span>
+                    </label>
+                      <input type="text" name="id_vendedor" id="id_vendedor" required="obligatorio" placeholder="Cedula o Nit" value="{{usuario.id_vendedor}}">
+                </div>
+                <div>
+                    <label for="nombre" class="colocar_nombre">Nombre Completo
+                      <span class="obligatorio">*</span>
+                    </label>
+                    
+                    <input type="text" name="nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre" value="{{usuario.nombre}}">
+                </div>
+                    
+                
+            </div>
+      
+          <div class="columnas">
+            
+            <div>
+              <label for="cotacto" >Teléfono o celular
+                <span class="obligatorio">*</span>
+              </label>
+                <input type="tel" name="cotacto" id="cotacto" placeholder="Escribe tu teléfono" value="{{usuario.contacto}}">
+            </div> 
+            <div>
+              <label for="email">Email
+                <span class="obligatorio">*</span>
+              </label>
+                <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu correo " value="{{usuario.email}}">
+            </div>
+  
+                <div>
+                  <label for="usuario" >Usuario
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="text" name="usuario" id="usuario" required="obligatorio" value="{{usuario.usuario}}">
+                </div>
+                <div>
+                  <label for="contrasena" >Contraseña
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="text" name="contrasena" id="contrasena" required="obligatorio" value="{{usuario.contrasena}}">
+                </div>  
+          </div> 
+                <div class="guardar">
+                    <button  class="guardar__button" type="submit" name="enviar_formulario" id="enviar"><a class="enviar">Guardar</a></button>
+                </div>
+                <div class="aviso">
+                  <span class="obligatorio"> * </span>los campos son obligatorios.
+                </div>          
+          </form>
+        </div>  
+      </div>
+    </section>
+
+{% endblock %}
