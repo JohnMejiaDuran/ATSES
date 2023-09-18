@@ -15,6 +15,9 @@ body {
 section {
     flex: 1;
     height: 92.5vh;
+    background-image: url(../img/estructuras.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: #dedede;
 }
 
@@ -133,11 +136,13 @@ a{
     grid-area: aside;
     font-size: 13px;
     
+    
 }
 
 .aside__father {
     list-style: none;  
     margin-top: 10px;
+    
 }
 .aside__name{
   margin-left: 10px;
@@ -150,7 +155,7 @@ a{
     
     display: flex;
     align-items: center;
-    position: relative;
+    position:relative;
 }
 
 .aside__father:has(:checked){
@@ -223,7 +228,7 @@ a{
 } 
 .encabezado__basedatos_flecha{
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   width: 40px;
   background-color:rgb(88, 90, 204);
@@ -239,21 +244,21 @@ a{
 }
 .flecha {
   font-size: 34px;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .encabezado__basedatos_titulo{
   display: flex;
   flex-grow: 1;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
   justify-content: center;
-  align-items: center;
+
 }
 
 .filtro{
   display: block;
-  margin: 20px 0;
+  margin: 10px 0;
   width: 200px;
 }
 .tabla__filtro_documento {
@@ -432,9 +437,9 @@ tbody tr:hover{
 
 /* Añadido para una sola columna */
 .contact_form label, .contact_form input, .contact_form select {
-  display: block;
+  display: flex;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .seleccion {
@@ -466,9 +471,9 @@ tbody tr:hover{
 
 /* Añadido para estilizar el botón de cerrar */
 
+    
 
-  
-  
+
   
   .button__submitregistrocliente{
     display: flex;
@@ -672,7 +677,7 @@ fieldset label {
   overflow-y: hidden;
   /* Establece el modal como un elemento de posición fija */
   position: fixed;
-  height: 725px;
+  height: 705px;
   /* Establece un ancho fijo para el modal */
   width: 400px; /* Ajusta el ancho según tus necesidades */
   /* Centra vertical y horizontalmente en la pantalla */
@@ -697,3 +702,113 @@ fieldset label {
 
 /*para vendedor*/
 
+#modal_usuarios {
+  overflow-y: hidden;
+  /* Establece el modal como un elemento de posición fija */
+  position: fixed;
+  height: 600px;
+  /* Establece un ancho fijo para el modal */
+  width: 400px; /* Ajusta el ancho según tus necesidades */
+  /* Centra vertical y horizontalmente en la pantalla */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Otros estilos para el modal, como fondo y bordes */
+  
+ 
+
+  /* Añade el efecto de sombra si lo deseas */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+/*actualizar usuario*/
+/*h1*/
+.titulo__actualizar {
+  text-align: center;
+  color: #ffffff;
+  font-size: 32px;
+}
+
+.container__registrousuario {
+  display: flex;
+  justify-content: center;
+}
+
+.contact_form {
+  background-color: #ffffff;
+  box-shadow: 0 0 20px;
+  padding: 50px; /* Añadido para espaciado interior */
+}
+
+/* Añadido para una sola columna */
+.contact_form label, .contact_form input {
+  display: flex;
+  width: 110%;
+  margin-bottom: 13px;
+}
+
+.guardar__button {
+  color: white;
+  height: 45px;
+  background-color: rgb(81, 22, 135);
+  border-style: solid;
+  border-radius: 5px;
+  width: 100%; /* Añadido para que ocupe el ancho completo */
+  cursor: pointer;
+  margin-top: 20px; /* Ajustado para mejor espaciado */
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.aviso {
+  text-align: center; /* Centra el texto */
+  margin-top: 10px; /* Ajustado para mejor espaciado */
+}
+.button__submitregistrocliente{
+  display: flex;
+  justify-content: center;
+}
+
+
+.aviso{
+  font-size: 13px;  
+  color: #0e0e0e; 
+  text-align: center; 
+}
+::-webkit-input-placeholder {
+ color: #939393;
+}
+
+.formulario input:focus{
+  outline:0;
+  border: 1px solid #48ced8;
+}
+.formularios{
+  background-color: rgb(81, 22, 135);
+  color: #f6f1f1;
+  display: flex;
+  width: 110%;
+  justify-content: center; /* Alinea horizontalmente al centro */
+}
+
+.encabezado__basedato_flecha{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 40px;
+  background-color: rgb(81, 22, 135);
+  margin-bottom: 13px;
+
+}
+.encabezado__basedato_flecha:hover a{
+ transform: translate(-3px) scale(1.05);
+ box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.4);
+ filter: none; 
+}
+.flecha:hover a{
+  filter: blur(2px);
+}
+.flecha {
+  font-size: 34px;
+  color: rgb(255, 255, 255);
+}

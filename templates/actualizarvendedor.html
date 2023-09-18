@@ -1,11 +1,14 @@
 {% extends "layout.html" %}
 {% block title %}Actualizar vendedor{% endblock %}
 {% block content %}
-    <section class="container__registrovendedor">
+    <section class="container__registrousuario">
       <div class="contact_form">
-          <div class="formulario">
-            <a href="/usuarios"><img for="perfil" src="{{ url_for('static', filename='icons/flecha.png')}}" alt="imagen de regreso" class="flecha"></a>
-              <h1 class="titulo__formulario">Actualizar Vendedor</h1>
+        <div class="encabezado__basedato_flecha">
+          <a href="/" class="flecha"><i class="fa-solid fa-arrow-left"></i></a>
+         </div>
+          <div class="formularios">
+            
+              <h1 class="titulo__actualizar">Actualizar Vendedor</h1>
           </div>
           
           <form action="/actualizarvendedor/{{usuario.id_vendedor}}", method="POST">      
@@ -30,10 +33,10 @@
           <div class="columnas">
             
             <div>
-              <label for="cotacto" >Teléfono o celular
+              <label for="contacto" >Teléfono o celular
                 <span class="obligatorio">*</span>
               </label>
-                <input type="tel" name="cotacto" id="cotacto" placeholder="Escribe tu teléfono" value="{{usuario.contacto}}">
+                <input type="tel" name="contacto" id="contacto" placeholder="Escribe tu teléfono" value="{{usuario.contacto}}">
             </div> 
             <div>
               <label for="email">Email

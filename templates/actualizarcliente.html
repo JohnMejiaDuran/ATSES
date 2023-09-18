@@ -3,12 +3,12 @@
 {% block content %}
     <section class="container__registrocliente">
       <div class="contact_form">
-          <div class="formulario">
-            <a href="/clientes"><img for="perfil" src="{{ url_for('static', filename='icons/flecha.png')}}" alt="imagen de regreso" class="flecha"></a>
-              <h1 class="titulo__formulario">Actualizar Clientes</h1>
+          <div class="">
+            
+              <h1 class="titulo__formulario_modal">Actualizar Clientes</h1>
           </div>
           
-          <form action="/actualizarcliente/{{cliente.id_cliente}}", method="POST">      
+          <form  action="/actualizarcliente/{{cliente.id_cliente}}", method="POST">      
             <div class="columnas" >
                 <div>
                     <label for="nombre" class="colocar_nombre">Nombres
@@ -68,20 +68,6 @@
             </div>
       
           <div class="columnas">
-            <div>
-                <label for="tipo_persona" >Tipo de persona 
-                  <span class="obligatorio">*</span>
-                </label>
-                <select  class="seleccion" id="tipo_persona" name="tipo_persona" >
-                    {% if cliente.tipo_persona == 'Persona Natural'%}
-                    <option value="Persona Natural" selected>Persona natural</option>
-                    <option value="Persona Juridica">Persona juridica</option>
-                    {% else %}
-                    <option value="Persona Juridica" selected>Persona juridica</option>
-                    <option value="Persona Natural">Persona natural</option>
-                    {% endif %}
-                </select>
-            </div> 
             <div>
               <label for="telefono" >Teléfono o celular
                 <span class="obligatorio">*</span>

@@ -53,7 +53,6 @@ def actualizar_cliente(id_cliente):
         cliente.tipo_doc = request.form['tipo_doc']
         cliente.nombre = request.form['nombre']
         cliente.apellido = request.form['apellido']
-        cliente.tipo_persona = request.form['tipo_persona']
         cliente.telefono = request.form['telefono']
         cliente.direccion = request.form['direccion']
         cliente.ciudad = request.form['ciudad']
