@@ -1,7 +1,10 @@
 from utils.db import db
-
-
+from flask_login import UserMixin
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, SubmitField
+from wtforms.validators import InputRequired, Length, ValidationError
 class Clientes(db.Model):
+
     id_cliente = db.Column(db.Integer, primary_key=True)
     tipo_doc = db.Column(db.String(10))
     nombre = db.Column(db.String(150))
@@ -80,4 +83,68 @@ class Materiales(db.Model):
         self.pulgada = pulgada
         self.medida =medida
         self.valor =valor
+
+class User(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(20), nullable=False, unique=True)
+    password = db.Column(db.String(20), nullable=False)
+
+
+class RegisterForm(FlaskForm):
+    username = StringField(validators=[InputRequired(), Length(
+        min=4, max=20)], render_kw={"placeholder": "Usario"})
+    
+
+    password = PasswordField(validators=[InputRequired(), Length(
+        min=4, max=20)], render_kw={"placeholder": "Contraseña"})
+    submit = SubmitField("Registro")    
+
+    def validar_usuario(self, username):
+        existe_usuario = User.query.filter_by(
+            username=username.data).first()
+        
+        if existe_usuario:
+            raise ValidationError(
+                "Ya existe este usuario. Por favor selecciona otro."
+            )
+
+class LoginForm(FlaskForm):
+    username = StringField(validators=[InputRequired(), Length(
+        min=4, max=20)], render_kw={"placeholder": "Username"})
+    
+
+    password = PasswordField(validators=[InputRequired(), Length(
+        min=4, max=20)], render_kw={"placeholder": "Password"})
+    submit = SubmitField("Login")    
+        
+class Estructuras(db.Model):
+    id_material = db.Column(db.String(150))
+    id_fabricacion = db.Column(db.Integer, primary_key=True)
+    diseño = db.Column(db.String(150))
+    nombre = db.Column(db.String(150))
+    precio_venta = db.Column(db.String(150))
+    valor_5deaccesorios = db.Column(db.String(150))
+    descripciondeaccesorios = db.Column(db.String(20))
+    valor_6manodeobra = db.Column(db.String(150))
+    altura = db.Column(db.String(150))
+    ancho = db.Column(db.String(150))
+    margen_perdidamaterial = db.Column(db.String(150))
+    costoenmaterial = db.Column(db.String(150))
+    valor_insumos = db.Column(db.String(150))
+    
+
+    def __init__(self,id_fabricacion,id_material,diseño, nombre, precio_venta , valor_5deaccesorios,descripcciondeaccserios,valro_6demanodeobra,altura,ancho,margen_perdidamaterial,costoenmaterial,valor_insumos):
+        self.id_material = id_material
+        self.id_fabricacion = id_fabricacion
+        self.diseño = diseño 
+        self.nombre = nombre
+        self.precio_venta = precio_venta 
+        self.valor_5deaccesorios = valor_5deaccesorios
+        self.descripciondeaccesorios=descripcciondeaccserios
+        self.valor_6manodeobra = valro_6demanodeobra
+        self.altura = altura
+        self.ancho = ancho
+        self.margen_perdidamaterial = margen_perdidamaterial
+        self.costoenmaterial = costoenmaterial
+        self.valor_insumos = valor_insumos
        

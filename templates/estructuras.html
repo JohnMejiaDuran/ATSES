@@ -2,120 +2,179 @@
 
 {% block content %}
 
-    <section class="container__clientes">
-        <div class="clientes">
-            <div class="formulario_a">
-                <a href="/"><img for="perfil" src="{{ url_for('static', filename='icons/flecha.png')}}" alt="imagen de regreso" class="flecha"></a>
-                <h1 class="titulo__formulario_a">Estructuras</h1>
+<section class="container__clientes">
+    <div class="clientes">
+
+        <div class="encabezado__basedatos">
+            
+            <div class="encabezado__basedatos_flecha">
+                <a href="/" class="flecha"><i class="fa-solid fa-arrow-left"></i></a>
             </div>
-            <div class="tabla__nav">
 
-                <div class="tabla">
-                    <label for="#documento" class="tabla__documento">Código o nombre<span class="span">*</span></label>
-                    <input class="tabla__input"type="text" name="introducir_Cedula o Nit" id="Cedula o Nit" required="obligatorio" placeholder="Código o nombre">
-                    <div class="icon__search">
+            <div class="encabezado__basedatos_titulo">
+                <h1 class="titulo__basedatos">Estructuras</h1>
+            </div>
+        </div>
 
-                        <a  href=""><i  class=" fa-solid fa-magnifying-glass"></i></a>
-                    </div>
+        <div class="barra__nav">
+            <div class="filtro">
+                <div class="tabla__filtro_documento">
+                    <label for="#documento">Número de documento</label>
                 </div>
+                <div class="tabla__filtro_input">
+                    <input type="text" name="introducir_Cedula o Nit" id="Cedula o Nit" required="obligatorio" placeholder="Cedula o Nit">
+                    <div><a  href=""><i  class=" fa-solid fa-magnifying-glass"></i></a></div>
+                </div>
+               
+            </div>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages%}
+                    <div class="alert alert-{{ messages[0]['category'] }}" role="alert">
+                        {{ messages[0] }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
             
                 <div class="tabla__button-nav">
-                    <button class="button__add">
-                        <a href="/registroestructuras"><i class="fa-solid fa-plus" style="color: #ffffff;">&nbsp;</i>Añadir</a>
+                    <button>
+                        <a class="button__add" id="btn-abrir-modal"><i class="fa-solid fa-plus" style="color: #ffffff;">&nbsp;</i>Añadir</a>
                     </button>
                 </div>
+
             </div>
         <table class="tablaclientes">
             <thead>
                 <tr>
                     <th>Código</th>
-                    <th>Estructura</th>
                     <th>Diseño</th>
-                    <th>Medidas</th>
+                    <th>Nombre</th>
                     <th>Material</th>
-                    <th>Valor venta</th>
-                    <th>Opciones</th>  
+                    <th>Altura</th>
+                    <th>Ancho</th>
+                    <th>Margen perdida de material</th>
+                    <th>Costo en material</th>
+                    <th>Valor-insumos</th>
+                    <th>Mano de obra</th>
+                    <th>Descripcion De Acceesorios</th>
+                    <th>Valor Accesorios</th>
+                    <th>Precio Venta</th>
+                    <th>opciones</th>  
                 </tr>
           </thead>
           <tbody>
-                <tr>
-                <td>15151</td>
-                    <td>Puerta</td>
-                    <td>3D</td>
-                    <td>2x5</td>
-                    <td>Acero</td>
-                    <td>1.200.000</td>
-                    <td><a href="/actualizarestructura"><span class="fas fa-edit"></span></a></td>
-                </tr>
-          </tbody>
-          <tbody>
-          <tr>
-          <td>15151</td>
-                    <td>Puerta</td>
-                    <td>3D</td>
-                    <td>2x5</td>
-                    <td>Acero</td>
-                    <td>1.200.000</td>
-                    <td><a href="/actualizarestructura"><span class="fas fa-edit"></span></a></td>
-                </tr>
-          </tbody>
-          <tbody>
-          <tr>
-          <td>15151</td>
-                    <td>Puerta</td>
-                    <td>3D</td>
-                    <td>2x5</td>
-                    <td>Acero</td>
-                    <td>1.200.000</td>
-                    <td><a href="/actualizarestructura"><span class="fas fa-edit"></span></a></td>
-                </tr>
-          </tbody>
-          <tbody>
-          <tr>
-          <td>15151</td>
-                    <td>Puerta</td>
-                    <td>3D</td>
-                    <td>2x5</td>
-                    <td>Acero</td>
-                    <td>1.200.000</td>
-                    <td><a href="/actualizarestructura"><span class="fas fa-edit"></span></a></td>
-                </tr>
-          </tbody>
-          <tbody>
-          <tr>
-          <td>15151</td>
-                    <td>Puerta</td>
-                    <td>3D</td>
-                    <td>2x5</td>
-                    <td>Acero</td>
-                    <td>1.200.000</td>
-                    <td><a href="/actualizarestructura"><span class="fas fa-edit"></span></a></td>
-                </tr>
-          </tbody>  
-          <tbody>
-                <tr>
-                <td>15151</td>
-                    <td>Puerta</td>
-                    <td>3D</td>
-                    <td>2x5</td>
-                    <td>Acero</td>
-                    <td>1.200.000</td>
-                    <td><a href="/actualizarestructura"><span class="fas fa-edit"></span></a></td>
-                </tr>
-          </tbody>
-          <tbody>
-                <tr>
-                <td>15151</td>
-                    <td>Puerta</td>
-                    <td>3D</td>
-                    <td>2x5</td>
-                    <td>Acero</td>
-                    <td>1.200.000</td>
-                    <td><a href="/actualizarestructura"><span class="fas fa-edit"></span></a></td>
-                </tr>
-          </tbody>
+            {% for estructura in estructuras %}
+            <tr>
+                <td>{{estructura.id_fabricacion}}</td>
+                <td>{{estructura.diseño}}</td>
+                <td>{{estructura.nombre}}</td>
+                <td>{{estructura.id_material}}</td>
+                <td>{{estructura.altura}}</td>
+                <td>{{estructura.ancho}}</td>
+                <td>{{estructura.margen_perdidamaterial}}</td>
+                <td>{{estructura.costoenmaterial}}</td>
+                <td>{{estructura.valor_insumos}}</td>
+                <td>{{estructura.valor_6manodeobra}}</td>
+                <td>{{estructura.descripciondeaccesorios}}</td>
+                <td>{{estructura.valor_5deaccesorios}}</td>
+                <td>{{estructura.precio_venta}}</td>
+
+                <td><a href="{{ url_for('estructura.actualizar_estructura', id_fabricacion=estructura.id_fabricacion) }}"><span
+                class="fas fa-edit"></span></a> <a href="{{url_for('estructura.eliminar_estructura',id_fabricacion=estructura.id_fabricacion)}}"><i class="fa-solid fa-trash" style="color: #190c4b;"></i></a>
+                </td>
+
+
+            </tr>
+            {% endfor %}
+      </tbody>
         
        </table>
+       <dialog id="modal" class="modalestructuras">
+        <form action="/registroestructura", method="POST">
+            <section class="misec">
+              
+              <div class="encabezado__basedatos">
+                        
+                <div class="encabezado__basedatos_flecha">
+                    <a href="/estructuras" class="equis"><i class="fa-solid fa-x"></i></i></a>
+                </div>
+        
+                <div class="encabezado__basedatos_titulo">
+                    <h1 class="titulo__basedatos">Registro de Estructuras</h1>
+                </div>
+            </div>
+            
+                <div class="formulario__re">
+
+                    <label for="id_fabricacion" class="remateriales">Codigo Fabricacion
+                    </label>
+                      <input type="number" name="id_fabricacion" class="input_rmateriales" required="obligatorio">
+        
+                    <label for="diseño" class="remateriales">Diseño
+                      </label>
+                      <select class="input_rmateriales" id="diseño"  name="diseño">
+                        <option selected></option>
+                        <option value="3D">3D</option>
+                        <option value="2D">2D</option>
+                    </select>
+        
+                    <label for="nombre" class="remateriales">Nombre
+                      </label>
+                        <input type="text" name="nombre" class="input_rmateriales" required="obligatorio">
+        
+                    <label for="id_material" class="remateriales">Material
+                      </label>
+                      <select class="input_rmateriales" id="id_material" name="id_material">
+                        <option selected></option>
+                        <option value="Barilla">Barilla</option>
+                        <option value="Acero">Acero</option>
+                    </select>
+        
+                        <label for="altura" class="remateriales">Altura
+                      </label>
+                        <input type="number" name="altura" class="input_rmateriales" required="obligatorio">
+        
+                    <label for="ancho" class="remateriales">Ancho
+                      </label>
+                        <input type="number" name="ancho" class="input_rmateriales" required="obligatorio">
+        
+                    <label for="margen_perdidamaterial" class="remateriales">Margen de perdida de material
+                      </label>
+                        <input type="number" name="margen_perdidamaterial" class="input_rmateriales" required="obligatorio">
+
+                        <label for="costoenmaterial" class="remateriales">Costo en material
+                        </label>
+                          <input type="number" name="costoenmaterial" class="input_rmateriales" required="obligatorio">
+        
+                    <label for="valor_insumos" class="remateriales">Valor-insumos
+                      </label>
+                        <input type="number" name="valor_insumos" class="input_rmateriales" required="obligatorio">
+        
+                    <label for="valor_6manodeobra" class="remateriales">Mano de obra
+                      </label>
+                        <input type="number" name="valor_6manodeobra" class="input_rmateriales" required="obligatorio">
+        
+                    <label for="descripciondeaccesorios" class="remateriales">Descripcion Accesorios
+                      </label>
+                        <input type="text" name="descripciondeaccesorios" class="input_rmateriales" required="obligatorio">
+
+                        <label for="valor_5deaccesorios" class="remateriales">Valor Accesorios
+                        </label>
+                          <input type="number" name="valor_5deaccesorios"class="input_rmateriales" required="obligatorio">
+
+                          <label for="precio_venta" class="remateriales">Precio venta 
+                        </label>
+                          <input type="number" name="precio_venta" class="input_rmateriales" required="obligatorio">
+                    
+                        <div class="guardar">
+                          <button  class="guardar__button" type="submit" name="enviar_formulario" id="enviar"><a class="enviar">Guardar</a></button>
+                      </div>
+                </div>
+                
+            </section>
+        </form>
+       </dialog>
      
       </div>
   </div>
