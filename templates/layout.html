@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
     
 </head>
-<body >
+<body  >
     <div class="container">
         <header class="header">
             
@@ -101,7 +101,6 @@
                    </ul>
                </div>
         </aside>
-        
         <main class="content">
             {% block content %}{% endblock %}
         </main>
@@ -114,5 +113,7 @@
         </footer>
     </div>
     <script src="/static/main.js"></script>
+        
+        
 </body>
 </html>
